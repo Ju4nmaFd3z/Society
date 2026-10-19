@@ -7,6 +7,7 @@ Punto de entrada a la documentación general del proyecto.
 - [Producto](producto/README.md): qué es Society, para quién y qué aporta.
 - [Diseño](diseno/README.md): flujo de navegación, pantallas y criterios de diseño.
 - [Arquitectura](arquitectura/README.md): mapa de repositorios y decisiones técnicas.
+- [API](api/README.md): documentación de las API externas que usa Society.
 - [Marca](marca/README.md): identidad visual y presencia en redes.
 - [Decisiones](decisiones/README.md): registro de las decisiones del proyecto.
 

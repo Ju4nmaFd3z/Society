@@ -28,6 +28,7 @@ Toda la documentación general está en [`docs/`](docs/README.md).
 | [Producto](docs/producto/README.md) | Qué es Society, para quién y qué aporta |
 | [Diseño](docs/diseno/README.md) | Flujo de navegación, pantallas y criterios de diseño |
 | [Arquitectura](docs/arquitectura/README.md) | Mapa de repositorios y decisiones técnicas |
+| [API](docs/api/README.md) | Documentación de las API externas que usa Society |
 | [Marca](docs/marca/README.md) | Identidad visual y presencia en redes |
 | [Decisiones](docs/decisiones/README.md) | Registro de las decisiones del proyecto |
 
