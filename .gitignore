@@ -1,0 +1,14 @@
+# sistema
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# secretos y entorno
+.env
+.env.*
+*.pem
+*.key
+
+# editores
+.vscode/
+.idea/
