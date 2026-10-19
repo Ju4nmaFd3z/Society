@@ -5,3 +5,4 @@ Una nota por pantalla, con su objetivo, contenido y estados. La implementación 
 ## Contenido
 
 - [01. Inicio](01-inicio.md)
+- [02. Análisis](02-analisis.md)

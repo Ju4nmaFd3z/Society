@@ -34,6 +34,10 @@ Además de los cuatro estados obligatorios (cargando, vacío, error y con datos)
 4. **Error:** aviso de fallo de red, con opción de reintentar.
 5. **Con datos:** búsqueda realizada, con los locales y la carga de más páginas al llegar al final de la lista.
 
+## Navegación
+
+Desde esta pantalla se llega a [02. Análisis](02-analisis.md): al pulsar Continuar en la tarjeta de un local o desde el buscador de página web.
+
 ## Implementación
 
 - Android: [Society-Kotlin](https://github.com/Ju4nmaFd3z/Society-Kotlin/blob/main/docs/pantallas.md).
