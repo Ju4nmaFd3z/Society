@@ -9,7 +9,7 @@ Flujo de navegación, pantallas y criterios de diseño de Society.
 
 ## Archivo de diseño
 
-Las pantallas de la app móvil se diseñan en Figma, en el archivo [Society — Pantallas móvil](https://www.figma.com/design/gHIAu6bb0N7xDzvI00VarY). Es el archivo oficial del proyecto para los dos autores.
+Las pantallas de la app móvil se diseñan en Figma, en el archivo [Society · Rediseño papel y cristal](https://www.figma.com/design/xigLfMNI2Zs3ugOiadJJ9O). La versión de trabajo es la pestaña **v3 · Cristal líquido**. Es el archivo oficial del proyecto para los dos autores.
 
 ## Criterios generales
 

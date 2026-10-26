@@ -1,23 +1,24 @@
 # Estado del proyecto
 
-Última actualización: 19 de octubre de 2026.
+Última actualización: 26 de octubre de 2026.
 
 ## Hecho
 
 - Proyecto organizado en un repositorio por tecnología, más este repositorio general. Ver [Repositorios](arquitectura/repositorios.md).
 - Identidad visual definida: logotipo, mascota y vídeo de identidad de 20 s.
 - Perfil de Instagram creado: [@society.app](https://www.instagram.com/society.app/).
-- Proyecto Android creado, con la estructura de carpetas y el esqueleto de la pantalla Inicio, en [Society-Kotlin](https://github.com/Ju4nmaFd3z/Society-Kotlin).
-- Flujo de navegación y especificación de la pantalla [01. Inicio](diseno/pantallas/01-inicio.md).
-- Primera ruta definida (Inicio → Análisis) y esqueleto de la pantalla [02. Análisis](diseno/pantallas/02-analisis.md) en Society-Kotlin.
-- Parte visual de la pantalla [01. Inicio](diseno/pantallas/01-inicio.md) en Society-Kotlin, sin funcionalidad real todavía.
+- Proyecto Android creado, con la estructura de carpetas y el esqueleto de la pantalla de búsqueda de locales, en [Society-Kotlin](https://github.com/Ju4nmaFd3z/Society-Kotlin).
+- Flujo de navegación y especificación de la pantalla [02. Empezamos](diseno/pantallas/02-empezamos.md).
+- Navegación montada en Society-Kotlin, con una ruta por pantalla del diseño (15 en total) y los enlaces del [flujo](diseno/flujo-de-navegacion/README.md). Salvo [02. Empezamos](diseno/pantallas/02-empezamos.md), todas las pantallas son de cartón piedra.
+- Notas de las 15 pantallas en [Pantallas](diseno/pantallas/README.md).
+- Parte visual de la pantalla [02. Empezamos](diseno/pantallas/02-empezamos.md) en Society-Kotlin, sin funcionalidad real todavía.
 
 ## En curso
 
-- Diseño de las pantallas de la app móvil en Figma. Ver [Diseño](diseno/README.md).
+- Diseño de las pantallas de la app móvil en Figma: diseñadas de la 01 a la 07; las 08 a 15 tienen solo la cabecera. Ver [Diseño](diseno/README.md).
 - Documentación de producto. Ver [Producto](producto/README.md).
-- Funcionalidad de la pantalla Inicio: búsqueda de locales y lectura de los datos.
-- Definición del contenido y los estados de la pantalla 02. Análisis.
+- Funcionalidad de la pantalla 02. Empezamos: búsqueda de locales y lectura de los datos.
+- Definición del contenido y los estados de las pantallas de cartón piedra.
 
 ## Pendiente
 
