@@ -8,6 +8,7 @@ Proyecto de fin de grado (TFG) de 2º de Desarrollo de Aplicaciones Multiplatafo
 
 - Juanma Fernández
 - Víctor Pagola
+- Pablo Jiménez
 
 ## Repositorios
 
@@ -17,7 +18,7 @@ El proyecto tiene un repositorio por tecnología. Este es el general: reúne la 
 | --- | --- |
 | **Society** (este) | Documentación general: producto, diseño, arquitectura, marca y decisiones |
 | [Society-Kotlin](https://github.com/Ju4nmaFd3z/Society-Kotlin) | App móvil Android, en Kotlin con Jetpack Compose |
-| [Society-TypeScript](https://github.com/Ju4nmaFd3z/Society-TypeScript) | Parte del proyecto desarrollada en TypeScript |
+| [Society-TypeScript](https://github.com/Ju4nmaFd3z/Society-TypeScript) | Backend (API Express con Prisma), panel web Angular y contrato OpenAPI |
 
 ## Documentación
 
@@ -27,12 +28,14 @@ Toda la documentación general está en [`docs/`](docs/README.md).
 | --- | --- |
 | [Producto](docs/producto/README.md) | Qué es Society, para quién y qué aporta |
 | [Diseño](docs/diseno/README.md) | Flujo de navegación, pantallas y criterios de diseño |
-| [Arquitectura](docs/arquitectura/README.md) | Mapa de repositorios y decisiones técnicas |
+| [Arquitectura](docs/arquitectura/README.md) | Arquitectura técnica, diagramas y mapa de repositorios |
 | [API](docs/api/README.md) | Documentación de las API externas que usa Society |
 | [Marca](docs/marca/README.md) | Identidad visual y presencia en redes |
 | [Decisiones](docs/decisiones/README.md) | Registro de las decisiones del proyecto |
 
 El estado actual del proyecto está en [`docs/estado.md`](docs/estado.md).
+
+El trabajo del equipo se organiza en Jira y la documentación del proyecto se centraliza en Notion. Ver la decisión [0004](docs/decisiones/0004-jira-y-notion.md).
 
 ## Licencia
 
