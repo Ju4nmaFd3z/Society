@@ -7,7 +7,7 @@ Identidad visual y presencia pública de Society.
 - **Nombre:** Society.
 - **Logotipo:** de papel rasgado.
 - **Mascota:** un robot.
-- **Estilo:** modo claro, con textos en español.
+- **Estilo:** modo claro, con textos en español y estética de cristal (glassmorfismo), según la pestaña v3 · Cristal líquido de Figma. Ver la decisión [0005](../decisiones/0005-estetica-de-cristal.md).
 
 ## Presencia en redes
 

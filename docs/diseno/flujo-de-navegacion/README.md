@@ -4,7 +4,9 @@ Reglas para dibujar el diagrama de navegación de la aplicación.
 
 ## Diagrama
 
-El diagrama se mantiene en Lucidchart. Enlace de solo lectura: pendiente.
+El diagrama de navegación es la página 1 («Mapa general del MVP») de [`diagrama-flujo-app.drawio`](../../arquitectura/diagramas/diagrama-flujo-app.drawio). El detalle de cada pantalla está en [`diagrama-pantallas-detalle.drawio`](../../arquitectura/diagramas/diagrama-pantallas-detalle.drawio).
+
+Los diagramas usan los mismos números con el prefijo S (S01 … S15), más tres pantallas que no tienen nota propia: S01A Acceso, S02M Alta manual y S09P Publicar.
 
 ## Flujo actual
 
@@ -13,7 +15,6 @@ El flujo de las pantallas también está en el archivo de Figma, en la pestaña 
 - 01 Inicio → 02 Empezamos → 03 Análisis → 04 Así te ve Internet → 05 Home.
 - Desde 05 Home: 10 Notificaciones, 11 Campaña propuesta, 12 Campaña a medida, 15 Calendario, 06 Crear contenido, 14 Estadísticas y 13 Perfil.
 - Crear contenido sigue los pasos del selector: 06 Idea, 07 Estética y 08 Local, y termina en 09 Contenido creado. Figma no dibuja esas flechas: el orden sale del selector de pasos.
-
 
 ## Reglas obligatorias
 
@@ -25,4 +26,4 @@ El flujo de las pantallas también está en el archivo de Figma, en la pestaña 
 - Una flecha que sale del marco lleva a otra pantalla. Esa pantalla se dibuja con otro marco, aunque esté vacío o con línea punteada si aún no está diseñada.
 - Toda pantalla que muestra datos incluye sus cuatro estados: cargando, vacío, error y con datos.
 - Los post-its amarillos son solo para aclaraciones. Nunca forman parte del flujo.
-- Los nombres de las pantallas son los mismos en Lucidchart, en Figma y en el código.
+- Los nombres de las pantallas son los mismos en los diagramas, en Figma y en el código.

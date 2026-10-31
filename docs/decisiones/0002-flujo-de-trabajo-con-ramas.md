@@ -1,24 +1,24 @@
 # 0002. Flujo de trabajo con una rama por persona
 
 - **Fecha:** 2026-10-19
-- **Estado:** aceptada
+- **Estado:** aceptada (actualizada el 2026-10-31 al incorporarse Pablo Jiménez)
 
 ## Contexto
 
-Dos autores trabajan en los mismos repositorios. Hace falta que ninguno pise el trabajo del otro y que la página principal de cada repositorio se vea siempre bien.
+Tres personas trabajan en los mismos repositorios. Hace falta que nadie pise el trabajo de los demás y que la página principal de cada repositorio se vea siempre bien.
 
 ## Decisión
 
 Se aplica en todos los repositorios del proyecto:
 
-- Cada autor tiene su rama: `juanma` y `victor`.
+- Cada persona tiene su rama: `juanma`, `victor` y `pablo`.
 - `main` contiene siempre la versión presentable.
-- Los cambios llegan a `main` mediante pull request, revisada por la otra persona.
-- Antes de empezar a trabajar, cada autor trae `main` a su rama.
+- Los cambios llegan a `main` mediante pull request, revisada por otra persona del equipo.
+- Antes de empezar a trabajar, cada persona trae `main` a su rama.
 
 ## Alternativas consideradas
 
-- **Trabajar los dos directamente en `main`:** descartada, por el riesgo de pisarse y de dejar `main` en un estado a medias.
+- **Trabajar todos directamente en `main`:** descartada, por el riesgo de pisarse y de dejar `main` en un estado a medias.
 
 ## Consecuencias
 

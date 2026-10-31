@@ -16,3 +16,6 @@ Si una decisión se sustituye por otra, no se borra: se cambia su estado y se en
 | --- | --- | --- |
 | [0001](0001-un-repositorio-por-tecnologia.md) | Un repositorio por tecnología y uno general | Aceptada |
 | [0002](0002-flujo-de-trabajo-con-ramas.md) | Flujo de trabajo con una rama por persona | Aceptada |
+| [0003](0003-backend-unico-node.md) | Backend único en Node.js con Express y Prisma | Aceptada |
+| [0004](0004-jira-y-notion.md) | Jira y Notion como herramientas del equipo | Aceptada |
+| [0005](0005-estetica-de-cristal.md) | Estética de cristal en la identidad visual | Aceptada |

@@ -1,5 +1,7 @@
 # Visión del producto
 
+Qué es Society, para quién y en qué contexto se desarrolla.
+
 ## Qué es
 
 Society es una plataforma SaaS para gestionar redes sociales, marketing y publicidad desde un único lugar.
@@ -10,7 +12,7 @@ Negocios de hostelería: restaurantes, bares y cafés.
 
 ## Contexto del proyecto
 
-Society se desarrolla como proyecto de fin de grado de 2º de Desarrollo de Aplicaciones Multiplataforma (curso 2026/27), a cargo de dos autores.
+Society se desarrolla como proyecto de fin de grado de 2º de Desarrollo de Aplicaciones Multiplataforma (curso 2026/27), a cargo de un equipo de tres personas: Juanma Fernández, Víctor Pagola y Pablo Jiménez.
 
 ## Dónde seguir
 
