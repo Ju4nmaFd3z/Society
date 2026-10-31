@@ -6,9 +6,9 @@ El proyecto tiene un repositorio por tecnología, más uno general.
 
 | Repositorio | Tecnología | Contenido |
 | --- | --- | --- |
-| [Society](https://github.com/Ju4nmaFd3z/Society) | Documentación | Producto, diseño, arquitectura, marca y decisiones |
+| [Society](https://github.com/Ju4nmaFd3z/Society) | Documentación | Producto, diseño, arquitectura, diagramas, marca y decisiones |
 | [Society-Kotlin](https://github.com/Ju4nmaFd3z/Society-Kotlin) | Kotlin | App móvil Android, con Jetpack Compose |
-| [Society-TypeScript](https://github.com/Ju4nmaFd3z/Society-TypeScript) | TypeScript | Alcance por definir |
+| [Society-TypeScript](https://github.com/Ju4nmaFd3z/Society-TypeScript) | TypeScript | Backend único (API Express con Prisma), panel web Angular y contrato OpenAPI. Ver la decisión [0003](../decisiones/0003-backend-unico-node.md) |
 
 ## Reglas
 
