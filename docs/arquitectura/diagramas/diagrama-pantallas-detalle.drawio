@@ -16,16 +16,16 @@
         <mxCell id="dx_n150" value="&lt;b&gt;Columnas de cada página&lt;/b&gt;&lt;br&gt;• Izquierda (notas): clases Android y web, datos que entran, que muestra y que se guardan, estado de pantalla, errores y navegación&lt;br&gt;• Centro: lo que ve y hace el usuario; los rectángulos azules «F1 · nombre()» son las funciones que lanza la pantalla&lt;br&gt;• Derecha: una franja por función. Se lee de izquierda a derecha: función → llamada (paralelogramo) → backend (morado) → API externa (naranja), IA (rosa) o datos (cilindro)" style="shape=note;size=14;whiteSpace=wrap;html=1;fontSize=12;fillColor=#fff9c4;strokeColor=#c9b458;align=left;spacingLeft=8;spacingRight=6;fontSize=11;" vertex="1" parent="1">
           <mxGeometry x="40" y="150" width="1000" height="176" as="geometry" />
         </mxCell>
-        <mxCell id="dx_n344" value="&lt;b&gt;Nombres&lt;/b&gt;&lt;br&gt;• Fn = función de la pantalla. En Android es un método del ViewModel; en la web, del Store. Mismo nombre en los dos&lt;br&gt;• Trabajo X = lo ejecuta el worker Node en Vercel, al que avisa Supabase; la pantalla no lo llama: sigue el estado (F1 · seguir)&lt;br&gt;• Todas las llamadas a /api/v1 llevan Authorization: Bearer JWT, salvo /instagram/callback" style="shape=note;size=14;whiteSpace=wrap;html=1;fontSize=12;fillColor=#fff9c4;strokeColor=#c9b458;align=left;spacingLeft=8;spacingRight=6;fontSize=11;" vertex="1" parent="1">
+        <mxCell id="dx_n344" value="&lt;b&gt;Nombres&lt;/b&gt;&lt;br&gt;• Fn = función de la pantalla. En Android es un método del ViewModel; en la web, del Store. Mismo nombre en los dos&lt;br&gt;• Trabajo X = lo ejecuta el worker (rutas internas /trabajos de la API en Vercel), al que avisa Supabase; la pantalla no lo llama: sigue el estado (F1 · seguir)&lt;br&gt;• Todas las llamadas a /api/v1 llevan Authorization: Bearer JWT, salvo /instagram/callback" style="shape=note;size=14;whiteSpace=wrap;html=1;fontSize=12;fillColor=#fff9c4;strokeColor=#c9b458;align=left;spacingLeft=8;spacingRight=6;fontSize=11;" vertex="1" parent="1">
           <mxGeometry x="40" y="344" width="1000" height="146" as="geometry" />
         </mxCell>
         <mxCell id="dx_n508" value="&lt;b&gt;Páginas&lt;/b&gt;&lt;br&gt;• 0 Arranque y S01 · 1 S01A Acceso · 2 S02 Busca tu local · 3 S02M Alta manual · 4 S03 Estudiando tu local&lt;br&gt;• 5 S04 Así te ve internet · 6 S05 Home · 7 S06 Idea · 8 S07 Estética · 9 S08 Fotos · 10 S09 Contenido creado&lt;br&gt;• 11 S09P Publicar · 12 S11 Campaña propuesta · 13 S13 Perfil e Instagram · 14 S12 [P1] · 15 S15 [P1]" style="shape=note;size=14;whiteSpace=wrap;html=1;fontSize=12;fillColor=#fff9c4;strokeColor=#c9b458;align=left;spacingLeft=8;spacingRight=6;fontSize=11;" vertex="1" parent="1">
           <mxGeometry x="40" y="508" width="1000" height="131" as="geometry" />
         </mxCell>
-        <mxCell id="dx_n657" value="&lt;b&gt;Reglas comunes&lt;/b&gt;&lt;br&gt;• Cuatro estados en toda pantalla con datos: cargando, vacío, error (con salida) y con datos&lt;br&gt;• Errores del backend: {error: {code, message, retryable}}; GET se reintenta 3 veces, POST nunca solo&lt;br&gt;• Ningún secreto en la app ni en el panel: solo la URL de Supabase y la clave pública&lt;br&gt;• Presupuesto 0 salvo el saldo de Higgsfield (lo paga el equipo); demo con un local ficticio (D-37)&lt;br&gt;• Datos de Google: valoración, reseñas y fotos siempre en vivo; datos básicos guardados al confirmar (D-06)" style="shape=note;size=14;whiteSpace=wrap;html=1;fontSize=12;fillColor=#fff9c4;strokeColor=#c9b458;align=left;spacingLeft=8;spacingRight=6;fontSize=11;" vertex="1" parent="1">
+        <mxCell id="dx_n657" value="&lt;b&gt;Reglas comunes&lt;/b&gt;&lt;br&gt;• Cuatro estados en toda pantalla con datos: cargando, vacío, error (con salida) y con datos&lt;br&gt;• Errores del backend: {error: {code, message, retryable}}; GET se reintenta 3 veces, POST nunca solo&lt;br&gt;• Ningún secreto en la app ni en el panel: solo la URL de la API. Los clientes no usan los SDK de Supabase&lt;br&gt;• Presupuesto 0 salvo el saldo de Higgsfield (lo paga el equipo); demo con un local ficticio (D-37)&lt;br&gt;• Datos de Google: valoración, reseñas y fotos siempre en vivo; datos básicos guardados al confirmar (D-06)" style="shape=note;size=14;whiteSpace=wrap;html=1;fontSize=12;fillColor=#fff9c4;strokeColor=#c9b458;align=left;spacingLeft=8;spacingRight=6;fontSize=11;" vertex="1" parent="1">
           <mxGeometry x="40" y="657" width="1000" height="191" as="geometry" />
         </mxCell>
-        <mxCell id="dx_n866" value="&lt;b&gt;Documentos relacionados&lt;/b&gt;&lt;br&gt;• README de esta carpeta: arquitectura general, servicios y lista de APIs&lt;br&gt;• diagrama_flujo_app.drawio: mapa general, arquitectura por funcionalidad, datos, estados y despliegue" style="shape=note;size=14;whiteSpace=wrap;html=1;fontSize=12;fillColor=#fff9c4;strokeColor=#c9b458;align=left;spacingLeft=8;spacingRight=6;fontSize=11;" vertex="1" parent="1">
+        <mxCell id="dx_n866" value="&lt;b&gt;Documentos relacionados&lt;/b&gt;&lt;br&gt;• docs/arquitectura/tecnica: arquitectura general, servicios y lista de APIs&lt;br&gt;• diagrama-flujo-app.drawio: mapa general, arquitectura por funcionalidad, datos, estados y despliegue" style="shape=note;size=14;whiteSpace=wrap;html=1;fontSize=12;fillColor=#fff9c4;strokeColor=#c9b458;align=left;spacingLeft=8;spacingRight=6;fontSize=11;" vertex="1" parent="1">
           <mxGeometry x="40" y="866" width="1000" height="101" as="geometry" />
         </mxCell>
         <mxCell id="dx_lg0" value="Inicio" style="ellipse;whiteSpace=wrap;html=1;fontSize=12;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;fontSize=11;" vertex="1" parent="1">
@@ -88,21 +88,21 @@
           <mxGeometry x="580" y="150" width="1000" height="1190" as="geometry" />
         </mxCell>
         <mxCell id="d0_lane1" value="F2 · cargarMiRestaurante() — ¿en qué punto del alta está el usuario?" style="rounded=1;arcSize=1;whiteSpace=wrap;html=1;fillColor=#f3f7fd;strokeColor=#1a4fa3;strokeWidth=2;verticalAlign=top;align=left;spacingLeft=12;spacingTop=4;fontSize=16;fontStyle=1;fontSize=13;fillColor=#fbfbf8;" vertex="1" parent="1">
-          <mxGeometry x="1632" y="344" width="1146" height="220" as="geometry" />
+          <mxGeometry x="1632" y="440" width="1146" height="220" as="geometry" />
         </mxCell>
         <mxCell id="d0_lane0" value="F1 · comprobarSesion() — ¿hay sesión guardada en el dispositivo?" style="rounded=1;arcSize=1;whiteSpace=wrap;html=1;fillColor=#f3f7fd;strokeColor=#1a4fa3;strokeWidth=2;verticalAlign=top;align=left;spacingLeft=12;spacingTop=4;fontSize=16;fontStyle=1;fontSize=13;fillColor=#fbfbf8;" vertex="1" parent="1">
-          <mxGeometry x="1632" y="190" width="1146" height="124" as="geometry" />
+          <mxGeometry x="1632" y="190" width="1146" height="220" as="geometry" />
         </mxCell>
         <mxCell id="d0_title" value="ARRANQUE · S01 BIENVENIDA" style="text;html=1;whiteSpace=wrap;fontSize=24;fontStyle=1;align=left;verticalAlign=top;fontSize=40;" vertex="1" parent="1">
           <mxGeometry x="40" y="18" width="2400" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="d0_sub" value="Cómo se lee: izquierda, los datos de la pantalla (notas) · centro, el flujo que sigue el usuario y las funciones que lanza (F1, F2…) · derecha, qué hace cada función por fuera: llamada a la API propia, Edge Function o worker Node, APIs externas y tablas. Android: ArranqueViewModel decide el destino inicial del NavHost · Panel web: el guard altaCompletada hace lo mismo. Prioridad P0." style="text;html=1;whiteSpace=wrap;fontSize=13;align=left;verticalAlign=top;fontColor=#333333;" vertex="1" parent="1">
+        <mxCell id="d0_sub" value="Cómo se lee: izquierda, los datos de la pantalla (notas) · centro, el flujo que sigue el usuario y las funciones que lanza (F1, F2…) · derecha, qué hace cada función por fuera: llamada a la API propia (Express en Vercel) o worker, APIs externas y tablas. Android: ArranqueViewModel decide el destino inicial del NavHost · Panel web: el guard altaCompletada hace lo mismo. Prioridad P0." style="text;html=1;whiteSpace=wrap;fontSize=13;align=left;verticalAlign=top;fontColor=#333333;" vertex="1" parent="1">
           <mxGeometry x="40" y="86" width="2740" height="44" as="geometry" />
         </mxCell>
-        <mxCell id="d0_n150" value="&lt;b&gt;Clases&lt;/b&gt;&lt;br&gt;• Android: ArranqueViewModel (navigation/) · SesionRepository · RestauranteRepository&lt;br&gt;• Panel web: SesionService (supabase-js) · guard altaCompletada · RestaurantesApi" style="shape=note;size=14;whiteSpace=wrap;html=1;fontSize=12;fillColor=#fff9c4;strokeColor=#c9b458;align=left;spacingLeft=8;spacingRight=6;fontSize=11;" vertex="1" parent="1">
+        <mxCell id="d0_n150" value="&lt;b&gt;Clases&lt;/b&gt;&lt;br&gt;• Android: ArranqueViewModel (navigation/) · SesionRepository · RestauranteRepository&lt;br&gt;• Panel web: SesionService (tokens en localStorage) · guard altaCompletada · RestaurantesApi" style="shape=note;size=14;whiteSpace=wrap;html=1;fontSize=12;fillColor=#fff9c4;strokeColor=#c9b458;align=left;spacingLeft=8;spacingRight=6;fontSize=11;" vertex="1" parent="1">
           <mxGeometry x="40" y="150" width="500" height="101" as="geometry" />
         </mxCell>
-        <mxCell id="d0_n269" value="&lt;b&gt;Datos que maneja&lt;/b&gt;&lt;br&gt;• Sesión: JWT de acceso + refresh. La guardan supabase-kt (Android) y supabase-js (web); nunca se copia a mano&lt;br&gt;• Respuesta de GET /restaurantes/mio: {restaurante: {id, nombre, origen} o null, altaEstado, analisisEnCursoId}&lt;br&gt;• altaEstado: SIN_LOCAL · ANALIZANDO · PENDIENTE_CONFIRMAR · COMPLETADA&lt;br&gt;• Preferencias (DataStore / localStorage): restaurante_id_actual, alta_completada, onboarding_visto" style="shape=note;size=14;whiteSpace=wrap;html=1;fontSize=12;fillColor=#fff9c4;strokeColor=#c9b458;align=left;spacingLeft=8;spacingRight=6;fontSize=11;" vertex="1" parent="1">
+        <mxCell id="d0_n269" value="&lt;b&gt;Datos que maneja&lt;/b&gt;&lt;br&gt;• Sesión: JWT de acceso + refresh que devuelve la API. Android los guarda en DataStore y la web en localStorage&lt;br&gt;• Respuesta de GET /restaurantes/mio: {restaurante: {id, nombre, origen} o null, altaEstado, analisisEnCursoId}&lt;br&gt;• altaEstado: SIN_LOCAL · ANALIZANDO · PENDIENTE_CONFIRMAR · COMPLETADA&lt;br&gt;• Preferencias (DataStore / localStorage): restaurante_id_actual, alta_completada, onboarding_visto" style="shape=note;size=14;whiteSpace=wrap;html=1;fontSize=12;fillColor=#fff9c4;strokeColor=#c9b458;align=left;spacingLeft=8;spacingRight=6;fontSize=11;" vertex="1" parent="1">
           <mxGeometry x="40" y="269" width="500" height="161" as="geometry" />
         </mxCell>
         <mxCell id="d0_n448" value="&lt;b&gt;S01 · Bienvenida (Figma 01)&lt;/b&gt;&lt;br&gt;• Título «Ideas que llenan tu local», mascota, texto y 3 ventajas&lt;br&gt;• Botón «Descubre cómo funciona» → S01A. Sin datos ni llamadas" style="shape=note;size=14;whiteSpace=wrap;html=1;fontSize=12;fillColor=#fff9c4;strokeColor=#c9b458;align=left;spacingLeft=8;spacingRight=6;fontSize=11;" vertex="1" parent="1">
@@ -162,29 +162,32 @@
         <mxCell id="d0_L0r0c0" value="F1 · comprobarSesion()" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
           <mxGeometry x="1650" y="226" width="255" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="d0_L0r0c1" value="supabase-kt / supabase-js: lee la sesión guardada" style="shape=parallelogram;perimeter=parallelogramPerimeter;fixedSize=1;size=16;whiteSpace=wrap;html=1;fontSize=12;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+        <mxCell id="d0_L0r0c1" value="Lee los tokens guardados (DataStore / localStorage)" style="shape=parallelogram;perimeter=parallelogramPerimeter;fixedSize=1;size=16;whiteSpace=wrap;html=1;fontSize=12;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
           <mxGeometry x="1935" y="226" width="255" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="d0_L0r0c2" value="Si el JWT de acceso caducó, lo renueva con el refresh" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
-          <mxGeometry x="2220" y="226" width="255" height="70" as="geometry" />
+        <mxCell id="d0_L0r1c1" value="Si el JWT de acceso caducó: POST /api/v1/auth/refresco {refreshToken}" style="shape=parallelogram;perimeter=parallelogramPerimeter;fixedSize=1;size=16;whiteSpace=wrap;html=1;fontSize=12;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1935" y="322" width="255" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="d0_L0r0c3" value="Supabase Auth · POST /auth/v1/token (refresh)" style="shape=cylinder3;boundedLbl=1;backgroundOutline=1;size=8;whiteSpace=wrap;html=1;fontSize=12;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
-          <mxGeometry x="2505" y="226" width="255" height="70" as="geometry" />
+        <mxCell id="d0_L0r1c2" value="API Express: renueva la sesión con Supabase Auth desde el servidor" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="2220" y="322" width="255" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="d0_L0r1c3" value="Supabase Auth" style="shape=cylinder3;boundedLbl=1;backgroundOutline=1;size=8;whiteSpace=wrap;html=1;fontSize=12;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="2505" y="322" width="255" height="70" as="geometry" />
         </mxCell>
         <mxCell id="d0_L1r0c0" value="F2 · cargarMiRestaurante()" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
-          <mxGeometry x="1650" y="380" width="255" height="70" as="geometry" />
+          <mxGeometry x="1650" y="476" width="255" height="70" as="geometry" />
         </mxCell>
         <mxCell id="d0_L1r0c1" value="GET /api/v1/restaurantes/mio · Bearer JWT" style="shape=parallelogram;perimeter=parallelogramPerimeter;fixedSize=1;size=16;whiteSpace=wrap;html=1;fontSize=12;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
-          <mxGeometry x="1935" y="380" width="255" height="70" as="geometry" />
+          <mxGeometry x="1935" y="476" width="255" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="d0_L1r0c2" value="Edge Function: valida el JWT → user_id; busca su local y el análisis en curso" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
-          <mxGeometry x="2220" y="380" width="255" height="70" as="geometry" />
+        <mxCell id="d0_L1r0c2" value="API Express: valida el JWT → user_id; busca su local y el análisis en curso" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="2220" y="476" width="255" height="70" as="geometry" />
         </mxCell>
         <mxCell id="d0_L1r0c3" value="restaurante (owner_id = user_id) · analisis (EN_COLA / EN_CURSO)" style="shape=cylinder3;boundedLbl=1;backgroundOutline=1;size=8;whiteSpace=wrap;html=1;fontSize=12;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
-          <mxGeometry x="2505" y="380" width="255" height="70" as="geometry" />
+          <mxGeometry x="2505" y="476" width="255" height="70" as="geometry" />
         </mxCell>
         <mxCell id="d0_L1r1c2" value="200 {restaurante, altaEstado, analisisEnCursoId}" style="shape=parallelogram;perimeter=parallelogramPerimeter;fixedSize=1;size=16;whiteSpace=wrap;html=1;fontSize=12;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
-          <mxGeometry x="2220" y="476" width="255" height="70" as="geometry" />
+          <mxGeometry x="2220" y="572" width="255" height="70" as="geometry" />
         </mxCell>
         <mxCell id="d0_e1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#ffffff;fontColor=#000000;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="d0_gst" target="d0_gf1">
           <mxGeometry relative="1" as="geometry">
@@ -259,22 +262,25 @@
         <mxCell id="d0_e15" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#ffffff;fontColor=#000000;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="d0_L0r0c0" target="d0_L0r0c1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="d0_e16" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#ffffff;fontColor=#000000;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="d0_L0r0c1" target="d0_L0r0c2">
+        <mxCell id="d0_e16" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#ffffff;fontColor=#000000;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="d0_L0r1c1" target="d0_L0r1c2">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="d0_e17" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#ffffff;fontColor=#000000;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="d0_L0r0c2" target="d0_L0r0c3">
+        <mxCell id="d0_e17" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#ffffff;fontColor=#000000;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="d0_L0r1c2" target="d0_L0r1c3">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="d0_e18" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#ffffff;fontColor=#000000;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="d0_L1r0c0" target="d0_L1r0c1">
+        <mxCell id="d0_e18" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#ffffff;fontColor=#000000;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="d0_L0r0c1" target="d0_L0r1c1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="d0_e19" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#ffffff;fontColor=#000000;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="d0_L1r0c1" target="d0_L1r0c2">
+        <mxCell id="d0_e19" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#ffffff;fontColor=#000000;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="d0_L1r0c0" target="d0_L1r0c1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="d0_e20" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#ffffff;fontColor=#000000;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="d0_L1r0c2" target="d0_L1r0c3">
+        <mxCell id="d0_e20" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#ffffff;fontColor=#000000;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="d0_L1r0c1" target="d0_L1r0c2">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="d0_e21" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#ffffff;fontColor=#000000;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="d0_L1r0c2" target="d0_L1r1c2">
+        <mxCell id="d0_e21" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#ffffff;fontColor=#000000;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="d0_L1r0c2" target="d0_L1r0c3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="d0_e22" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#ffffff;fontColor=#000000;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="d0_L1r0c2" target="d0_L1r1c2">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
       </root>
@@ -292,16 +298,16 @@
           <mxGeometry x="580" y="150" width="1000" height="1440" as="geometry" />
         </mxCell>
         <mxCell id="d1_lane4" value="F5 · recuperarContrasena(email) [P1]&lt;br&gt;&lt;i&gt;[P1 · conveniente]&lt;/i&gt;" style="rounded=1;arcSize=1;whiteSpace=wrap;html=1;fillColor=#f3f7fd;strokeColor=#1a4fa3;strokeWidth=2;verticalAlign=top;align=left;spacingLeft=12;spacingTop=4;fontSize=16;fontStyle=1;dashed=1;dashPattern=8 4;fontSize=13;fillColor=#fbfbf8;" vertex="1" parent="1">
-          <mxGeometry x="1632" y="902" width="1146" height="124" as="geometry" />
+          <mxGeometry x="1632" y="912" width="1146" height="124" as="geometry" />
         </mxCell>
         <mxCell id="d1_lane3" value="F4 · cargarMiRestaurante() — igual que en Arranque" style="rounded=1;arcSize=1;whiteSpace=wrap;html=1;fillColor=#f3f7fd;strokeColor=#1a4fa3;strokeWidth=2;verticalAlign=top;align=left;spacingLeft=12;spacingTop=4;fontSize=16;fontStyle=1;fontSize=13;fillColor=#fbfbf8;" vertex="1" parent="1">
-          <mxGeometry x="1632" y="748" width="1146" height="124" as="geometry" />
+          <mxGeometry x="1632" y="758" width="1146" height="124" as="geometry" />
         </mxCell>
         <mxCell id="d1_lane2" value="F3 · iniciarSesion(email, contrasena)" style="rounded=1;arcSize=1;whiteSpace=wrap;html=1;fillColor=#f3f7fd;strokeColor=#1a4fa3;strokeWidth=2;verticalAlign=top;align=left;spacingLeft=12;spacingTop=4;fontSize=16;fontStyle=1;fontSize=13;fillColor=#fbfbf8;" vertex="1" parent="1">
-          <mxGeometry x="1632" y="594" width="1146" height="124" as="geometry" />
+          <mxGeometry x="1632" y="604" width="1146" height="124" as="geometry" />
         </mxCell>
         <mxCell id="d1_lane1" value="F2 · crearCuenta(email, contrasena)" style="rounded=1;arcSize=1;whiteSpace=wrap;html=1;fillColor=#f3f7fd;strokeColor=#1a4fa3;strokeWidth=2;verticalAlign=top;align=left;spacingLeft=12;spacingTop=4;fontSize=16;fontStyle=1;fontSize=13;fillColor=#fbfbf8;" vertex="1" parent="1">
-          <mxGeometry x="1632" y="344" width="1146" height="220" as="geometry" />
+          <mxGeometry x="1632" y="344" width="1146" height="230" as="geometry" />
         </mxCell>
         <mxCell id="d1_lane0" value="F1 · validar() — en el dispositivo, sin red" style="rounded=1;arcSize=1;whiteSpace=wrap;html=1;fillColor=#f3f7fd;strokeColor=#1a4fa3;strokeWidth=2;verticalAlign=top;align=left;spacingLeft=12;spacingTop=4;fontSize=16;fontStyle=1;fontSize=13;fillColor=#fbfbf8;" vertex="1" parent="1">
           <mxGeometry x="1632" y="190" width="1146" height="124" as="geometry" />
@@ -309,19 +315,19 @@
         <mxCell id="d1_title" value="S01A · ACCESO" style="text;html=1;whiteSpace=wrap;fontSize=24;fontStyle=1;align=left;verticalAlign=top;fontSize=40;" vertex="1" parent="1">
           <mxGeometry x="40" y="18" width="2400" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="d1_sub" value="Cómo se lee: izquierda, los datos de la pantalla (notas) · centro, el flujo que sigue el usuario y las funciones que lanza (F1, F2…) · derecha, qué hace cada función por fuera: llamada a la API propia, Edge Function o worker Node, APIs externas y tablas. Ruta Android: Acceso · Ruta en el panel web: /acceso · Pantalla nueva (falta en Figma, propuesta en pantallas_nuevas.html) · P0 · D-04." style="text;html=1;whiteSpace=wrap;fontSize=13;align=left;verticalAlign=top;fontColor=#333333;" vertex="1" parent="1">
+        <mxCell id="d1_sub" value="Cómo se lee: izquierda, los datos de la pantalla (notas) · centro, el flujo que sigue el usuario y las funciones que lanza (F1, F2…) · derecha, qué hace cada función por fuera: llamada a la API propia (Express en Vercel) o worker, APIs externas y tablas. Ruta Android: Acceso · Ruta en el panel web: /acceso · Pantalla nueva (falta en Figma, propuesta en pantallas_nuevas.html) · P0 · D-04." style="text;html=1;whiteSpace=wrap;fontSize=13;align=left;verticalAlign=top;fontColor=#333333;" vertex="1" parent="1">
           <mxGeometry x="40" y="86" width="2740" height="44" as="geometry" />
         </mxCell>
-        <mxCell id="d1_n150" value="&lt;b&gt;Clases&lt;/b&gt;&lt;br&gt;• Android: AccesoViewModel · AuthRepository (supabase-kt) · RestauranteRepository&lt;br&gt;• Panel web: AccesoStore · SesionService (supabase-js) · RestaurantesApi" style="shape=note;size=14;whiteSpace=wrap;html=1;fontSize=12;fillColor=#fff9c4;strokeColor=#c9b458;align=left;spacingLeft=8;spacingRight=6;fontSize=11;" vertex="1" parent="1">
+        <mxCell id="d1_n150" value="&lt;b&gt;Clases&lt;/b&gt;&lt;br&gt;• Android: AccesoViewModel · AuthRepository (Retrofit → /auth) · RestauranteRepository&lt;br&gt;• Panel web: AccesoStore · SesionService (HttpClient → /auth) · RestaurantesApi" style="shape=note;size=14;whiteSpace=wrap;html=1;fontSize=12;fillColor=#fff9c4;strokeColor=#c9b458;align=left;spacingLeft=8;spacingRight=6;fontSize=11;" vertex="1" parent="1">
           <mxGeometry x="40" y="150" width="500" height="101" as="geometry" />
         </mxCell>
         <mxCell id="d1_n269" value="&lt;b&gt;Datos que entran&lt;/b&gt;&lt;br&gt;• email · String · obligatorio · formato email · máx. 254&lt;br&gt;• contrasena · String · mín. 8 · nunca se guarda en la app ni en registros&lt;br&gt;• terminosAceptados · Boolean · obligatorio al crear cuenta&lt;br&gt;• pestana · CREAR o ENTRAR (solo estado de pantalla)" style="shape=note;size=14;whiteSpace=wrap;html=1;fontSize=12;fillColor=#fff9c4;strokeColor=#c9b458;align=left;spacingLeft=8;spacingRight=6;fontSize=11;" vertex="1" parent="1">
           <mxGeometry x="40" y="269" width="500" height="131" as="geometry" />
         </mxCell>
-        <mxCell id="d1_n418" value="&lt;b&gt;Datos que recibe&lt;/b&gt;&lt;br&gt;• Sesión: JWT de acceso (1 h) + refresh → la guarda supabase-kt / supabase-js&lt;br&gt;• user_id (= auth.users.id)" style="shape=note;size=14;whiteSpace=wrap;html=1;fontSize=12;fillColor=#fff9c4;strokeColor=#c9b458;align=left;spacingLeft=8;spacingRight=6;fontSize=11;" vertex="1" parent="1">
+        <mxCell id="d1_n418" value="&lt;b&gt;Datos que recibe&lt;/b&gt;&lt;br&gt;• Sesión: JWT de acceso (1 h) + refresh que devuelve la API → DataStore (Android) / localStorage (web)&lt;br&gt;• user_id (= auth.users.id)" style="shape=note;size=14;whiteSpace=wrap;html=1;fontSize=12;fillColor=#fff9c4;strokeColor=#c9b458;align=left;spacingLeft=8;spacingRight=6;fontSize=11;" vertex="1" parent="1">
           <mxGeometry x="40" y="418" width="500" height="86" as="geometry" />
         </mxCell>
-        <mxCell id="d1_n522" value="&lt;b&gt;Datos que se guardan&lt;/b&gt;&lt;br&gt;• auth.users (Supabase Auth; contraseña con hash)&lt;br&gt;• perfil_usuario {id, email, terminos_version, terminos_aceptados_en}: lo crea un trigger al registrarse" style="shape=note;size=14;whiteSpace=wrap;html=1;fontSize=12;fillColor=#fff9c4;strokeColor=#c9b458;align=left;spacingLeft=8;spacingRight=6;fontSize=11;" vertex="1" parent="1">
+        <mxCell id="d1_n522" value="&lt;b&gt;Datos que se guardan&lt;/b&gt;&lt;br&gt;• auth.users (Supabase Auth; contraseña con hash)&lt;br&gt;• perfil_usuario {id, email, terminos_version, terminos_aceptados_en}: lo crea la API con Prisma al registrarse" style="shape=note;size=14;whiteSpace=wrap;html=1;fontSize=12;fillColor=#fff9c4;strokeColor=#c9b458;align=left;spacingLeft=8;spacingRight=6;fontSize=11;" vertex="1" parent="1">
           <mxGeometry x="40" y="522" width="500" height="86" as="geometry" />
         </mxCell>
         <mxCell id="d1_n626" value="&lt;b&gt;Estado de pantalla&lt;/b&gt;&lt;br&gt;• Formulario(email, pestaña, errores por campo) · Enviando · Error(mensaje) · Hecho(destino)" style="shape=note;size=14;whiteSpace=wrap;html=1;fontSize=12;fillColor=#fff9c4;strokeColor=#c9b458;align=left;spacingLeft=8;spacingRight=6;fontSize=11;" vertex="1" parent="1">
@@ -360,7 +366,7 @@
         <mxCell id="d1_gf3" value="F3 · iniciarSesion(email, contrasena)" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
           <mxGeometry x="670" y="960" width="260" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="d1_gm" value="Respuesta de Supabase Auth" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+        <mxCell id="d1_gm" value="Respuesta de la API (/auth)" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
           <mxGeometry x="670" y="1085" width="260" height="70" as="geometry" />
         </mxCell>
         <mxCell id="d1_gd3" value="¿Sesión recibida?" style="rhombus;whiteSpace=wrap;html=1;fontSize=12;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
@@ -388,46 +394,55 @@
           <mxGeometry x="1935" y="226" width="255" height="70" as="geometry" />
         </mxCell>
         <mxCell id="d1_L1r0c0" value="F2 · crearCuenta()" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
-          <mxGeometry x="1650" y="380" width="255" height="70" as="geometry" />
+          <mxGeometry x="1650" y="385" width="255" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="d1_L1r0c1" value="supabase.auth.signUp({email, password})" style="shape=parallelogram;perimeter=parallelogramPerimeter;fixedSize=1;size=16;whiteSpace=wrap;html=1;fontSize=12;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
-          <mxGeometry x="1935" y="380" width="255" height="70" as="geometry" />
+        <mxCell id="d1_L1r0c1" value="POST /api/v1/auth/registro {email, contrasena, terminosVersion}" style="shape=parallelogram;perimeter=parallelogramPerimeter;fixedSize=1;size=16;whiteSpace=wrap;html=1;fontSize=12;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1935" y="385" width="255" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="d1_L1r0c2" value="Supabase Auth: crea auth.users (confirmación de email desactivada, D-04)" style="shape=cylinder3;boundedLbl=1;backgroundOutline=1;size=8;whiteSpace=wrap;html=1;fontSize=12;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
-          <mxGeometry x="2220" y="380" width="255" height="70" as="geometry" />
+        <mxCell id="d1_L1r0c2" value="API Express: crea el usuario en Supabase Auth desde el servidor (sin confirmación de email, D-04)" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="2220" y="380" width="255" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="d1_L1r1c2" value="Trigger de Postgres: INSERT perfil_usuario con versión y fecha de los términos" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
-          <mxGeometry x="2220" y="476" width="255" height="70" as="geometry" />
+        <mxCell id="d1_L1r0c3" value="Supabase Auth: auth.users" style="shape=cylinder3;boundedLbl=1;backgroundOutline=1;size=8;whiteSpace=wrap;html=1;fontSize=12;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="2505" y="380" width="255" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="d1_L1r1c2" value="Prisma: INSERT perfil_usuario con versión y fecha de los términos; devuelve los tokens" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="2220" y="486" width="255" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="d1_L1r1c3" value="perfil_usuario" style="shape=cylinder3;boundedLbl=1;backgroundOutline=1;size=8;whiteSpace=wrap;html=1;fontSize=12;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="2505" y="486" width="255" height="70" as="geometry" />
         </mxCell>
         <mxCell id="d1_L2r0c0" value="F3 · iniciarSesion()" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
-          <mxGeometry x="1650" y="630" width="255" height="70" as="geometry" />
+          <mxGeometry x="1650" y="640" width="255" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="d1_L2r0c1" value="supabase.auth.signInWithPassword({email, password})" style="shape=parallelogram;perimeter=parallelogramPerimeter;fixedSize=1;size=16;whiteSpace=wrap;html=1;fontSize=12;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
-          <mxGeometry x="1935" y="630" width="255" height="70" as="geometry" />
+        <mxCell id="d1_L2r0c1" value="POST /api/v1/auth/acceso {email, contrasena}" style="shape=parallelogram;perimeter=parallelogramPerimeter;fixedSize=1;size=16;whiteSpace=wrap;html=1;fontSize=12;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1935" y="640" width="255" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="d1_L2r0c2" value="Supabase Auth → JWT de acceso + refresh" style="shape=cylinder3;boundedLbl=1;backgroundOutline=1;size=8;whiteSpace=wrap;html=1;fontSize=12;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
-          <mxGeometry x="2220" y="630" width="255" height="70" as="geometry" />
+        <mxCell id="d1_L2r0c2" value="API Express: signInWithPassword en el servidor" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="2220" y="640" width="255" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="d1_L2r0c3" value="Supabase Auth → JWT de acceso + refresh" style="shape=cylinder3;boundedLbl=1;backgroundOutline=1;size=8;whiteSpace=wrap;html=1;fontSize=12;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="2505" y="640" width="255" height="70" as="geometry" />
         </mxCell>
         <mxCell id="d1_L3r0c0" value="F4 · cargarMiRestaurante()" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
-          <mxGeometry x="1650" y="784" width="255" height="70" as="geometry" />
+          <mxGeometry x="1650" y="794" width="255" height="70" as="geometry" />
         </mxCell>
         <mxCell id="d1_L3r0c1" value="GET /api/v1/restaurantes/mio" style="shape=parallelogram;perimeter=parallelogramPerimeter;fixedSize=1;size=16;whiteSpace=wrap;html=1;fontSize=12;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
-          <mxGeometry x="1935" y="784" width="255" height="70" as="geometry" />
+          <mxGeometry x="1935" y="794" width="255" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="d1_L3r0c2" value="Edge Function: valida el JWT; busca local y análisis en curso" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
-          <mxGeometry x="2220" y="784" width="255" height="70" as="geometry" />
+        <mxCell id="d1_L3r0c2" value="API Express: valida el JWT; busca local y análisis en curso" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="2220" y="794" width="255" height="70" as="geometry" />
         </mxCell>
         <mxCell id="d1_L3r0c3" value="restaurante · analisis" style="shape=cylinder3;boundedLbl=1;backgroundOutline=1;size=8;whiteSpace=wrap;html=1;fontSize=12;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
-          <mxGeometry x="2505" y="784" width="255" height="70" as="geometry" />
+          <mxGeometry x="2505" y="794" width="255" height="70" as="geometry" />
         </mxCell>
         <mxCell id="d1_L4r0c0" value="F5 · recuperarContrasena()&lt;br&gt;&lt;i&gt;[P1 · conveniente]&lt;/i&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#dae8fc;strokeColor=#6c8ebf;dashed=1;dashPattern=8 4;" vertex="1" parent="1">
-          <mxGeometry x="1650" y="938" width="255" height="70" as="geometry" />
+          <mxGeometry x="1650" y="948" width="255" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="d1_L4r0c1" value="supabase.auth.resetPasswordForEmail(email)" style="shape=parallelogram;perimeter=parallelogramPerimeter;fixedSize=1;size=16;whiteSpace=wrap;html=1;fontSize=12;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
-          <mxGeometry x="1935" y="938" width="255" height="70" as="geometry" />
+        <mxCell id="d1_L4r0c1" value="POST /api/v1/auth/recuperar {email} (la API llama a Supabase Auth)" style="shape=parallelogram;perimeter=parallelogramPerimeter;fixedSize=1;size=16;whiteSpace=wrap;html=1;fontSize=12;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1935" y="948" width="255" height="70" as="geometry" />
         </mxCell>
         <mxCell id="d1_L4r0c2" value="Email de Supabase con enlace para cambiarla" style="shape=hexagon;perimeter=hexagonPerimeter2;fixedSize=1;size=16;whiteSpace=wrap;html=1;fontSize=12;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
-          <mxGeometry x="2220" y="938" width="255" height="70" as="geometry" />
+          <mxGeometry x="2220" y="948" width="255" height="70" as="geometry" />
         </mxCell>
         <mxCell id="d1_e1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#ffffff;fontColor=#000000;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="d1_gst" target="d1_gform">
           <mxGeometry relative="1" as="geometry">
@@ -516,28 +531,37 @@
         <mxCell id="d1_e18" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#ffffff;fontColor=#000000;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="d1_L1r0c1" target="d1_L1r0c2">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="d1_e19" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#ffffff;fontColor=#000000;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="d1_L1r0c2" target="d1_L1r1c2">
+        <mxCell id="d1_e19" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#ffffff;fontColor=#000000;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="d1_L1r0c2" target="d1_L1r0c3">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="d1_e20" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#ffffff;fontColor=#000000;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="d1_L2r0c0" target="d1_L2r0c1">
+        <mxCell id="d1_e20" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#ffffff;fontColor=#000000;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="d1_L1r1c2" target="d1_L1r1c3">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="d1_e21" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#ffffff;fontColor=#000000;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="d1_L2r0c1" target="d1_L2r0c2">
+        <mxCell id="d1_e21" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#ffffff;fontColor=#000000;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="d1_L1r0c2" target="d1_L1r1c2">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="d1_e22" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#ffffff;fontColor=#000000;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="d1_L3r0c0" target="d1_L3r0c1">
+        <mxCell id="d1_e22" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#ffffff;fontColor=#000000;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="d1_L2r0c0" target="d1_L2r0c1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="d1_e23" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#ffffff;fontColor=#000000;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="d1_L3r0c1" target="d1_L3r0c2">
+        <mxCell id="d1_e23" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#ffffff;fontColor=#000000;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="d1_L2r0c1" target="d1_L2r0c2">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="d1_e24" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#ffffff;fontColor=#000000;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="d1_L3r0c2" target="d1_L3r0c3">
+        <mxCell id="d1_e24" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#ffffff;fontColor=#000000;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="d1_L2r0c2" target="d1_L2r0c3">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="d1_e25" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#ffffff;fontColor=#000000;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;dashed=1;dashPattern=8 4;" edge="1" parent="1" source="d1_L4r0c0" target="d1_L4r0c1">
+        <mxCell id="d1_e25" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#ffffff;fontColor=#000000;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="d1_L3r0c0" target="d1_L3r0c1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="d1_e26" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#ffffff;fontColor=#000000;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;dashed=1;dashPattern=8 4;" edge="1" parent="1" source="d1_L4r0c1" target="d1_L4r0c2">
+        <mxCell id="d1_e26" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#ffffff;fontColor=#000000;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="d1_L3r0c1" target="d1_L3r0c2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="d1_e27" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#ffffff;fontColor=#000000;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="d1_L3r0c2" target="d1_L3r0c3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="d1_e28" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#ffffff;fontColor=#000000;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;dashed=1;dashPattern=8 4;" edge="1" parent="1" source="d1_L4r0c0" target="d1_L4r0c1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="d1_e29" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#ffffff;fontColor=#000000;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;dashed=1;dashPattern=8 4;" edge="1" parent="1" source="d1_L4r0c1" target="d1_L4r0c2">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
       </root>
@@ -572,7 +596,7 @@
         <mxCell id="d2_title" value="S02 · BUSCA TU LOCAL" style="text;html=1;whiteSpace=wrap;fontSize=24;fontStyle=1;align=left;verticalAlign=top;fontSize=40;" vertex="1" parent="1">
           <mxGeometry x="40" y="18" width="2400" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="d2_sub" value="Cómo se lee: izquierda, los datos de la pantalla (notas) · centro, el flujo que sigue el usuario y las funciones que lanza (F1, F2…) · derecha, qué hace cada función por fuera: llamada a la API propia, Edge Function o worker Node, APIs externas y tablas. Ruta Android: Empezamos (feature/empezamos, hoy feature/inicio) · Ruta en el panel web: /alta/buscar · P0 · D-05, D-06, D-13, D-14, D-15." style="text;html=1;whiteSpace=wrap;fontSize=13;align=left;verticalAlign=top;fontColor=#333333;" vertex="1" parent="1">
+        <mxCell id="d2_sub" value="Cómo se lee: izquierda, los datos de la pantalla (notas) · centro, el flujo que sigue el usuario y las funciones que lanza (F1, F2…) · derecha, qué hace cada función por fuera: llamada a la API propia (Express en Vercel) o worker, APIs externas y tablas. Ruta Android: Empezamos (feature/empezamos, hoy feature/inicio) · Ruta en el panel web: /alta/buscar · P0 · D-05, D-06, D-13, D-14, D-15." style="text;html=1;whiteSpace=wrap;fontSize=13;align=left;verticalAlign=top;fontColor=#333333;" vertex="1" parent="1">
           <mxGeometry x="40" y="86" width="2740" height="44" as="geometry" />
         </mxCell>
         <mxCell id="d2_n150" value="&lt;b&gt;Clases&lt;/b&gt;&lt;br&gt;• Android: BuscarLocalViewModel · RestauranteRepository · SocietyApi (Retrofit)&lt;br&gt;• Panel web: BusquedaStore · RestaurantesApi (HttpClient)" style="shape=note;size=14;whiteSpace=wrap;html=1;fontSize=12;fillColor=#fff9c4;strokeColor=#c9b458;align=left;spacingLeft=8;spacingRight=6;fontSize=11;" vertex="1" parent="1">
@@ -671,7 +695,7 @@
         <mxCell id="d2_L0r0c1" value="GET /api/v1/places/search?q=…" style="shape=parallelogram;perimeter=parallelogramPerimeter;fixedSize=1;size=16;whiteSpace=wrap;html=1;fontSize=12;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
           <mxGeometry x="1935" y="231" width="255" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="d2_L0r0c2" value="Edge Function: valida JWT y texto; llama a Places con la clave del servidor" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+        <mxCell id="d2_L0r0c2" value="API Express: valida JWT y texto; llama a Places con la clave del servidor" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
           <mxGeometry x="2220" y="231" width="255" height="70" as="geometry" />
         </mxCell>
         <mxCell id="d2_L0r0c3" value="Google Places · Text Search (POST places:searchText, FieldMask, languageCode es)" style="shape=hexagon;perimeter=hexagonPerimeter2;fixedSize=1;size=16;whiteSpace=wrap;html=1;fontSize=12;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
@@ -686,7 +710,7 @@
         <mxCell id="d2_L1r0c1" value="GET /places/search?q=…&amp;amp;pageToken=…" style="shape=parallelogram;perimeter=parallelogramPerimeter;fixedSize=1;size=16;whiteSpace=wrap;html=1;fontSize=12;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
           <mxGeometry x="1935" y="486" width="255" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="d2_L1r0c2" value="Edge Function: misma llamada con pageToken" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+        <mxCell id="d2_L1r0c2" value="API Express: misma llamada con pageToken" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
           <mxGeometry x="2220" y="486" width="255" height="70" as="geometry" />
         </mxCell>
         <mxCell id="d2_L1r0c3" value="Places · Text Search (páginas 2 y 3)" style="shape=hexagon;perimeter=hexagonPerimeter2;fixedSize=1;size=16;whiteSpace=wrap;html=1;fontSize=12;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
@@ -698,7 +722,7 @@
         <mxCell id="d2_L2r0c1" value="GET /places/photo?name=…&amp;amp;maxWidthPx=400" style="shape=parallelogram;perimeter=parallelogramPerimeter;fixedSize=1;size=16;whiteSpace=wrap;html=1;fontSize=12;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
           <mxGeometry x="1935" y="640" width="255" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="d2_L2r0c2" value="Edge Function: pide la URL sin redirección" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+        <mxCell id="d2_L2r0c2" value="API Express: pide la URL sin redirección" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
           <mxGeometry x="2220" y="640" width="255" height="70" as="geometry" />
         </mxCell>
         <mxCell id="d2_L2r0c3" value="Places · Place Photos (skipHttpRedirect=true) → photoUri" style="shape=hexagon;perimeter=hexagonPerimeter2;fixedSize=1;size=16;whiteSpace=wrap;html=1;fontSize=12;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
@@ -713,7 +737,7 @@
         <mxCell id="d2_L3r0c1" value="POST /api/v1/restaurantes {origen: GOOGLE, googlePlaceId, declaraGestor}" style="shape=parallelogram;perimeter=parallelogramPerimeter;fixedSize=1;size=16;whiteSpace=wrap;html=1;fontSize=12;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
           <mxGeometry x="1935" y="890" width="255" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="d2_L3r0c2" value="Edge Function: ¿place_id ya existe o el usuario ya tiene local? → 409" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+        <mxCell id="d2_L3r0c2" value="API Express: ¿place_id ya existe o el usuario ya tiene local? → 409" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
           <mxGeometry x="2220" y="890" width="255" height="80" as="geometry" />
         </mxCell>
         <mxCell id="d2_L3r0c3" value="Places · Place Details: datos básicos (D-06)" style="shape=hexagon;perimeter=hexagonPerimeter2;fixedSize=1;size=16;whiteSpace=wrap;html=1;fontSize=12;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
@@ -734,7 +758,7 @@
         <mxCell id="d2_L4r0c1" value="POST /restaurantes/{id}/analisis" style="shape=parallelogram;perimeter=parallelogramPerimeter;fixedSize=1;size=16;whiteSpace=wrap;html=1;fontSize=12;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
           <mxGeometry x="1935" y="1246" width="255" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="d2_L4r0c2" value="Edge Function: INSERT analisis (EN_COLA) + trabajo ANALISIS; si ya hay uno, lo devuelve" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+        <mxCell id="d2_L4r0c2" value="API Express: INSERT analisis (EN_COLA) + trabajo ANALISIS; si ya hay uno, lo devuelve" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
           <mxGeometry x="2220" y="1246" width="255" height="70" as="geometry" />
         </mxCell>
         <mxCell id="d2_L4r0c3" value="analisis · trabajo" style="shape=cylinder3;boundedLbl=1;backgroundOutline=1;size=8;whiteSpace=wrap;html=1;fontSize=12;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
@@ -949,7 +973,7 @@
         <mxCell id="d3_title" value="S02M · ALTA MANUAL" style="text;html=1;whiteSpace=wrap;fontSize=24;fontStyle=1;align=left;verticalAlign=top;fontSize=40;" vertex="1" parent="1">
           <mxGeometry x="40" y="18" width="2400" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="d3_sub" value="Cómo se lee: izquierda, los datos de la pantalla (notas) · centro, el flujo que sigue el usuario y las funciones que lanza (F1, F2…) · derecha, qué hace cada función por fuera: llamada a la API propia, Edge Function o worker Node, APIs externas y tablas. Ruta Android: AltaManual · Ruta en el panel web: /alta/manual · Pantalla nueva · P0 simplificada." style="text;html=1;whiteSpace=wrap;fontSize=13;align=left;verticalAlign=top;fontColor=#333333;" vertex="1" parent="1">
+        <mxCell id="d3_sub" value="Cómo se lee: izquierda, los datos de la pantalla (notas) · centro, el flujo que sigue el usuario y las funciones que lanza (F1, F2…) · derecha, qué hace cada función por fuera: llamada a la API propia (Express en Vercel) o worker, APIs externas y tablas. Ruta Android: AltaManual · Ruta en el panel web: /alta/manual · Pantalla nueva · P0 simplificada." style="text;html=1;whiteSpace=wrap;fontSize=13;align=left;verticalAlign=top;fontColor=#333333;" vertex="1" parent="1">
           <mxGeometry x="40" y="86" width="2740" height="44" as="geometry" />
         </mxCell>
         <mxCell id="d3_n150" value="&lt;b&gt;Clases&lt;/b&gt;&lt;br&gt;• Android: AltaManualViewModel · RestauranteRepository&lt;br&gt;• Panel web: AltaManualStore · RestaurantesApi" style="shape=note;size=14;whiteSpace=wrap;html=1;fontSize=12;fillColor=#fff9c4;strokeColor=#c9b458;align=left;spacingLeft=8;spacingRight=6;fontSize=11;" vertex="1" parent="1">
@@ -1015,7 +1039,7 @@
         <mxCell id="d3_L1r0c1" value="POST /api/v1/restaurantes {origen: MANUAL, nombre, direccion, municipio, tipo, web, instagram, declaraGestor}" style="shape=parallelogram;perimeter=parallelogramPerimeter;fixedSize=1;size=16;whiteSpace=wrap;html=1;fontSize=12;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
           <mxGeometry x="1935" y="380" width="255" height="90" as="geometry" />
         </mxCell>
-        <mxCell id="d3_L1r0c2" value="Edge Function: valida con zod; un local por usuario (409)" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+        <mxCell id="d3_L1r0c2" value="API Express: valida con zod; un local por usuario (409)" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
           <mxGeometry x="2220" y="380" width="255" height="90" as="geometry" />
         </mxCell>
         <mxCell id="d3_L1r0c3" value="INSERT restaurante + canal (fuente USUARIO)" style="shape=cylinder3;boundedLbl=1;backgroundOutline=1;size=8;whiteSpace=wrap;html=1;fontSize=12;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
@@ -1027,7 +1051,7 @@
         <mxCell id="d3_L2r0c1" value="POST /restaurantes/{id}/analisis" style="shape=parallelogram;perimeter=parallelogramPerimeter;fixedSize=1;size=16;whiteSpace=wrap;html=1;fontSize=12;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
           <mxGeometry x="1935" y="554" width="255" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="d3_L2r0c2" value="Edge Function: analisis + trabajo ANALISIS (sin paso de Google)" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+        <mxCell id="d3_L2r0c2" value="API Express: analisis + trabajo ANALISIS (sin paso de Google)" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
           <mxGeometry x="2220" y="554" width="255" height="70" as="geometry" />
         </mxCell>
         <mxCell id="d3_L2r0c3" value="analisis · trabajo" style="shape=cylinder3;boundedLbl=1;backgroundOutline=1;size=8;whiteSpace=wrap;html=1;fontSize=12;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
@@ -1133,7 +1157,7 @@
         <mxCell id="d4_title" value="S03 · ESTUDIANDO TU LOCAL" style="text;html=1;whiteSpace=wrap;fontSize=24;fontStyle=1;align=left;verticalAlign=top;fontSize=40;" vertex="1" parent="1">
           <mxGeometry x="40" y="18" width="2400" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="d4_sub" value="Cómo se lee: izquierda, los datos de la pantalla (notas) · centro, el flujo que sigue el usuario y las funciones que lanza (F1, F2…) · derecha, qué hace cada función por fuera: llamada a la API propia, Edge Function o worker Node, APIs externas y tablas. Ruta Android: Analisis(analisisId) · Ruta en el panel web: /alta/analisis/:analisisId · P0 · D-08, D-19, D-28." style="text;html=1;whiteSpace=wrap;fontSize=13;align=left;verticalAlign=top;fontColor=#333333;" vertex="1" parent="1">
+        <mxCell id="d4_sub" value="Cómo se lee: izquierda, los datos de la pantalla (notas) · centro, el flujo que sigue el usuario y las funciones que lanza (F1, F2…) · derecha, qué hace cada función por fuera: llamada a la API propia (Express en Vercel) o worker, APIs externas y tablas. Ruta Android: Analisis(analisisId) · Ruta en el panel web: /alta/analisis/:analisisId · P0 · D-08, D-19, D-28." style="text;html=1;whiteSpace=wrap;fontSize=13;align=left;verticalAlign=top;fontColor=#333333;" vertex="1" parent="1">
           <mxGeometry x="40" y="86" width="2740" height="44" as="geometry" />
         </mxCell>
         <mxCell id="d4_n150" value="&lt;b&gt;Clases&lt;/b&gt;&lt;br&gt;• Android: AnalisisViewModel · AnalisisRepository&lt;br&gt;• Panel web: AnalisisStore · AnalisisApi (timer + switchMap)" style="shape=note;size=14;whiteSpace=wrap;html=1;fontSize=12;fillColor=#fff9c4;strokeColor=#c9b458;align=left;spacingLeft=8;spacingRight=6;fontSize=11;" vertex="1" parent="1">
@@ -1217,7 +1241,7 @@
         <mxCell id="d4_L0r0c1" value="GET /api/v1/analisis/{id}" style="shape=parallelogram;perimeter=parallelogramPerimeter;fixedSize=1;size=16;whiteSpace=wrap;html=1;fontSize=12;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
           <mxGeometry x="1935" y="231" width="255" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="d4_L0r0c2" value="Edge Function: lee analisis + pasos (RLS) y calcula tiempoRestanteSeg con la mediana de los últimos 20" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+        <mxCell id="d4_L0r0c2" value="API Express: lee analisis + pasos del usuario y calcula tiempoRestanteSeg con la mediana de los últimos 20" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
           <mxGeometry x="2220" y="226" width="255" height="80" as="geometry" />
         </mxCell>
         <mxCell id="d4_L0r0c3" value="analisis · paso_analisis" style="shape=cylinder3;boundedLbl=1;backgroundOutline=1;size=8;whiteSpace=wrap;html=1;fontSize=12;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
@@ -1232,7 +1256,7 @@
         <mxCell id="d4_L1r0c1" value="POST /analisis/{id}/cancelar" style="shape=parallelogram;perimeter=parallelogramPerimeter;fixedSize=1;size=16;whiteSpace=wrap;html=1;fontSize=12;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
           <mxGeometry x="1935" y="486" width="255" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="d4_L1r0c2" value="Edge Function: CANCELADO en analisis y trabajo; el worker lo mira entre pasos" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+        <mxCell id="d4_L1r0c2" value="API Express: CANCELADO en analisis y trabajo; el worker lo mira entre pasos" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
           <mxGeometry x="2220" y="486" width="255" height="70" as="geometry" />
         </mxCell>
         <mxCell id="d4_L1r0c3" value="analisis · trabajo" style="shape=cylinder3;boundedLbl=1;backgroundOutline=1;size=8;whiteSpace=wrap;html=1;fontSize=12;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
@@ -1244,7 +1268,7 @@
         <mxCell id="d4_L2r0c1" value="POST /restaurantes/{id}/analisis" style="shape=parallelogram;perimeter=parallelogramPerimeter;fixedSize=1;size=16;whiteSpace=wrap;html=1;fontSize=12;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
           <mxGeometry x="1935" y="640" width="255" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="d4_L2r0c2" value="Edge Function: nuevo analisis + trabajo ANALISIS" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+        <mxCell id="d4_L2r0c2" value="API Express: nuevo analisis + trabajo ANALISIS" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
           <mxGeometry x="2220" y="640" width="255" height="70" as="geometry" />
         </mxCell>
         <mxCell id="d4_L2r0c3" value="analisis · trabajo" style="shape=cylinder3;boundedLbl=1;backgroundOutline=1;size=8;whiteSpace=wrap;html=1;fontSize=12;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
@@ -1467,7 +1491,7 @@
         <mxCell id="d5_title" value="S04 · ASÍ TE VE INTERNET" style="text;html=1;whiteSpace=wrap;fontSize=24;fontStyle=1;align=left;verticalAlign=top;fontSize=40;" vertex="1" parent="1">
           <mxGeometry x="40" y="18" width="2400" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="d5_sub" value="Cómo se lee: izquierda, los datos de la pantalla (notas) · centro, el flujo que sigue el usuario y las funciones que lanza (F1, F2…) · derecha, qué hace cada función por fuera: llamada a la API propia, Edge Function o worker Node, APIs externas y tablas. Ruta Android: AsiTeVeInternet(restauranteId, modoEdicion) · Ruta en el panel web: /ficha · P0 · D-06, D-09, D-31." style="text;html=1;whiteSpace=wrap;fontSize=13;align=left;verticalAlign=top;fontColor=#333333;" vertex="1" parent="1">
+        <mxCell id="d5_sub" value="Cómo se lee: izquierda, los datos de la pantalla (notas) · centro, el flujo que sigue el usuario y las funciones que lanza (F1, F2…) · derecha, qué hace cada función por fuera: llamada a la API propia (Express en Vercel) o worker, APIs externas y tablas. Ruta Android: AsiTeVeInternet(restauranteId, modoEdicion) · Ruta en el panel web: /ficha · P0 · D-06, D-09, D-31." style="text;html=1;whiteSpace=wrap;fontSize=13;align=left;verticalAlign=top;fontColor=#333333;" vertex="1" parent="1">
           <mxGeometry x="40" y="86" width="2740" height="44" as="geometry" />
         </mxCell>
         <mxCell id="d5_n150" value="&lt;b&gt;Clases&lt;/b&gt;&lt;br&gt;• Android: FichaViewModel · FichaRepository · InstagramRepository&lt;br&gt;• Panel web: FichaStore · FichaApi · InstagramApi" style="shape=note;size=14;whiteSpace=wrap;html=1;fontSize=12;fillColor=#fff9c4;strokeColor=#c9b458;align=left;spacingLeft=8;spacingRight=6;fontSize=11;" vertex="1" parent="1">
@@ -1551,7 +1575,7 @@
         <mxCell id="d5_L0r0c1" value="GET /restaurantes/{id}/ficha" style="shape=parallelogram;perimeter=parallelogramPerimeter;fixedSize=1;size=16;whiteSpace=wrap;html=1;fontSize=12;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
           <mxGeometry x="1935" y="226" width="255" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="d5_L0r0c2" value="Edge Function: ficha_marca + canales + restaurante, con origen por campo" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+        <mxCell id="d5_L0r0c2" value="API Express: ficha_marca + canales + restaurante, con origen por campo" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
           <mxGeometry x="2220" y="226" width="255" height="70" as="geometry" />
         </mxCell>
         <mxCell id="d5_L0r0c3" value="ficha_marca · canal · restaurante" style="shape=cylinder3;boundedLbl=1;backgroundOutline=1;size=8;whiteSpace=wrap;html=1;fontSize=12;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
@@ -1560,7 +1584,7 @@
         <mxCell id="d5_L0r1c1" value="GET /restaurantes/{id}/resumen-google" style="shape=parallelogram;perimeter=parallelogramPerimeter;fixedSize=1;size=16;whiteSpace=wrap;html=1;fontSize=12;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
           <mxGeometry x="1935" y="322" width="255" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="d5_L0r1c2" value="Edge Function: Place Details solo rating, userRatingCount y googleMapsUri" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+        <mxCell id="d5_L0r1c2" value="API Express: Place Details solo rating, userRatingCount y googleMapsUri" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
           <mxGeometry x="2220" y="322" width="255" height="70" as="geometry" />
         </mxCell>
         <mxCell id="d5_L0r1c3" value="Places · Place Details (en vivo, no se guarda)" style="shape=hexagon;perimeter=hexagonPerimeter2;fixedSize=1;size=16;whiteSpace=wrap;html=1;fontSize=12;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
@@ -1569,7 +1593,7 @@
         <mxCell id="d5_L0r2c1" value="GET /instagram/cuenta" style="shape=parallelogram;perimeter=parallelogramPerimeter;fixedSize=1;size=16;whiteSpace=wrap;html=1;fontSize=12;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
           <mxGeometry x="1935" y="418" width="255" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="d5_L0r2c2" value="Edge Function: estado de la cuenta, sin el token" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+        <mxCell id="d5_L0r2c2" value="API Express: estado de la cuenta, sin el token" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
           <mxGeometry x="2220" y="418" width="255" height="70" as="geometry" />
         </mxCell>
         <mxCell id="d5_L0r2c3" value="cuenta_social" style="shape=cylinder3;boundedLbl=1;backgroundOutline=1;size=8;whiteSpace=wrap;html=1;fontSize=12;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
@@ -1581,7 +1605,7 @@
         <mxCell id="d5_L1r0c1" value="PATCH /restaurantes/{id}/ficha {campo: valor, version}" style="shape=parallelogram;perimeter=parallelogramPerimeter;fixedSize=1;size=16;whiteSpace=wrap;html=1;fontSize=12;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
           <mxGeometry x="1935" y="577" width="255" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="d5_L1r0c2" value="Edge Function: valida con zod; origen USUARIO; version + 1; 409 si la versión no coincide" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+        <mxCell id="d5_L1r0c2" value="API Express: valida con zod; origen USUARIO; version + 1; 409 si la versión no coincide" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
           <mxGeometry x="2220" y="572" width="255" height="80" as="geometry" />
         </mxCell>
         <mxCell id="d5_L1r0c3" value="ficha_marca · canal · restaurante" style="shape=cylinder3;boundedLbl=1;backgroundOutline=1;size=8;whiteSpace=wrap;html=1;fontSize=12;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
@@ -1593,7 +1617,7 @@
         <mxCell id="d5_L2r0c1" value="PATCH /restaurantes/{id}/ficha {confirmada: true}" style="shape=parallelogram;perimeter=parallelogramPerimeter;fixedSize=1;size=16;whiteSpace=wrap;html=1;fontSize=12;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
           <mxGeometry x="1935" y="736" width="255" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="d5_L2r0c2" value="Edge Function: confirmada_en = ahora; alta_estado = COMPLETADA" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+        <mxCell id="d5_L2r0c2" value="API Express: confirmada_en = ahora; alta_estado = COMPLETADA" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
           <mxGeometry x="2220" y="736" width="255" height="70" as="geometry" />
         </mxCell>
         <mxCell id="d5_L2r0c3" value="ficha_marca · restaurante" style="shape=cylinder3;boundedLbl=1;backgroundOutline=1;size=8;whiteSpace=wrap;html=1;fontSize=12;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
@@ -1605,7 +1629,7 @@
         <mxCell id="d5_L3r0c1" value="POST /instagram/conexiones {cliente, retorno: S04}" style="shape=parallelogram;perimeter=parallelogramPerimeter;fixedSize=1;size=16;whiteSpace=wrap;html=1;fontSize=12;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
           <mxGeometry x="1935" y="890" width="255" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="d5_L3r0c2" value="Edge Function: crea oauth_estado y devuelve la URL de Instagram" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+        <mxCell id="d5_L3r0c2" value="API Express: crea oauth_estado y devuelve la URL de Instagram" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
           <mxGeometry x="2220" y="890" width="255" height="70" as="geometry" />
         </mxCell>
         <mxCell id="d5_L3r0c3" value="Instagram Login (detalle en S13)" style="shape=hexagon;perimeter=hexagonPerimeter2;fixedSize=1;size=16;whiteSpace=wrap;html=1;fontSize=12;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
@@ -1770,7 +1794,7 @@
         <mxCell id="d6_title" value="S05 · HOME" style="text;html=1;whiteSpace=wrap;fontSize=24;fontStyle=1;align=left;verticalAlign=top;fontSize=40;" vertex="1" parent="1">
           <mxGeometry x="40" y="18" width="2400" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="d6_sub" value="Cómo se lee: izquierda, los datos de la pantalla (notas) · centro, el flujo que sigue el usuario y las funciones que lanza (F1, F2…) · derecha, qué hace cada función por fuera: llamada a la API propia, Edge Function o worker Node, APIs externas y tablas. Ruta Android: Home · Ruta en el panel web: /resumen · P0 · D-11 (sin «10 % menos de clientes»)." style="text;html=1;whiteSpace=wrap;fontSize=13;align=left;verticalAlign=top;fontColor=#333333;" vertex="1" parent="1">
+        <mxCell id="d6_sub" value="Cómo se lee: izquierda, los datos de la pantalla (notas) · centro, el flujo que sigue el usuario y las funciones que lanza (F1, F2…) · derecha, qué hace cada función por fuera: llamada a la API propia (Express en Vercel) o worker, APIs externas y tablas. Ruta Android: Home · Ruta en el panel web: /resumen · P0 · D-11 (sin «10 % menos de clientes»)." style="text;html=1;whiteSpace=wrap;fontSize=13;align=left;verticalAlign=top;fontColor=#333333;" vertex="1" parent="1">
           <mxGeometry x="40" y="86" width="2740" height="44" as="geometry" />
         </mxCell>
         <mxCell id="d6_n150" value="&lt;b&gt;Clases&lt;/b&gt;&lt;br&gt;• Android: HomeViewModel · RestauranteRepository · CampanaRepository · PiezaRepository&lt;br&gt;• Panel web: HomeStore · RestaurantesApi · OportunidadesApi · PiezasApi" style="shape=note;size=14;whiteSpace=wrap;html=1;fontSize=12;fillColor=#fff9c4;strokeColor=#c9b458;align=left;spacingLeft=8;spacingRight=6;fontSize=11;" vertex="1" parent="1">
@@ -1842,7 +1866,7 @@
         <mxCell id="d6_L0r0c1" value="GET /restaurantes/{id}/resumen-google" style="shape=parallelogram;perimeter=parallelogramPerimeter;fixedSize=1;size=16;whiteSpace=wrap;html=1;fontSize=12;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
           <mxGeometry x="1935" y="226" width="255" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="d6_L0r0c2" value="Edge Function: Place Details en vivo" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+        <mxCell id="d6_L0r0c2" value="API Express: Place Details en vivo" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
           <mxGeometry x="2220" y="226" width="255" height="70" as="geometry" />
         </mxCell>
         <mxCell id="d6_L0r0c3" value="Places · Place Details" style="shape=hexagon;perimeter=hexagonPerimeter2;fixedSize=1;size=16;whiteSpace=wrap;html=1;fontSize=12;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
@@ -1851,7 +1875,7 @@
         <mxCell id="d6_L0r1c1" value="GET /restaurantes/{id}/oportunidades?estado=NUEVA,GUARDADA" style="shape=parallelogram;perimeter=parallelogramPerimeter;fixedSize=1;size=16;whiteSpace=wrap;html=1;fontSize=12;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
           <mxGeometry x="1935" y="322" width="255" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="d6_L0r1c2" value="Edge Function: oportunidades del local" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+        <mxCell id="d6_L0r1c2" value="API Express: oportunidades del local" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
           <mxGeometry x="2220" y="322" width="255" height="70" as="geometry" />
         </mxCell>
         <mxCell id="d6_L0r1c3" value="oportunidad" style="shape=cylinder3;boundedLbl=1;backgroundOutline=1;size=8;whiteSpace=wrap;html=1;fontSize=12;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
@@ -1860,7 +1884,7 @@
         <mxCell id="d6_L0r2c1" value="GET /piezas?restauranteId=…&amp;amp;limite=5" style="shape=parallelogram;perimeter=parallelogramPerimeter;fixedSize=1;size=16;whiteSpace=wrap;html=1;fontSize=12;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
           <mxGeometry x="1935" y="418" width="255" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="d6_L0r2c2" value="Edge Function: últimas piezas con URL firmada de la miniatura" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+        <mxCell id="d6_L0r2c2" value="API Express: últimas piezas con URL firmada de la miniatura" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
           <mxGeometry x="2220" y="418" width="255" height="70" as="geometry" />
         </mxCell>
         <mxCell id="d6_L0r2c3" value="pieza · diapositiva · Storage" style="shape=cylinder3;boundedLbl=1;backgroundOutline=1;size=8;whiteSpace=wrap;html=1;fontSize=12;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
@@ -1869,7 +1893,7 @@
         <mxCell id="d6_L0r3c1" value="GET /referencias-esteticas" style="shape=parallelogram;perimeter=parallelogramPerimeter;fixedSize=1;size=16;whiteSpace=wrap;html=1;fontSize=12;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
           <mxGeometry x="1935" y="514" width="255" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="d6_L0r3c2" value="Edge Function: catálogo de SOCIETY + del usuario (URL firmadas 1 h)" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+        <mxCell id="d6_L0r3c2" value="API Express: catálogo de SOCIETY + del usuario (URL firmadas 1 h)" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
           <mxGeometry x="2220" y="514" width="255" height="70" as="geometry" />
         </mxCell>
         <mxCell id="d6_L0r3c3" value="referencia_estetica · Storage" style="shape=cylinder3;boundedLbl=1;backgroundOutline=1;size=8;whiteSpace=wrap;html=1;fontSize=12;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
@@ -2007,7 +2031,7 @@
         <mxCell id="d7_title" value="S06 · CREAR CONTENIDO · 1 IDEA" style="text;html=1;whiteSpace=wrap;fontSize=24;fontStyle=1;align=left;verticalAlign=top;fontSize=40;" vertex="1" parent="1">
           <mxGeometry x="40" y="18" width="2400" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="d7_sub" value="Cómo se lee: izquierda, los datos de la pantalla (notas) · centro, el flujo que sigue el usuario y las funciones que lanza (F1, F2…) · derecha, qué hace cada función por fuera: llamada a la API propia, Edge Function o worker Node, APIs externas y tablas. Ruta Android: CrearContenido dentro de CrearContenidoGraph(campanaId?) · Ruta en el panel web: /crear/idea · P0 · D-16." style="text;html=1;whiteSpace=wrap;fontSize=13;align=left;verticalAlign=top;fontColor=#333333;" vertex="1" parent="1">
+        <mxCell id="d7_sub" value="Cómo se lee: izquierda, los datos de la pantalla (notas) · centro, el flujo que sigue el usuario y las funciones que lanza (F1, F2…) · derecha, qué hace cada función por fuera: llamada a la API propia (Express en Vercel) o worker, APIs externas y tablas. Ruta Android: CrearContenido dentro de CrearContenidoGraph(campanaId?) · Ruta en el panel web: /crear/idea · P0 · D-16." style="text;html=1;whiteSpace=wrap;fontSize=13;align=left;verticalAlign=top;fontColor=#333333;" vertex="1" parent="1">
           <mxGeometry x="40" y="86" width="2740" height="44" as="geometry" />
         </mxCell>
         <mxCell id="d7_n150" value="&lt;b&gt;Clases&lt;/b&gt;&lt;br&gt;• Android: CrearContenidoViewModel, compartido por S06–S08 (hiltViewModel del grafo anidado)&lt;br&gt;• Panel web: CrearContenidoStore, declarado en los providers de la ruta /crear" style="shape=note;size=14;whiteSpace=wrap;html=1;fontSize=12;fillColor=#fff9c4;strokeColor=#c9b458;align=left;spacingLeft=8;spacingRight=6;fontSize=11;" vertex="1" parent="1">
@@ -2064,7 +2088,7 @@
         <mxCell id="d7_L0r0c1" value="GET /api/v1/campanas/{id}" style="shape=parallelogram;perimeter=parallelogramPerimeter;fixedSize=1;size=16;whiteSpace=wrap;html=1;fontSize=12;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
           <mxGeometry x="1935" y="226" width="255" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="d7_L0r0c2" value="Edge Function: campaña + oportunidad (idea y tipo sugeridos)" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+        <mxCell id="d7_L0r0c2" value="API Express: campaña + oportunidad (idea y tipo sugeridos)" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
           <mxGeometry x="2220" y="226" width="255" height="70" as="geometry" />
         </mxCell>
         <mxCell id="d7_L0r0c3" value="campana · oportunidad" style="shape=cylinder3;boundedLbl=1;backgroundOutline=1;size=8;whiteSpace=wrap;html=1;fontSize=12;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
@@ -2151,7 +2175,7 @@
           <mxGeometry x="580" y="150" width="1000" height="1440" as="geometry" />
         </mxCell>
         <mxCell id="d8_lane1" value="F2 · subirReferencia(imagen)" style="rounded=1;arcSize=1;whiteSpace=wrap;html=1;fillColor=#f3f7fd;strokeColor=#1a4fa3;strokeWidth=2;verticalAlign=top;align=left;spacingLeft=12;spacingTop=4;fontSize=16;fontStyle=1;fontSize=13;fillColor=#fbfbf8;" vertex="1" parent="1">
-          <mxGeometry x="1632" y="440" width="1146" height="220" as="geometry" />
+          <mxGeometry x="1632" y="440" width="1146" height="316" as="geometry" />
         </mxCell>
         <mxCell id="d8_lane0" value="F1 · cargarEstetica() — 2 llamadas en paralelo" style="rounded=1;arcSize=1;whiteSpace=wrap;html=1;fillColor=#f3f7fd;strokeColor=#1a4fa3;strokeWidth=2;verticalAlign=top;align=left;spacingLeft=12;spacingTop=4;fontSize=16;fontStyle=1;fontSize=13;fillColor=#fbfbf8;" vertex="1" parent="1">
           <mxGeometry x="1632" y="190" width="1146" height="220" as="geometry" />
@@ -2159,7 +2183,7 @@
         <mxCell id="d8_title" value="S07 · CREAR CONTENIDO · 2 ESTÉTICA" style="text;html=1;whiteSpace=wrap;fontSize=24;fontStyle=1;align=left;verticalAlign=top;fontSize=40;" vertex="1" parent="1">
           <mxGeometry x="40" y="18" width="2400" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="d8_sub" value="Cómo se lee: izquierda, los datos de la pantalla (notas) · centro, el flujo que sigue el usuario y las funciones que lanza (F1, F2…) · derecha, qué hace cada función por fuera: llamada a la API propia, Edge Function o worker Node, APIs externas y tablas. Ruta Android: EleccionEstilo (grafo CrearContenidoGraph) · Ruta en el panel web: /crear/estetica · P0." style="text;html=1;whiteSpace=wrap;fontSize=13;align=left;verticalAlign=top;fontColor=#333333;" vertex="1" parent="1">
+        <mxCell id="d8_sub" value="Cómo se lee: izquierda, los datos de la pantalla (notas) · centro, el flujo que sigue el usuario y las funciones que lanza (F1, F2…) · derecha, qué hace cada función por fuera: llamada a la API propia (Express en Vercel) o worker, APIs externas y tablas. Ruta Android: EleccionEstilo (grafo CrearContenidoGraph) · Ruta en el panel web: /crear/estetica · P0." style="text;html=1;whiteSpace=wrap;fontSize=13;align=left;verticalAlign=top;fontColor=#333333;" vertex="1" parent="1">
           <mxGeometry x="40" y="86" width="2740" height="44" as="geometry" />
         </mxCell>
         <mxCell id="d8_n150" value="&lt;b&gt;Clases&lt;/b&gt;&lt;br&gt;• Android: CrearContenidoViewModel · RecursoRepository&lt;br&gt;• Panel web: CrearContenidoStore · ReferenciasApi" style="shape=note;size=14;whiteSpace=wrap;html=1;fontSize=12;fillColor=#fff9c4;strokeColor=#c9b458;align=left;spacingLeft=8;spacingRight=6;fontSize=11;" vertex="1" parent="1">
@@ -2234,7 +2258,7 @@
         <mxCell id="d8_L0r0c1" value="GET /referencias-esteticas" style="shape=parallelogram;perimeter=parallelogramPerimeter;fixedSize=1;size=16;whiteSpace=wrap;html=1;fontSize=12;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
           <mxGeometry x="1935" y="226" width="255" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="d8_L0r0c2" value="Edge Function: catálogo + referencias del usuario, URL firmadas 1 h" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+        <mxCell id="d8_L0r0c2" value="API Express: catálogo + referencias del usuario, URL firmadas 1 h" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
           <mxGeometry x="2220" y="226" width="255" height="70" as="geometry" />
         </mxCell>
         <mxCell id="d8_L0r0c3" value="referencia_estetica · Storage" style="shape=cylinder3;boundedLbl=1;backgroundOutline=1;size=8;whiteSpace=wrap;html=1;fontSize=12;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
@@ -2243,7 +2267,7 @@
         <mxCell id="d8_L0r1c1" value="GET /restaurantes/{id}/ficha" style="shape=parallelogram;perimeter=parallelogramPerimeter;fixedSize=1;size=16;whiteSpace=wrap;html=1;fontSize=12;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
           <mxGeometry x="1935" y="322" width="255" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="d8_L0r1c2" value="Edge Function: colores y tonos de la ficha" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+        <mxCell id="d8_L0r1c2" value="API Express: colores y tonos de la ficha" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
           <mxGeometry x="2220" y="322" width="255" height="70" as="geometry" />
         </mxCell>
         <mxCell id="d8_L0r1c3" value="ficha_marca" style="shape=cylinder3;boundedLbl=1;backgroundOutline=1;size=8;whiteSpace=wrap;html=1;fontSize=12;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
@@ -2252,20 +2276,26 @@
         <mxCell id="d8_L1r0c0" value="F2 · subirReferencia()" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
           <mxGeometry x="1650" y="476" width="255" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="d8_L1r0c1" value="Storage: subir a referencias/{userId}/{uuid}.jpg (supabase-kt / supabase-js)" style="shape=parallelogram;perimeter=parallelogramPerimeter;fixedSize=1;size=16;whiteSpace=wrap;html=1;fontSize=12;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+        <mxCell id="d8_L1r0c1" value="POST /recursos/subida {destino: REFERENCIA, mime}" style="shape=parallelogram;perimeter=parallelogramPerimeter;fixedSize=1;size=16;whiteSpace=wrap;html=1;fontSize=12;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
           <mxGeometry x="1935" y="476" width="255" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="d8_L1r0c2" value="Storage · bucket privado «referencias» (RLS por carpeta)" style="shape=cylinder3;boundedLbl=1;backgroundOutline=1;size=8;whiteSpace=wrap;html=1;fontSize=12;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+        <mxCell id="d8_L1r0c2" value="API Express: URL de subida firmada (10 min) para referencias/{userId}/{uuid}.jpg" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
           <mxGeometry x="2220" y="476" width="255" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="d8_L1r1c1" value="POST /referencias-esteticas {storagePath, titulo}" style="shape=parallelogram;perimeter=parallelogramPerimeter;fixedSize=1;size=16;whiteSpace=wrap;html=1;fontSize=12;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+        <mxCell id="d8_L1r0c3" value="Storage · bucket privado «referencias»" style="shape=cylinder3;boundedLbl=1;backgroundOutline=1;size=8;whiteSpace=wrap;html=1;fontSize=12;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="2505" y="476" width="255" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="d8_L1r1c1" value="PUT del archivo a la URL firmada (no pasa por Vercel)" style="shape=parallelogram;perimeter=parallelogramPerimeter;fixedSize=1;size=16;whiteSpace=wrap;html=1;fontSize=12;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
           <mxGeometry x="1935" y="572" width="255" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="d8_L1r1c2" value="Edge Function: comprueba que la ruta es del usuario" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
-          <mxGeometry x="2220" y="572" width="255" height="70" as="geometry" />
+        <mxCell id="d8_L1r2c1" value="POST /referencias-esteticas {storagePath, titulo}" style="shape=parallelogram;perimeter=parallelogramPerimeter;fixedSize=1;size=16;whiteSpace=wrap;html=1;fontSize=12;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1935" y="668" width="255" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="d8_L1r1c3" value="INSERT referencia_estetica (USUARIO)" style="shape=cylinder3;boundedLbl=1;backgroundOutline=1;size=8;whiteSpace=wrap;html=1;fontSize=12;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
-          <mxGeometry x="2505" y="572" width="255" height="70" as="geometry" />
+        <mxCell id="d8_L1r2c2" value="API Express: comprueba que la ruta es del usuario" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="2220" y="668" width="255" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="d8_L1r2c3" value="INSERT referencia_estetica (USUARIO)" style="shape=cylinder3;boundedLbl=1;backgroundOutline=1;size=8;whiteSpace=wrap;html=1;fontSize=12;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="2505" y="668" width="255" height="70" as="geometry" />
         </mxCell>
         <mxCell id="d8_e1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#ffffff;fontColor=#000000;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="d8_gst" target="d8_gf1">
           <mxGeometry relative="1" as="geometry">
@@ -2374,13 +2404,19 @@
         <mxCell id="d8_e24" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#ffffff;fontColor=#000000;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="d8_L1r0c1" target="d8_L1r0c2">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="d8_e25" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#ffffff;fontColor=#000000;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="d8_L1r1c1" target="d8_L1r1c2">
+        <mxCell id="d8_e25" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#ffffff;fontColor=#000000;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="d8_L1r0c2" target="d8_L1r0c3">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="d8_e26" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#ffffff;fontColor=#000000;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="d8_L1r1c2" target="d8_L1r1c3">
+        <mxCell id="d8_e26" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#ffffff;fontColor=#000000;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="d8_L1r0c1" target="d8_L1r1c1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="d8_e27" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#ffffff;fontColor=#000000;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="d8_L1r0c1" target="d8_L1r1c1">
+        <mxCell id="d8_e27" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#ffffff;fontColor=#000000;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="d8_L1r2c1" target="d8_L1r2c2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="d8_e28" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#ffffff;fontColor=#000000;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="d8_L1r2c2" target="d8_L1r2c3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="d8_e29" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#ffffff;fontColor=#000000;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="d8_L1r1c1" target="d8_L1r2c1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
       </root>
@@ -2398,13 +2434,13 @@
           <mxGeometry x="580" y="150" width="1000" height="1940" as="geometry" />
         </mxCell>
         <mxCell id="d9_lane4" value="F5 · generar(piezaId)" style="rounded=1;arcSize=1;whiteSpace=wrap;html=1;fillColor=#f3f7fd;strokeColor=#1a4fa3;strokeWidth=2;verticalAlign=top;align=left;spacingLeft=12;spacingTop=4;fontSize=16;fontStyle=1;fontSize=13;fillColor=#fbfbf8;" vertex="1" parent="1">
-          <mxGeometry x="1632" y="952" width="1146" height="220" as="geometry" />
+          <mxGeometry x="1632" y="1048" width="1146" height="220" as="geometry" />
         </mxCell>
         <mxCell id="d9_lane3" value="F4 · crearPieza()" style="rounded=1;arcSize=1;whiteSpace=wrap;html=1;fillColor=#f3f7fd;strokeColor=#1a4fa3;strokeWidth=2;verticalAlign=top;align=left;spacingLeft=12;spacingTop=4;fontSize=16;fontStyle=1;fontSize=13;fillColor=#fbfbf8;" vertex="1" parent="1">
-          <mxGeometry x="1632" y="768" width="1146" height="154" as="geometry" />
+          <mxGeometry x="1632" y="864" width="1146" height="154" as="geometry" />
         </mxCell>
         <mxCell id="d9_lane2" value="F3 · subirFoto(foto)" style="rounded=1;arcSize=1;whiteSpace=wrap;html=1;fillColor=#f3f7fd;strokeColor=#1a4fa3;strokeWidth=2;verticalAlign=top;align=left;spacingLeft=12;spacingTop=4;fontSize=16;fontStyle=1;fontSize=13;fillColor=#fbfbf8;" vertex="1" parent="1">
-          <mxGeometry x="1632" y="498" width="1146" height="240" as="geometry" />
+          <mxGeometry x="1632" y="498" width="1146" height="336" as="geometry" />
         </mxCell>
         <mxCell id="d9_lane1" value="F2 · prepararFoto(uri) — en el dispositivo" style="rounded=1;arcSize=1;whiteSpace=wrap;html=1;fillColor=#f3f7fd;strokeColor=#1a4fa3;strokeWidth=2;verticalAlign=top;align=left;spacingLeft=12;spacingTop=4;fontSize=16;fontStyle=1;fontSize=13;fillColor=#fbfbf8;" vertex="1" parent="1">
           <mxGeometry x="1632" y="344" width="1146" height="124" as="geometry" />
@@ -2415,7 +2451,7 @@
         <mxCell id="d9_title" value="S08 · CREAR CONTENIDO · 3 FOTOS DEL LOCAL" style="text;html=1;whiteSpace=wrap;fontSize=24;fontStyle=1;align=left;verticalAlign=top;fontSize=40;" vertex="1" parent="1">
           <mxGeometry x="40" y="18" width="2400" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="d9_sub" value="Cómo se lee: izquierda, los datos de la pantalla (notas) · centro, el flujo que sigue el usuario y las funciones que lanza (F1, F2…) · derecha, qué hace cada función por fuera: llamada a la API propia, Edge Function o worker Node, APIs externas y tablas. Ruta Android: FotosLocal (grafo CrearContenidoGraph) · Ruta en el panel web: /crear/fotos · P0 · D-16, D-32." style="text;html=1;whiteSpace=wrap;fontSize=13;align=left;verticalAlign=top;fontColor=#333333;" vertex="1" parent="1">
+        <mxCell id="d9_sub" value="Cómo se lee: izquierda, los datos de la pantalla (notas) · centro, el flujo que sigue el usuario y las funciones que lanza (F1, F2…) · derecha, qué hace cada función por fuera: llamada a la API propia (Express en Vercel) o worker, APIs externas y tablas. Ruta Android: FotosLocal (grafo CrearContenidoGraph) · Ruta en el panel web: /crear/fotos · P0 · D-16, D-32." style="text;html=1;whiteSpace=wrap;fontSize=13;align=left;verticalAlign=top;fontColor=#333333;" vertex="1" parent="1">
           <mxGeometry x="40" y="86" width="2740" height="44" as="geometry" />
         </mxCell>
         <mxCell id="d9_n150" value="&lt;b&gt;Clases&lt;/b&gt;&lt;br&gt;• Android: CrearContenidoViewModel · RecursoRepository · PiezaRepository · Photo Picker y TakePicture&lt;br&gt;• Panel web: CrearContenidoStore · RecursosApi · PiezasApi · input file y arrastrar y soltar" style="shape=note;size=14;whiteSpace=wrap;html=1;fontSize=12;fillColor=#fff9c4;strokeColor=#c9b458;align=left;spacingLeft=8;spacingRight=6;fontSize=11;" vertex="1" parent="1">
@@ -2505,7 +2541,7 @@
         <mxCell id="d9_L0r0c1" value="GET /recursos?restauranteId=…&amp;amp;naturaleza=REAL" style="shape=parallelogram;perimeter=parallelogramPerimeter;fixedSize=1;size=16;whiteSpace=wrap;html=1;fontSize=12;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
           <mxGeometry x="1935" y="226" width="255" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="d9_L0r0c2" value="Edge Function: recursos del local con URL firmada" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+        <mxCell id="d9_L0r0c2" value="API Express: recursos del local con URL firmada" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
           <mxGeometry x="2220" y="226" width="255" height="70" as="geometry" />
         </mxCell>
         <mxCell id="d9_L0r0c3" value="recurso · Storage" style="shape=cylinder3;boundedLbl=1;backgroundOutline=1;size=8;whiteSpace=wrap;html=1;fontSize=12;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
@@ -2520,47 +2556,53 @@
         <mxCell id="d9_L2r0c0" value="F3 · subirFoto()" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
           <mxGeometry x="1650" y="534" width="255" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="d9_L2r0c1" value="Storage: subir a recursos/{userId}/{uuid}.jpg" style="shape=parallelogram;perimeter=parallelogramPerimeter;fixedSize=1;size=16;whiteSpace=wrap;html=1;fontSize=12;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+        <mxCell id="d9_L2r0c1" value="POST /recursos/subida {destino: RECURSO, mime}" style="shape=parallelogram;perimeter=parallelogramPerimeter;fixedSize=1;size=16;whiteSpace=wrap;html=1;fontSize=12;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
           <mxGeometry x="1935" y="534" width="255" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="d9_L2r0c2" value="Storage · bucket «recursos»" style="shape=cylinder3;boundedLbl=1;backgroundOutline=1;size=8;whiteSpace=wrap;html=1;fontSize=12;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+        <mxCell id="d9_L2r0c2" value="API Express: URL de subida firmada (10 min) para recursos/{userId}/{uuid}.jpg" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
           <mxGeometry x="2220" y="534" width="255" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="d9_L2r1c1" value="POST /recursos {storagePath, mime, ancho, alto, bytes, sha256, procedencia, derechosConfirmados}" style="shape=parallelogram;perimeter=parallelogramPerimeter;fixedSize=1;size=16;whiteSpace=wrap;html=1;fontSize=12;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
-          <mxGeometry x="1935" y="630" width="255" height="90" as="geometry" />
+        <mxCell id="d9_L2r0c3" value="Storage · bucket privado «recursos»" style="shape=cylinder3;boundedLbl=1;backgroundOutline=1;size=8;whiteSpace=wrap;html=1;fontSize=12;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="2505" y="534" width="255" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="d9_L2r1c2" value="Edge Function: si el sha256 ya existe, devuelve ese recurso" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
-          <mxGeometry x="2220" y="630" width="255" height="90" as="geometry" />
+        <mxCell id="d9_L2r1c1" value="PUT del JPEG a la URL firmada (no pasa por Vercel)" style="shape=parallelogram;perimeter=parallelogramPerimeter;fixedSize=1;size=16;whiteSpace=wrap;html=1;fontSize=12;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1935" y="630" width="255" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="d9_L2r1c3" value="INSERT recurso" style="shape=cylinder3;boundedLbl=1;backgroundOutline=1;size=8;whiteSpace=wrap;html=1;fontSize=12;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
-          <mxGeometry x="2505" y="630" width="255" height="90" as="geometry" />
+        <mxCell id="d9_L2r2c1" value="POST /recursos {storagePath, mime, ancho, alto, bytes, sha256, procedencia, derechosConfirmados}" style="shape=parallelogram;perimeter=parallelogramPerimeter;fixedSize=1;size=16;whiteSpace=wrap;html=1;fontSize=12;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1935" y="726" width="255" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="d9_L2r2c2" value="API Express: si el sha256 ya existe, devuelve ese recurso" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="2220" y="726" width="255" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="d9_L2r2c3" value="INSERT recurso" style="shape=cylinder3;boundedLbl=1;backgroundOutline=1;size=8;whiteSpace=wrap;html=1;fontSize=12;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="2505" y="726" width="255" height="90" as="geometry" />
         </mxCell>
         <mxCell id="d9_L3r0c0" value="F4 · crearPieza()" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
-          <mxGeometry x="1650" y="819" width="255" height="70" as="geometry" />
+          <mxGeometry x="1650" y="915" width="255" height="70" as="geometry" />
         </mxCell>
         <mxCell id="d9_L3r0c1" value="POST /piezas {restauranteId, campanaId, formato, idea, tipo, condiciones, referenciaId, recursoIds, numDiapositivas}" style="shape=parallelogram;perimeter=parallelogramPerimeter;fixedSize=1;size=16;whiteSpace=wrap;html=1;fontSize=12;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
-          <mxGeometry x="1935" y="804" width="255" height="100" as="geometry" />
+          <mxGeometry x="1935" y="900" width="255" height="100" as="geometry" />
         </mxCell>
-        <mxCell id="d9_L3r0c2" value="Edge Function: valida con zod; estado BORRADOR" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
-          <mxGeometry x="2220" y="804" width="255" height="100" as="geometry" />
+        <mxCell id="d9_L3r0c2" value="API Express: valida con zod; estado BORRADOR" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="2220" y="900" width="255" height="100" as="geometry" />
         </mxCell>
         <mxCell id="d9_L3r0c3" value="INSERT pieza + pieza_recurso" style="shape=cylinder3;boundedLbl=1;backgroundOutline=1;size=8;whiteSpace=wrap;html=1;fontSize=12;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
-          <mxGeometry x="2505" y="804" width="255" height="100" as="geometry" />
+          <mxGeometry x="2505" y="900" width="255" height="100" as="geometry" />
         </mxCell>
         <mxCell id="d9_L4r0c0" value="F5 · generar()" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
-          <mxGeometry x="1650" y="988" width="255" height="70" as="geometry" />
+          <mxGeometry x="1650" y="1084" width="255" height="70" as="geometry" />
         </mxCell>
         <mxCell id="d9_L4r0c1" value="POST /piezas/{id}/generar" style="shape=parallelogram;perimeter=parallelogramPerimeter;fixedSize=1;size=16;whiteSpace=wrap;html=1;fontSize=12;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
-          <mxGeometry x="1935" y="988" width="255" height="70" as="geometry" />
+          <mxGeometry x="1935" y="1084" width="255" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="d9_L4r0c2" value="Edge Function: límite diario (D-32); estado GENERANDO; INSERT trabajo PLAN_PIEZA" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
-          <mxGeometry x="2220" y="988" width="255" height="70" as="geometry" />
+        <mxCell id="d9_L4r0c2" value="API Express: límite diario (D-32); estado GENERANDO; INSERT trabajo PLAN_PIEZA" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="2220" y="1084" width="255" height="70" as="geometry" />
         </mxCell>
         <mxCell id="d9_L4r0c3" value="pieza · trabajo" style="shape=cylinder3;boundedLbl=1;backgroundOutline=1;size=8;whiteSpace=wrap;html=1;fontSize=12;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
-          <mxGeometry x="2505" y="988" width="255" height="70" as="geometry" />
+          <mxGeometry x="2505" y="1084" width="255" height="70" as="geometry" />
         </mxCell>
         <mxCell id="d9_L4r1c2" value="202 → Supabase avisa al worker en Vercel (ver S09)" style="shape=parallelogram;perimeter=parallelogramPerimeter;fixedSize=1;size=16;whiteSpace=wrap;html=1;fontSize=12;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
-          <mxGeometry x="2220" y="1084" width="255" height="70" as="geometry" />
+          <mxGeometry x="2220" y="1180" width="255" height="70" as="geometry" />
         </mxCell>
         <mxCell id="d9_e1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#ffffff;fontColor=#000000;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="d9_gst" target="d9_gf1">
           <mxGeometry relative="1" as="geometry">
@@ -2680,34 +2722,40 @@
         <mxCell id="d9_e26" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#ffffff;fontColor=#000000;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="d9_L2r0c1" target="d9_L2r0c2">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="d9_e27" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#ffffff;fontColor=#000000;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="d9_L2r1c1" target="d9_L2r1c2">
+        <mxCell id="d9_e27" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#ffffff;fontColor=#000000;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="d9_L2r0c2" target="d9_L2r0c3">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="d9_e28" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#ffffff;fontColor=#000000;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="d9_L2r1c2" target="d9_L2r1c3">
+        <mxCell id="d9_e28" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#ffffff;fontColor=#000000;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="d9_L2r0c1" target="d9_L2r1c1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="d9_e29" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#ffffff;fontColor=#000000;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="d9_L2r0c1" target="d9_L2r1c1">
+        <mxCell id="d9_e29" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#ffffff;fontColor=#000000;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="d9_L2r2c1" target="d9_L2r2c2">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="d9_e30" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#ffffff;fontColor=#000000;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="d9_L3r0c0" target="d9_L3r0c1">
+        <mxCell id="d9_e30" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#ffffff;fontColor=#000000;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="d9_L2r2c2" target="d9_L2r2c3">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="d9_e31" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#ffffff;fontColor=#000000;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="d9_L3r0c1" target="d9_L3r0c2">
+        <mxCell id="d9_e31" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#ffffff;fontColor=#000000;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="d9_L2r1c1" target="d9_L2r2c1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="d9_e32" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#ffffff;fontColor=#000000;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="d9_L3r0c2" target="d9_L3r0c3">
+        <mxCell id="d9_e32" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#ffffff;fontColor=#000000;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="d9_L3r0c0" target="d9_L3r0c1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="d9_e33" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#ffffff;fontColor=#000000;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="d9_L4r0c0" target="d9_L4r0c1">
+        <mxCell id="d9_e33" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#ffffff;fontColor=#000000;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="d9_L3r0c1" target="d9_L3r0c2">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="d9_e34" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#ffffff;fontColor=#000000;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="d9_L4r0c1" target="d9_L4r0c2">
+        <mxCell id="d9_e34" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#ffffff;fontColor=#000000;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="d9_L3r0c2" target="d9_L3r0c3">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="d9_e35" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#ffffff;fontColor=#000000;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="d9_L4r0c2" target="d9_L4r0c3">
+        <mxCell id="d9_e35" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#ffffff;fontColor=#000000;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="d9_L4r0c0" target="d9_L4r0c1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="d9_e36" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#ffffff;fontColor=#000000;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="d9_L4r0c2" target="d9_L4r1c2">
+        <mxCell id="d9_e36" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#ffffff;fontColor=#000000;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="d9_L4r0c1" target="d9_L4r0c2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="d9_e37" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#ffffff;fontColor=#000000;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="d9_L4r0c2" target="d9_L4r0c3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="d9_e38" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#ffffff;fontColor=#000000;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="d9_L4r0c2" target="d9_L4r1c2">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
       </root>
@@ -2742,7 +2790,7 @@
         <mxCell id="d10_title" value="S09 · CONTENIDO CREADO" style="text;html=1;whiteSpace=wrap;fontSize=24;fontStyle=1;align=left;verticalAlign=top;fontSize=40;" vertex="1" parent="1">
           <mxGeometry x="40" y="18" width="2400" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="d10_sub" value="Cómo se lee: izquierda, los datos de la pantalla (notas) · centro, el flujo que sigue el usuario y las funciones que lanza (F1, F2…) · derecha, qué hace cada función por fuera: llamada a la API propia, Edge Function o worker Node, APIs externas y tablas. Ruta Android: ContenidoCreado(piezaId) · Ruta en el panel web: /contenido/:piezaId · P0 · D-07, D-08, D-16, D-17, D-19, D-32, D-36." style="text;html=1;whiteSpace=wrap;fontSize=13;align=left;verticalAlign=top;fontColor=#333333;" vertex="1" parent="1">
+        <mxCell id="d10_sub" value="Cómo se lee: izquierda, los datos de la pantalla (notas) · centro, el flujo que sigue el usuario y las funciones que lanza (F1, F2…) · derecha, qué hace cada función por fuera: llamada a la API propia (Express en Vercel) o worker, APIs externas y tablas. Ruta Android: ContenidoCreado(piezaId) · Ruta en el panel web: /contenido/:piezaId · P0 · D-07, D-08, D-16, D-17, D-19, D-32, D-36." style="text;html=1;whiteSpace=wrap;fontSize=13;align=left;verticalAlign=top;fontColor=#333333;" vertex="1" parent="1">
           <mxGeometry x="40" y="86" width="2740" height="44" as="geometry" />
         </mxCell>
         <mxCell id="d10_n150" value="&lt;b&gt;Clases&lt;/b&gt;&lt;br&gt;• Android: PiezaViewModel · PiezaRepository&lt;br&gt;• Panel web: PiezaStore · PiezasApi" style="shape=note;size=14;whiteSpace=wrap;html=1;fontSize=12;fillColor=#fff9c4;strokeColor=#c9b458;align=left;spacingLeft=8;spacingRight=6;fontSize=11;" vertex="1" parent="1">
@@ -2811,7 +2859,7 @@
         <mxCell id="d10_L0r0c1" value="GET /api/v1/piezas/{id}" style="shape=parallelogram;perimeter=parallelogramPerimeter;fixedSize=1;size=16;whiteSpace=wrap;html=1;fontSize=12;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
           <mxGeometry x="1935" y="226" width="255" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="d10_L0r0c2" value="Edge Function: pieza + diapositivas con URL firmadas y tiempoRestanteSeg" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+        <mxCell id="d10_L0r0c2" value="API Express: pieza + diapositivas con URL firmadas y tiempoRestanteSeg" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
           <mxGeometry x="2220" y="226" width="255" height="70" as="geometry" />
         </mxCell>
         <mxCell id="d10_L0r0c3" value="pieza · diapositiva · recurso · Storage" style="shape=cylinder3;boundedLbl=1;backgroundOutline=1;size=8;whiteSpace=wrap;html=1;fontSize=12;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
@@ -2823,7 +2871,7 @@
         <mxCell id="d10_L1r0c1" value="POST /piezas/{id}/diapositivas/{n}/regenerar {comentario}" style="shape=parallelogram;perimeter=parallelogramPerimeter;fixedSize=1;size=16;whiteSpace=wrap;html=1;fontSize=12;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
           <mxGeometry x="1935" y="390" width="255" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="d10_L1r0c2" value="Edge Function: ¿menos de 3 cambios y de 40 imágenes hoy? si no, 429; +1 cambio; trabajo IMAGEN_DIAPOSITIVA" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+        <mxCell id="d10_L1r0c2" value="API Express: ¿menos de 3 cambios y de 40 imágenes hoy? si no, 429; +1 cambio; trabajo IMAGEN_DIAPOSITIVA" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
           <mxGeometry x="2220" y="380" width="255" height="90" as="geometry" />
         </mxCell>
         <mxCell id="d10_L1r0c3" value="diapositiva · trabajo" style="shape=cylinder3;boundedLbl=1;backgroundOutline=1;size=8;whiteSpace=wrap;html=1;fontSize=12;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
@@ -2835,7 +2883,7 @@
         <mxCell id="d10_L2r0c1" value="POST /piezas/{id}/generar" style="shape=parallelogram;perimeter=parallelogramPerimeter;fixedSize=1;size=16;whiteSpace=wrap;html=1;fontSize=12;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
           <mxGeometry x="1935" y="554" width="255" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="d10_L2r0c2" value="Edge Function: nuevo trabajo PLAN_PIEZA" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+        <mxCell id="d10_L2r0c2" value="API Express: nuevo trabajo PLAN_PIEZA" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
           <mxGeometry x="2220" y="554" width="255" height="70" as="geometry" />
         </mxCell>
         <mxCell id="d10_L2r0c3" value="pieza · trabajo" style="shape=cylinder3;boundedLbl=1;backgroundOutline=1;size=8;whiteSpace=wrap;html=1;fontSize=12;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
@@ -3037,7 +3085,7 @@
         <mxCell id="d11_title" value="S09P · PUBLICAR CONTENIDO" style="text;html=1;whiteSpace=wrap;fontSize=24;fontStyle=1;align=left;verticalAlign=top;fontSize=40;" vertex="1" parent="1">
           <mxGeometry x="40" y="18" width="2400" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="d11_sub" value="Cómo se lee: izquierda, los datos de la pantalla (notas) · centro, el flujo que sigue el usuario y las funciones que lanza (F1, F2…) · derecha, qué hace cada función por fuera: llamada a la API propia, Edge Function o worker Node, APIs externas y tablas. Ruta Android: PublicarContenido(piezaId) · Ruta en el panel web: /contenido/:piezaId/publicar · P0 · D-09, D-16, D-31, D-33." style="text;html=1;whiteSpace=wrap;fontSize=13;align=left;verticalAlign=top;fontColor=#333333;" vertex="1" parent="1">
+        <mxCell id="d11_sub" value="Cómo se lee: izquierda, los datos de la pantalla (notas) · centro, el flujo que sigue el usuario y las funciones que lanza (F1, F2…) · derecha, qué hace cada función por fuera: llamada a la API propia (Express en Vercel) o worker, APIs externas y tablas. Ruta Android: PublicarContenido(piezaId) · Ruta en el panel web: /contenido/:piezaId/publicar · P0 · D-09, D-16, D-31, D-33." style="text;html=1;whiteSpace=wrap;fontSize=13;align=left;verticalAlign=top;fontColor=#333333;" vertex="1" parent="1">
           <mxGeometry x="40" y="86" width="2740" height="44" as="geometry" />
         </mxCell>
         <mxCell id="d11_n150" value="&lt;b&gt;Clases&lt;/b&gt;&lt;br&gt;• Android: PiezaViewModel · InstagramRepository · hoja de compartir de Android&lt;br&gt;• Panel web: PiezaStore · InstagramApi" style="shape=note;size=14;whiteSpace=wrap;html=1;fontSize=12;fillColor=#fff9c4;strokeColor=#c9b458;align=left;spacingLeft=8;spacingRight=6;fontSize=11;" vertex="1" parent="1">
@@ -3127,7 +3175,7 @@
         <mxCell id="d11_L0r0c1" value="GET /piezas/{id}" style="shape=parallelogram;perimeter=parallelogramPerimeter;fixedSize=1;size=16;whiteSpace=wrap;html=1;fontSize=12;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
           <mxGeometry x="1935" y="226" width="255" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="d11_L0r0c2" value="Edge Function: pie, hashtags y alt propuestos + miniaturas" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+        <mxCell id="d11_L0r0c2" value="API Express: pie, hashtags y alt propuestos + miniaturas" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
           <mxGeometry x="2220" y="226" width="255" height="70" as="geometry" />
         </mxCell>
         <mxCell id="d11_L0r0c3" value="pieza · diapositiva" style="shape=cylinder3;boundedLbl=1;backgroundOutline=1;size=8;whiteSpace=wrap;html=1;fontSize=12;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
@@ -3136,7 +3184,7 @@
         <mxCell id="d11_L0r1c1" value="GET /instagram/cuenta" style="shape=parallelogram;perimeter=parallelogramPerimeter;fixedSize=1;size=16;whiteSpace=wrap;html=1;fontSize=12;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
           <mxGeometry x="1935" y="322" width="255" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="d11_L0r1c2" value="Edge Function: estado de la cuenta, sin el token" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+        <mxCell id="d11_L0r1c2" value="API Express: estado de la cuenta, sin el token" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
           <mxGeometry x="2220" y="322" width="255" height="70" as="geometry" />
         </mxCell>
         <mxCell id="d11_L0r1c3" value="cuenta_social" style="shape=cylinder3;boundedLbl=1;backgroundOutline=1;size=8;whiteSpace=wrap;html=1;fontSize=12;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
@@ -3148,7 +3196,7 @@
         <mxCell id="d11_L1r0c1" value="PATCH /piezas/{id} {pie, hashtags, textoAlt, estado: APROBADA}" style="shape=parallelogram;perimeter=parallelogramPerimeter;fixedSize=1;size=16;whiteSpace=wrap;html=1;fontSize=12;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
           <mxGeometry x="1935" y="476" width="255" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="d11_L1r0c2" value="Edge Function: valida; avisa si hay precios o fechas fuera de las condiciones" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+        <mxCell id="d11_L1r0c2" value="API Express: valida; avisa si hay precios o fechas fuera de las condiciones" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
           <mxGeometry x="2220" y="476" width="255" height="70" as="geometry" />
         </mxCell>
         <mxCell id="d11_L1r0c3" value="pieza" style="shape=cylinder3;boundedLbl=1;backgroundOutline=1;size=8;whiteSpace=wrap;html=1;fontSize=12;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
@@ -3160,7 +3208,7 @@
         <mxCell id="d11_L2r0c1" value="POST /piezas/{id}/publicar-instagram" style="shape=parallelogram;perimeter=parallelogramPerimeter;fixedSize=1;size=16;whiteSpace=wrap;html=1;fontSize=12;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
           <mxGeometry x="1935" y="630" width="255" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="d11_L2r0c2" value="Edge Function: ¿cuenta CONECTADA? si no, 409; estado PUBLICANDO; trabajo PUBLICAR_INSTAGRAM" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+        <mxCell id="d11_L2r0c2" value="API Express: ¿cuenta CONECTADA? si no, 409; estado PUBLICANDO; trabajo PUBLICAR_INSTAGRAM" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
           <mxGeometry x="2220" y="630" width="255" height="70" as="geometry" />
         </mxCell>
         <mxCell id="d11_L2r0c3" value="pieza · trabajo" style="shape=cylinder3;boundedLbl=1;backgroundOutline=1;size=8;whiteSpace=wrap;html=1;fontSize=12;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
@@ -3205,7 +3253,7 @@
         <mxCell id="d11_L4r0c1" value="POST /instagram/conexiones {cliente, retorno: S09P, piezaId}" style="shape=parallelogram;perimeter=parallelogramPerimeter;fixedSize=1;size=16;whiteSpace=wrap;html=1;fontSize=12;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
           <mxGeometry x="1935" y="1322" width="255" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="d11_L4r0c2" value="Edge Function: oauth_estado + URL de Instagram" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+        <mxCell id="d11_L4r0c2" value="API Express: oauth_estado + URL de Instagram" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
           <mxGeometry x="2220" y="1322" width="255" height="70" as="geometry" />
         </mxCell>
         <mxCell id="d11_L4r0c3" value="Instagram Login (flujo completo en S13)" style="shape=hexagon;perimeter=hexagonPerimeter2;fixedSize=1;size=16;whiteSpace=wrap;html=1;fontSize=12;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
@@ -3220,7 +3268,7 @@
         <mxCell id="d11_L5r1c1" value="POST /piezas/{id}/marcar-publicada" style="shape=parallelogram;perimeter=parallelogramPerimeter;fixedSize=1;size=16;whiteSpace=wrap;html=1;fontSize=12;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
           <mxGeometry x="1935" y="1572" width="255" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="d11_L5r1c2" value="Edge Function: PUBLICADA_MANUAL y publicada_en" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+        <mxCell id="d11_L5r1c2" value="API Express: PUBLICADA_MANUAL y publicada_en" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
           <mxGeometry x="2220" y="1572" width="255" height="70" as="geometry" />
         </mxCell>
         <mxCell id="d11_L5r1c3" value="pieza" style="shape=cylinder3;boundedLbl=1;backgroundOutline=1;size=8;whiteSpace=wrap;html=1;fontSize=12;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
@@ -3440,7 +3488,7 @@
         <mxCell id="d12_title" value="S11 · CAMPAÑA PROPUESTA" style="text;html=1;whiteSpace=wrap;fontSize=24;fontStyle=1;align=left;verticalAlign=top;fontSize=40;" vertex="1" parent="1">
           <mxGeometry x="40" y="18" width="2400" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="d12_sub" value="Cómo se lee: izquierda, los datos de la pantalla (notas) · centro, el flujo que sigue el usuario y las funciones que lanza (F1, F2…) · derecha, qué hace cada función por fuera: llamada a la API propia, Edge Function o worker Node, APIs externas y tablas. Ruta Android: CampanaPropuesta(oportunidadId) · Ruta en el panel web: /oportunidades/:oportunidadId · P0 simplificada · D-11, D-18." style="text;html=1;whiteSpace=wrap;fontSize=13;align=left;verticalAlign=top;fontColor=#333333;" vertex="1" parent="1">
+        <mxCell id="d12_sub" value="Cómo se lee: izquierda, los datos de la pantalla (notas) · centro, el flujo que sigue el usuario y las funciones que lanza (F1, F2…) · derecha, qué hace cada función por fuera: llamada a la API propia (Express en Vercel) o worker, APIs externas y tablas. Ruta Android: CampanaPropuesta(oportunidadId) · Ruta en el panel web: /oportunidades/:oportunidadId · P0 simplificada · D-11, D-18." style="text;html=1;whiteSpace=wrap;fontSize=13;align=left;verticalAlign=top;fontColor=#333333;" vertex="1" parent="1">
           <mxGeometry x="40" y="86" width="2740" height="44" as="geometry" />
         </mxCell>
         <mxCell id="d12_n150" value="&lt;b&gt;Clases&lt;/b&gt;&lt;br&gt;• Android: CampanaViewModel · CampanaRepository&lt;br&gt;• Panel web: CampanaStore · OportunidadesApi · CampanasApi" style="shape=note;size=14;whiteSpace=wrap;html=1;fontSize=12;fillColor=#fff9c4;strokeColor=#c9b458;align=left;spacingLeft=8;spacingRight=6;fontSize=11;" vertex="1" parent="1">
@@ -3515,7 +3563,7 @@
         <mxCell id="d12_L0r0c1" value="GET /oportunidades/{id}" style="shape=parallelogram;perimeter=parallelogramPerimeter;fixedSize=1;size=16;whiteSpace=wrap;html=1;fontSize=12;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
           <mxGeometry x="1935" y="226" width="255" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="d12_L0r0c2" value="Edge Function: oportunidad del local (RLS)" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+        <mxCell id="d12_L0r0c2" value="API Express: oportunidad del local del usuario" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
           <mxGeometry x="2220" y="226" width="255" height="70" as="geometry" />
         </mxCell>
         <mxCell id="d12_L0r0c3" value="oportunidad" style="shape=cylinder3;boundedLbl=1;backgroundOutline=1;size=8;whiteSpace=wrap;html=1;fontSize=12;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
@@ -3527,7 +3575,7 @@
         <mxCell id="d12_L1r0c1" value="PATCH /oportunidades/{id} {estado: GUARDADA}" style="shape=parallelogram;perimeter=parallelogramPerimeter;fixedSize=1;size=16;whiteSpace=wrap;html=1;fontSize=12;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
           <mxGeometry x="1935" y="380" width="255" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="d12_L1r0c2" value="Edge Function: cambia el estado" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+        <mxCell id="d12_L1r0c2" value="API Express: cambia el estado" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
           <mxGeometry x="2220" y="380" width="255" height="70" as="geometry" />
         </mxCell>
         <mxCell id="d12_L1r0c3" value="oportunidad" style="shape=cylinder3;boundedLbl=1;backgroundOutline=1;size=8;whiteSpace=wrap;html=1;fontSize=12;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
@@ -3539,7 +3587,7 @@
         <mxCell id="d12_L2r0c1" value="PATCH /oportunidades/{id} {estado: DESCARTADA}" style="shape=parallelogram;perimeter=parallelogramPerimeter;fixedSize=1;size=16;whiteSpace=wrap;html=1;fontSize=12;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
           <mxGeometry x="1935" y="534" width="255" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="d12_L2r0c2" value="Edge Function: cambia el estado" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+        <mxCell id="d12_L2r0c2" value="API Express: cambia el estado" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
           <mxGeometry x="2220" y="534" width="255" height="70" as="geometry" />
         </mxCell>
         <mxCell id="d12_L2r0c3" value="oportunidad" style="shape=cylinder3;boundedLbl=1;backgroundOutline=1;size=8;whiteSpace=wrap;html=1;fontSize=12;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
@@ -3551,7 +3599,7 @@
         <mxCell id="d12_L3r0c1" value="POST /campanas {oportunidadId}" style="shape=parallelogram;perimeter=parallelogramPerimeter;fixedSize=1;size=16;whiteSpace=wrap;html=1;fontSize=12;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
           <mxGeometry x="1935" y="688" width="255" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="d12_L3r0c2" value="Edge Function: INSERT campana (BORRADOR); oportunidad CONVERTIDA; devuelve ideaSugerida" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+        <mxCell id="d12_L3r0c2" value="API Express: INSERT campana (BORRADOR); oportunidad CONVERTIDA; devuelve ideaSugerida" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
           <mxGeometry x="2220" y="688" width="255" height="70" as="geometry" />
         </mxCell>
         <mxCell id="d12_L3r0c3" value="campana · oportunidad" style="shape=cylinder3;boundedLbl=1;backgroundOutline=1;size=8;whiteSpace=wrap;html=1;fontSize=12;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
@@ -3695,13 +3743,13 @@
         <mxCell id="d13_title" value="S13 · PERFIL (Y CONEXIÓN CON INSTAGRAM)" style="text;html=1;whiteSpace=wrap;fontSize=24;fontStyle=1;align=left;verticalAlign=top;fontSize=40;" vertex="1" parent="1">
           <mxGeometry x="40" y="18" width="2400" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="d13_sub" value="Cómo se lee: izquierda, los datos de la pantalla (notas) · centro, el flujo que sigue el usuario y las funciones que lanza (F1, F2…) · derecha, qué hace cada función por fuera: llamada a la API propia, Edge Function o worker Node, APIs externas y tablas. Ruta Android: Perfil · Ruta en el panel web: /perfil · P0 · D-09, D-30, D-31. El flujo de conexión (F2) es el mismo que usan S04 y S09P." style="text;html=1;whiteSpace=wrap;fontSize=13;align=left;verticalAlign=top;fontColor=#333333;" vertex="1" parent="1">
+        <mxCell id="d13_sub" value="Cómo se lee: izquierda, los datos de la pantalla (notas) · centro, el flujo que sigue el usuario y las funciones que lanza (F1, F2…) · derecha, qué hace cada función por fuera: llamada a la API propia (Express en Vercel) o worker, APIs externas y tablas. Ruta Android: Perfil · Ruta en el panel web: /perfil · P0 · D-09, D-30, D-31. El flujo de conexión (F2) es el mismo que usan S04 y S09P." style="text;html=1;whiteSpace=wrap;fontSize=13;align=left;verticalAlign=top;fontColor=#333333;" vertex="1" parent="1">
           <mxGeometry x="40" y="86" width="2740" height="44" as="geometry" />
         </mxCell>
         <mxCell id="d13_n150" value="&lt;b&gt;Clases&lt;/b&gt;&lt;br&gt;• Android: PerfilViewModel · SesionRepository · InstagramRepository · intent-filter society://instagram&lt;br&gt;• Panel web: PerfilStore · SesionService · InstagramApi" style="shape=note;size=14;whiteSpace=wrap;html=1;fontSize=12;fillColor=#fff9c4;strokeColor=#c9b458;align=left;spacingLeft=8;spacingRight=6;fontSize=11;" vertex="1" parent="1">
           <mxGeometry x="40" y="150" width="500" height="86" as="geometry" />
         </mxCell>
-        <mxCell id="d13_n254" value="&lt;b&gt;Datos que muestra&lt;/b&gt;&lt;br&gt;• email (Supabase Auth) · nombre del local&lt;br&gt;• Instagram {conectada, usuario, tipoCuenta BUSINESS · CREATOR, expiraEn, estado CONECTADA · CADUCADA · REVOCADA}" style="shape=note;size=14;whiteSpace=wrap;html=1;fontSize=12;fillColor=#fff9c4;strokeColor=#c9b458;align=left;spacingLeft=8;spacingRight=6;fontSize=11;" vertex="1" parent="1">
+        <mxCell id="d13_n254" value="&lt;b&gt;Datos que muestra&lt;/b&gt;&lt;br&gt;• email (GET /perfil) · nombre del local&lt;br&gt;• Instagram {conectada, usuario, tipoCuenta BUSINESS · CREATOR, expiraEn, estado CONECTADA · CADUCADA · REVOCADA}" style="shape=note;size=14;whiteSpace=wrap;html=1;fontSize=12;fillColor=#fff9c4;strokeColor=#c9b458;align=left;spacingLeft=8;spacingRight=6;fontSize=11;" vertex="1" parent="1">
           <mxGeometry x="40" y="254" width="500" height="86" as="geometry" />
         </mxCell>
         <mxCell id="d13_n358" value="&lt;b&gt;Datos que entran&lt;/b&gt;&lt;br&gt;• Acciones: Datos del local · Conectar · Desconectar · Términos · Cerrar sesión · Eliminar cuenta [P1]" style="shape=note;size=14;whiteSpace=wrap;html=1;fontSize=12;fillColor=#fff9c4;strokeColor=#c9b458;align=left;spacingLeft=8;spacingRight=6;fontSize=11;" vertex="1" parent="1">
@@ -3773,16 +3821,19 @@
         <mxCell id="d13_L0r0c0" value="F1 · cargarPerfil()" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
           <mxGeometry x="1650" y="226" width="255" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="d13_L0r0c1" value="supabase.auth: usuario actual (email)" style="shape=parallelogram;perimeter=parallelogramPerimeter;fixedSize=1;size=16;whiteSpace=wrap;html=1;fontSize=12;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+        <mxCell id="d13_L0r0c1" value="GET /perfil" style="shape=parallelogram;perimeter=parallelogramPerimeter;fixedSize=1;size=16;whiteSpace=wrap;html=1;fontSize=12;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
           <mxGeometry x="1935" y="226" width="255" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="d13_L0r0c2" value="Supabase Auth" style="shape=cylinder3;boundedLbl=1;backgroundOutline=1;size=8;whiteSpace=wrap;html=1;fontSize=12;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+        <mxCell id="d13_L0r0c2" value="API Express: email y términos del usuario del JWT" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
           <mxGeometry x="2220" y="226" width="255" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="d13_L0r0c3" value="perfil_usuario" style="shape=cylinder3;boundedLbl=1;backgroundOutline=1;size=8;whiteSpace=wrap;html=1;fontSize=12;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="2505" y="226" width="255" height="70" as="geometry" />
         </mxCell>
         <mxCell id="d13_L0r1c1" value="GET /instagram/cuenta" style="shape=parallelogram;perimeter=parallelogramPerimeter;fixedSize=1;size=16;whiteSpace=wrap;html=1;fontSize=12;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
           <mxGeometry x="1935" y="322" width="255" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="d13_L0r1c2" value="Edge Function: cuenta_social sin el token" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+        <mxCell id="d13_L0r1c2" value="API Express: cuenta_social sin el token" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
           <mxGeometry x="2220" y="322" width="255" height="70" as="geometry" />
         </mxCell>
         <mxCell id="d13_L0r1c3" value="cuenta_social" style="shape=cylinder3;boundedLbl=1;backgroundOutline=1;size=8;whiteSpace=wrap;html=1;fontSize=12;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
@@ -3794,7 +3845,7 @@
         <mxCell id="d13_L1r0c1" value="POST /instagram/conexiones {cliente: ANDROID o WEB, retorno: S13}" style="shape=parallelogram;perimeter=parallelogramPerimeter;fixedSize=1;size=16;whiteSpace=wrap;html=1;fontSize=12;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
           <mxGeometry x="1935" y="476" width="255" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="d13_L1r0c2" value="Edge Function: INSERT oauth_estado (state aleatorio, 10 min)" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+        <mxCell id="d13_L1r0c2" value="API Express: INSERT oauth_estado (state aleatorio, 10 min)" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
           <mxGeometry x="2220" y="476" width="255" height="70" as="geometry" />
         </mxCell>
         <mxCell id="d13_L1r0c3" value="oauth_estado" style="shape=cylinder3;boundedLbl=1;backgroundOutline=1;size=8;whiteSpace=wrap;html=1;fontSize=12;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
@@ -3833,7 +3884,7 @@
         <mxCell id="d13_L2r0c1" value="DELETE /instagram/cuenta" style="shape=parallelogram;perimeter=parallelogramPerimeter;fixedSize=1;size=16;whiteSpace=wrap;html=1;fontSize=12;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
           <mxGeometry x="1935" y="1226" width="255" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="d13_L2r0c2" value="Edge Function: borra el token y marca REVOCADA" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+        <mxCell id="d13_L2r0c2" value="API Express: borra el token y marca REVOCADA" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
           <mxGeometry x="2220" y="1226" width="255" height="70" as="geometry" />
         </mxCell>
         <mxCell id="d13_L2r0c3" value="cuenta_social" style="shape=cylinder3;boundedLbl=1;backgroundOutline=1;size=8;whiteSpace=wrap;html=1;fontSize=12;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
@@ -3842,11 +3893,14 @@
         <mxCell id="d13_L3r0c0" value="F4 · cerrarSesion()" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
           <mxGeometry x="1650" y="1380" width="255" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="d13_L3r0c1" value="supabase.auth.signOut()" style="shape=parallelogram;perimeter=parallelogramPerimeter;fixedSize=1;size=16;whiteSpace=wrap;html=1;fontSize=12;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+        <mxCell id="d13_L3r0c1" value="POST /api/v1/auth/salir" style="shape=parallelogram;perimeter=parallelogramPerimeter;fixedSize=1;size=16;whiteSpace=wrap;html=1;fontSize=12;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
           <mxGeometry x="1935" y="1380" width="255" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="d13_L3r0c2" value="Supabase Auth (anula el refresh)" style="shape=cylinder3;boundedLbl=1;backgroundOutline=1;size=8;whiteSpace=wrap;html=1;fontSize=12;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+        <mxCell id="d13_L3r0c2" value="API Express: cierra la sesión en Supabase Auth (anula el refresh)" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
           <mxGeometry x="2220" y="1380" width="255" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="d13_L3r0c3" value="Supabase Auth" style="shape=cylinder3;boundedLbl=1;backgroundOutline=1;size=8;whiteSpace=wrap;html=1;fontSize=12;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="2505" y="1380" width="255" height="70" as="geometry" />
         </mxCell>
         <mxCell id="d13_L3r1c1" value="Borra DataStore / localStorage y vacía la pila de navegación" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
           <mxGeometry x="1935" y="1476" width="255" height="70" as="geometry" />
@@ -3952,79 +4006,85 @@
         <mxCell id="d13_e18" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#ffffff;fontColor=#000000;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="d13_L0r0c1" target="d13_L0r0c2">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="d13_e19" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#ffffff;fontColor=#000000;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="d13_L0r1c1" target="d13_L0r1c2">
+        <mxCell id="d13_e19" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#ffffff;fontColor=#000000;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="d13_L0r0c2" target="d13_L0r0c3">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="d13_e20" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#ffffff;fontColor=#000000;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="d13_L0r1c2" target="d13_L0r1c3">
+        <mxCell id="d13_e20" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#ffffff;fontColor=#000000;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="d13_L0r1c1" target="d13_L0r1c2">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="d13_e21" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#ffffff;fontColor=#000000;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="d13_L0r0c1" target="d13_L0r1c1">
+        <mxCell id="d13_e21" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#ffffff;fontColor=#000000;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="d13_L0r1c2" target="d13_L0r1c3">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="d13_e22" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#ffffff;fontColor=#000000;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="d13_L1r0c0" target="d13_L1r0c1">
+        <mxCell id="d13_e22" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#ffffff;fontColor=#000000;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="d13_L0r0c1" target="d13_L0r1c1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="d13_e23" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#ffffff;fontColor=#000000;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="d13_L1r0c1" target="d13_L1r0c2">
+        <mxCell id="d13_e23" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#ffffff;fontColor=#000000;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="d13_L1r0c0" target="d13_L1r0c1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="d13_e24" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#ffffff;fontColor=#000000;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="d13_L1r0c2" target="d13_L1r0c3">
+        <mxCell id="d13_e24" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#ffffff;fontColor=#000000;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="d13_L1r0c1" target="d13_L1r0c2">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="d13_e25" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#ffffff;fontColor=#000000;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="d13_L1r0c2" target="d13_L1r1c2">
+        <mxCell id="d13_e25" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#ffffff;fontColor=#000000;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="d13_L1r0c2" target="d13_L1r0c3">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="d13_e26" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#ffffff;fontColor=#000000;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="d13_L1r1c2" target="d13_L1r2c2">
+        <mxCell id="d13_e26" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#ffffff;fontColor=#000000;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="d13_L1r0c2" target="d13_L1r1c2">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="d13_e27" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#ffffff;fontColor=#000000;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="d13_L1r3c2" target="d13_L1r3c3">
+        <mxCell id="d13_e27" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#ffffff;fontColor=#000000;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="d13_L1r1c2" target="d13_L1r2c2">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="d13_e28" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#ffffff;fontColor=#000000;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="d13_L1r2c2" target="d13_L1r3c2">
+        <mxCell id="d13_e28" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#ffffff;fontColor=#000000;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="d13_L1r3c2" target="d13_L1r3c3">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="d13_e29" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#ffffff;fontColor=#000000;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="d13_L1r4c2" target="d13_L1r4c3">
+        <mxCell id="d13_e29" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#ffffff;fontColor=#000000;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="d13_L1r2c2" target="d13_L1r3c2">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="d13_e30" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#ffffff;fontColor=#000000;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="d13_L1r3c2" target="d13_L1r4c2">
+        <mxCell id="d13_e30" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#ffffff;fontColor=#000000;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="d13_L1r4c2" target="d13_L1r4c3">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="d13_e31" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#ffffff;fontColor=#000000;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="d13_L1r5c2" target="d13_L1r5c3">
+        <mxCell id="d13_e31" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#ffffff;fontColor=#000000;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="d13_L1r3c2" target="d13_L1r4c2">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="d13_e32" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#ffffff;fontColor=#000000;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="d13_L1r4c2" target="d13_L1r5c2">
+        <mxCell id="d13_e32" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#ffffff;fontColor=#000000;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="d13_L1r5c2" target="d13_L1r5c3">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="d13_e33" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#ffffff;fontColor=#000000;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="d13_L1r5c2" target="d13_L1r6c2">
+        <mxCell id="d13_e33" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#ffffff;fontColor=#000000;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="d13_L1r4c2" target="d13_L1r5c2">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="d13_e34" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#ffffff;fontColor=#000000;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="d13_L2r0c0" target="d13_L2r0c1">
+        <mxCell id="d13_e34" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#ffffff;fontColor=#000000;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="d13_L1r5c2" target="d13_L1r6c2">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="d13_e35" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#ffffff;fontColor=#000000;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="d13_L2r0c1" target="d13_L2r0c2">
+        <mxCell id="d13_e35" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#ffffff;fontColor=#000000;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="d13_L2r0c0" target="d13_L2r0c1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="d13_e36" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#ffffff;fontColor=#000000;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="d13_L2r0c2" target="d13_L2r0c3">
+        <mxCell id="d13_e36" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#ffffff;fontColor=#000000;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="d13_L2r0c1" target="d13_L2r0c2">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="d13_e37" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#ffffff;fontColor=#000000;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="d13_L3r0c0" target="d13_L3r0c1">
+        <mxCell id="d13_e37" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#ffffff;fontColor=#000000;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="d13_L2r0c2" target="d13_L2r0c3">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="d13_e38" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#ffffff;fontColor=#000000;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="d13_L3r0c1" target="d13_L3r0c2">
+        <mxCell id="d13_e38" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#ffffff;fontColor=#000000;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="d13_L3r0c0" target="d13_L3r0c1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="d13_e39" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#ffffff;fontColor=#000000;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="d13_L3r0c1" target="d13_L3r1c1">
+        <mxCell id="d13_e39" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#ffffff;fontColor=#000000;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="d13_L3r0c1" target="d13_L3r0c2">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="d13_e40" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#ffffff;fontColor=#000000;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="d13_L4r0c0" target="d13_L4r0c2">
+        <mxCell id="d13_e40" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#ffffff;fontColor=#000000;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="d13_L3r0c2" target="d13_L3r0c3">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="d13_e41" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#ffffff;fontColor=#000000;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="d13_L4r0c2" target="d13_L4r0c3">
+        <mxCell id="d13_e41" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#ffffff;fontColor=#000000;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="d13_L3r0c1" target="d13_L3r1c1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="d13_e42" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#ffffff;fontColor=#000000;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="d13_L4r1c2" target="d13_L4r1c3">
+        <mxCell id="d13_e42" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#ffffff;fontColor=#000000;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="d13_L4r0c0" target="d13_L4r0c2">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="d13_e43" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#ffffff;fontColor=#000000;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="d13_L4r0c2" target="d13_L4r1c2">
+        <mxCell id="d13_e43" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#ffffff;fontColor=#000000;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="d13_L4r0c2" target="d13_L4r0c3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="d13_e44" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#ffffff;fontColor=#000000;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="d13_L4r1c2" target="d13_L4r1c3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="d13_e45" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=block;endFill=1;fontSize=11;labelBackgroundColor=#ffffff;fontColor=#000000;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="d13_L4r0c2" target="d13_L4r1c2">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
       </root>
@@ -4053,7 +4113,7 @@
         <mxCell id="d14_title" value="S12 · CAMPAÑA A MEDIDA [P1]" style="text;html=1;whiteSpace=wrap;fontSize=24;fontStyle=1;align=left;verticalAlign=top;fontSize=40;" vertex="1" parent="1">
           <mxGeometry x="40" y="18" width="2400" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="d14_sub" value="Cómo se lee: izquierda, los datos de la pantalla (notas) · centro, el flujo que sigue el usuario y las funciones que lanza (F1, F2…) · derecha, qué hace cada función por fuera: llamada a la API propia, Edge Function o worker Node, APIs externas y tablas. Ruta Android: CampanaAMedida · Ruta en el panel web: /campanas/nueva · P1 (si sobra tiempo; si no, se oculta el acceso en S05) · D-18." style="text;html=1;whiteSpace=wrap;fontSize=13;align=left;verticalAlign=top;fontColor=#333333;" vertex="1" parent="1">
+        <mxCell id="d14_sub" value="Cómo se lee: izquierda, los datos de la pantalla (notas) · centro, el flujo que sigue el usuario y las funciones que lanza (F1, F2…) · derecha, qué hace cada función por fuera: llamada a la API propia (Express en Vercel) o worker, APIs externas y tablas. Ruta Android: CampanaAMedida · Ruta en el panel web: /campanas/nueva · P1 (si sobra tiempo; si no, se oculta el acceso en S05) · D-18." style="text;html=1;whiteSpace=wrap;fontSize=13;align=left;verticalAlign=top;fontColor=#333333;" vertex="1" parent="1">
           <mxGeometry x="40" y="86" width="2740" height="44" as="geometry" />
         </mxCell>
         <mxCell id="d14_n150" value="&lt;b&gt;Clases&lt;/b&gt;&lt;br&gt;• Android: CampanaViewModel · CampanaRepository&lt;br&gt;• Panel web: CampanaStore · CampanasApi" style="shape=note;size=14;whiteSpace=wrap;html=1;fontSize=12;fillColor=#fff9c4;strokeColor=#c9b458;align=left;spacingLeft=8;spacingRight=6;fontSize=11;" vertex="1" parent="1">
@@ -4113,7 +4173,7 @@
         <mxCell id="d14_L1r0c1" value="POST /campanas {origen: MANUAL, objetivo, producto, mensaje, fechas, formatos}" style="shape=parallelogram;perimeter=parallelogramPerimeter;fixedSize=1;size=16;whiteSpace=wrap;html=1;fontSize=12;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
           <mxGeometry x="1935" y="380" width="255" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="d14_L1r0c2" value="Edge Function: INSERT campana (BORRADOR) + trabajo PLAN_CAMPANA" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+        <mxCell id="d14_L1r0c2" value="API Express: INSERT campana (BORRADOR) + trabajo PLAN_CAMPANA" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
           <mxGeometry x="2220" y="380" width="255" height="80" as="geometry" />
         </mxCell>
         <mxCell id="d14_L1r0c3" value="campana · trabajo" style="shape=cylinder3;boundedLbl=1;backgroundOutline=1;size=8;whiteSpace=wrap;html=1;fontSize=12;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
@@ -4223,7 +4283,7 @@
         <mxCell id="d15_title" value="S15 · CALENDARIO [P1]" style="text;html=1;whiteSpace=wrap;fontSize=24;fontStyle=1;align=left;verticalAlign=top;fontSize=40;" vertex="1" parent="1">
           <mxGeometry x="40" y="18" width="2400" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="d15_sub" value="Cómo se lee: izquierda, los datos de la pantalla (notas) · centro, el flujo que sigue el usuario y las funciones que lanza (F1, F2…) · derecha, qué hace cada función por fuera: llamada a la API propia, Edge Function o worker Node, APIs externas y tablas. Ruta Android: Calendario · Ruta en el panel web: /calendario · P1 (programar publicaciones para una fecha también es P1)." style="text;html=1;whiteSpace=wrap;fontSize=13;align=left;verticalAlign=top;fontColor=#333333;" vertex="1" parent="1">
+        <mxCell id="d15_sub" value="Cómo se lee: izquierda, los datos de la pantalla (notas) · centro, el flujo que sigue el usuario y las funciones que lanza (F1, F2…) · derecha, qué hace cada función por fuera: llamada a la API propia (Express en Vercel) o worker, APIs externas y tablas. Ruta Android: Calendario · Ruta en el panel web: /calendario · P1 (programar publicaciones para una fecha también es P1)." style="text;html=1;whiteSpace=wrap;fontSize=13;align=left;verticalAlign=top;fontColor=#333333;" vertex="1" parent="1">
           <mxGeometry x="40" y="86" width="2740" height="44" as="geometry" />
         </mxCell>
         <mxCell id="d15_n150" value="&lt;b&gt;Clases&lt;/b&gt;&lt;br&gt;• Android: CalendarioViewModel · PiezaRepository&lt;br&gt;• Panel web: CalendarioStore · PiezasApi" style="shape=note;size=14;whiteSpace=wrap;html=1;fontSize=12;fillColor=#fff9c4;strokeColor=#c9b458;align=left;spacingLeft=8;spacingRight=6;fontSize=11;" vertex="1" parent="1">
@@ -4280,7 +4340,7 @@
         <mxCell id="d15_L0r0c1" value="GET /piezas?restauranteId=…&amp;amp;desde=…&amp;amp;hasta=…" style="shape=parallelogram;perimeter=parallelogramPerimeter;fixedSize=1;size=16;whiteSpace=wrap;html=1;fontSize=12;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
           <mxGeometry x="1935" y="226" width="255" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="d15_L0r0c2" value="Edge Function: piezas por fecha prevista o de publicación" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+        <mxCell id="d15_L0r0c2" value="API Express: piezas por fecha prevista o de publicación" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
           <mxGeometry x="2220" y="226" width="255" height="70" as="geometry" />
         </mxCell>
         <mxCell id="d15_L0r0c3" value="pieza" style="shape=cylinder3;boundedLbl=1;backgroundOutline=1;size=8;whiteSpace=wrap;html=1;fontSize=12;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
