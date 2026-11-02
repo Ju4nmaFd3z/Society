@@ -1,6 +1,6 @@
 # Estado del proyecto
 
-Última actualización: 31 de octubre de 2026.
+Última actualización: 2 de noviembre de 2026.
 
 ## Hecho
 
@@ -16,10 +16,15 @@
 - Navegación montada en Society-Kotlin, con una ruta por pantalla del diseño (15 en total) y los enlaces del [flujo](diseno/flujo-de-navegacion/README.md). Salvo [02. Empezamos](diseno/pantallas/02-empezamos.md), todas las pantallas son de cartón piedra.
 - Notas de las 15 pantallas en [Pantallas](diseno/pantallas/README.md).
 - Parte visual de la pantalla [02. Empezamos](diseno/pantallas/02-empezamos.md) en Society-Kotlin, sin funcionalidad real todavía.
+- Proyecto de Supabase creado en Frankfurt, con todo el equipo invitado.
+- API Express con TypeScript desplegada en Vercel, organizada en rutas, controladores y servicios, con un formato de error común. Responde en [`/api/v1/salud`](https://society-api-xi.vercel.app/api/v1/salud) (hito H1). Código en [Society-TypeScript](https://github.com/Ju4nmaFd3z/Society-TypeScript/tree/main/api).
+- Prisma conectado a Supabase, con la primera migración (`perfil_usuario` y `restaurante`) y RLS en todas las tablas.
+- Proyecto Angular creado en Society-TypeScript (`web/`) y primera versión del contrato OpenAPI, con las rutas de Places.
+- [Arquitectura técnica](arquitectura/arquitectura-tecnica.md) actualizada a la API Express con Prisma.
 
 ## En curso
 
-- Sprint 1 · Arranque (hitos H1 y H2), del 1 al 8 de noviembre: Supabase, API Express con Prisma, proyecto Angular con Tailwind y capa de red Android.
+- Sprint 1 · Arranque (hitos H1 y H2), del 1 al 8 de noviembre. Quedan: despliegue del panel web con Tailwind, capa de red Android, contrato OpenAPI de `/auth` y `/restaurantes`, y prueba de Nano Banana Pro en Higgsfield.
 - Diseño de las pantallas de la app móvil en Figma: diseñadas de la 01 a la 07; las 08 a 15 tienen solo la cabecera. Ver [Diseño](diseno/README.md).
 - Documentación de producto. Ver [Producto](producto/README.md).
 - Funcionalidad de la pantalla 02. Empezamos: búsqueda de locales y lectura de los datos.
@@ -27,6 +32,7 @@
 
 ## Pendiente
 
-- Actualizar la arquitectura técnica y los diagramas a la API Express con Prisma (SOCIETY-128 en Jira).
-- Implementar el modelo de datos con Prisma, sus migraciones y el seed.
+- Actualizar los diagramas a la API Express con Prisma (SOCIETY-128 en Jira).
+- Completar el modelo de datos con Prisma (el resto de tablas) y el seed con el local ficticio de la demo.
+- Confirmar en equipo dos decisiones de datos: un restaurante por usuario (D-13) y que `perfil_usuario` lo cree la API al registrarse.
 - Elegir la licencia de los repositorios.
