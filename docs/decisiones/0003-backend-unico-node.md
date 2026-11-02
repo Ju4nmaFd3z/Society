@@ -22,5 +22,5 @@ Society tiene dos clientes con las mismas funciones: la app Android y el panel w
 ## Consecuencias
 
 - Los dos clientes usan la misma API y el mismo contrato, y no usan los SDK de Supabase: la sesión también pasa por la API.
-- La [arquitectura técnica](../arquitectura/arquitectura-tecnica.md) ya está actualizada a esta decisión. Los diagramas siguen pendientes (SOCIETY-128 en Jira).
+- La [arquitectura técnica](../arquitectura/tecnica/README.md) ya está actualizada a esta decisión. Los diagramas siguen pendientes (SOCIETY-128 en Jira).
 - Primeros pasos hechos el 2 de noviembre de 2026: la API está desplegada en Vercel y Prisma ha creado las primeras tablas en Supabase.

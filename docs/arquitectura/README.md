@@ -4,7 +4,7 @@ Decisiones técnicas, estructura del sistema y diagramas.
 
 ## Contenido
 
-- [Arquitectura técnica](arquitectura-tecnica.md): servicios, tecnologías, API externas, API propia, datos, secretos y despliegue.
+- [Arquitectura técnica](tecnica/README.md): servicios, comunicación, trabajos largos, API externas, API propia, datos, secretos y despliegue, cada uno en su archivo.
 - [Diagramas](diagramas/README.md): flujo general de la app y detalle de cada pantalla.
 - [Repositorios](repositorios.md): qué repositorio hay por tecnología y qué contiene cada uno.
 

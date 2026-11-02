@@ -20,7 +20,7 @@
 - API Express con TypeScript desplegada en Vercel, organizada en rutas, controladores y servicios, con un formato de error común. Responde en [`/api/v1/salud`](https://society-api-xi.vercel.app/api/v1/salud) (hito H1). Código en [Society-TypeScript](https://github.com/Ju4nmaFd3z/Society-TypeScript/tree/main/api).
 - Prisma conectado a Supabase, con la primera migración (`perfil_usuario` y `restaurante`) y RLS en todas las tablas.
 - Proyecto Angular creado en Society-TypeScript (`web/`) y primera versión del contrato OpenAPI, con las rutas de Places.
-- [Arquitectura técnica](arquitectura/arquitectura-tecnica.md) actualizada a la API Express con Prisma.
+- [Arquitectura técnica](arquitectura/tecnica/README.md) actualizada a la API Express con Prisma.
 
 ## En curso
 
