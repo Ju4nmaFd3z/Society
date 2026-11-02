@@ -12,6 +12,6 @@ Decisiones técnicas, estructura del sistema y diagramas.
 
 La arquitectura está definida: dos clientes, la app Android y el panel web Angular, con las mismas funciones sobre un único backend Node.js con Express y Prisma. Ver la decisión [0003](../decisiones/0003-backend-unico-node.md).
 
-La arquitectura técnica y los diagramas todavía describen la API como una Supabase Edge Function. Su actualización está pendiente en Jira (SOCIETY-128).
+La arquitectura técnica ya describe la API Express con Prisma, que está desplegada en Vercel. Los diagramas todavía muestran la API como una Supabase Edge Function; su actualización sigue pendiente en Jira (SOCIETY-128).
 
 El código de cada tecnología se documenta en su propio repositorio. Cada decisión relevante se registra además en [Decisiones](../decisiones/README.md).

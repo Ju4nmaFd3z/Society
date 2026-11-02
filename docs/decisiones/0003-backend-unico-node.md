@@ -17,9 +17,10 @@ Society tiene dos clientes con las mismas funciones: la app Android y el panel w
 
 ## Alternativas consideradas
 
-- **API en Supabase Edge Functions (Deno + Hono), con un worker aparte:** es lo que describe la [arquitectura técnica](../arquitectura/arquitectura-tecnica.md). Descartada porque no usa Express ni un ORM, y los requisitos los exigen.
+- **API en Supabase Edge Functions (Deno + Hono), con un worker aparte:** era la arquitectura inicial. Descartada porque no usa Express ni un ORM, y los requisitos los exigen.
 
 ## Consecuencias
 
-- Los dos clientes usan la misma API y el mismo contrato.
-- La arquitectura técnica y los diagramas se tienen que actualizar a esta decisión (SOCIETY-128 en Jira).
+- Los dos clientes usan la misma API y el mismo contrato, y no usan los SDK de Supabase: la sesión también pasa por la API.
+- La [arquitectura técnica](../arquitectura/arquitectura-tecnica.md) ya está actualizada a esta decisión. Los diagramas siguen pendientes (SOCIETY-128 en Jira).
+- Primeros pasos hechos el 2 de noviembre de 2026: la API está desplegada en Vercel y Prisma ha creado las primeras tablas en Supabase.
