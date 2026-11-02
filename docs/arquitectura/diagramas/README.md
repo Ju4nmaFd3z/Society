@@ -45,3 +45,4 @@ Los diagramas citan decisiones con un identificador D-xx. Estas son las que apar
 | D-35 | Plantilla sin IA como respaldo de las imágenes |
 | D-36 | Supabase activa el worker de Vercel (webhook, `pg_cron` y *webhook* de Higgsfield) |
 | D-37 | Demo con un local ficticio e imágenes del equipo |
+| D-38 | Backend con Express y Prisma en Vercel; los clientes solo hablan con la API, también para la sesión; fotos por URL firmada. Ver la decisión [0003](../../decisiones/0003-backend-unico-node.md) |

@@ -2,13 +2,14 @@
 
 Cómo está construido Society: servicios, comunicación, API, datos y despliegue. El backend es una API Express con Prisma en Vercel, según la decisión [0003](../../decisiones/0003-backend-unico-node.md). Actualizado el 2 de noviembre de 2026.
 
-> **Diagramas pendientes de actualizar.** Esta documentación ya describe la API Express con Prisma, pero los [diagramas](../diagramas/README.md) todavía muestran la API como una Supabase Edge Function (SOCIETY-128 en Jira).
+Los [diagramas](../diagramas/README.md) muestran lo mismo de forma visual: el flujo general y el detalle de cada pantalla.
 
 ## Contenido
 
 | Archivo | Qué contiene |
 |---|---|
 | [Servicios y tecnologías](servicios.md) | Qué pieza hace qué, con qué tecnología y en qué repositorio |
+| [Clientes](clientes.md) | Capa de red y estructura por pantalla de la app Android; el panel web usa los mismos nombres |
 | [Reglas de comunicación](comunicacion.md) | Cómo hablan los clientes con la API: JWT, errores, reintentos y contrato |
 | [Trabajos largos](trabajos-largos.md) | Cómo se ejecutan en Vercel el análisis, las imágenes y la publicación |
 | [API externas](apis-externas.md) | Google Places, Gemini, Higgsfield, Instagram y Supabase |
