@@ -37,10 +37,11 @@ En inglés, cortos y en minúscula. Por ejemplo: `add product vision`, `update p
 
 ## Flujo de trabajo
 
-Se aplica en todos los repositorios. Resumen de la decisión [0002](decisiones/0002-flujo-de-trabajo-con-ramas.md):
+Se aplica en todos los repositorios. Resumen de la decisión [0006](decisiones/0006-una-rama-por-issue-de-jira.md):
 
-1. Cada autor trabaja en su rama: `juanma` y `victor`.
-2. `main` contiene siempre la versión presentable del proyecto.
-3. Los cambios llegan a `main` mediante pull request, revisada por la otra persona.
-4. Antes de empezar a trabajar, se trae `main` a la rama propia para evitar conflictos.
-5. Repartir las áreas de trabajo, por ejemplo una persona en arquitectura y otra en diseño, reduce los conflictos.
+1. Cada issue de Jira se trabaja en su propia rama, con la clave de la issue como nombre: `SOCIETY-37`. Ya no se usan ramas por persona.
+2. La rama se crea desde `main` actualizada, justo antes de empezar.
+3. `main` contiene siempre la versión presentable del proyecto.
+4. Los cambios llegan a `main` mediante pull request, revisada por otra persona. El título empieza por la clave de la issue.
+5. Si la rama dura varios días, se trae `main` a la rama para evitar conflictos.
+6. Al fusionar la pull request, la rama se borra.
