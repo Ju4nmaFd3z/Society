@@ -1,7 +1,7 @@
 # 0002. Flujo de trabajo con una rama por persona
 
 - **Fecha:** 2026-10-19
-- **Estado:** aceptada (actualizada el 2026-10-31 al incorporarse Pablo Jiménez)
+- **Estado:** sustituida por [0006](0006-una-rama-por-issue-de-jira.md) (actualizada el 2026-10-31 al incorporarse Pablo Jiménez)
 
 ## Contexto
 
