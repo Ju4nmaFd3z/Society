@@ -10,16 +10,19 @@ Que el usuario elija la estética que quiere para su contenido.
 
 - Flujo: [Flujo de navegación](../flujo-de-navegacion/README.md).
 - Figma: pestaña v3 · Cristal líquido. Ver [Diseño](../README.md).
+- Detalle: página «8 · S07 · Crear contenido · Estética» de [`diagrama-pantallas-detalle.drawio`](../../arquitectura/diagramas/diagrama-pantallas-detalle.drawio).
 
 ## Contenido
 
 - **Cabecera:** botón atrás, el título «Crear contenido» y el selector de pasos, con «Estética» seleccionado.
-- **Sube tus referencias:** botón «+» para subir imágenes.
-- **Elige las mejores:** rejilla de estilos de ejemplo, para seleccionar los que más gusten.
+- **Sube tus referencias:** botón «+» para subir una imagen. JPEG o PNG, de 10 MB como máximo. Es solo inspiración: nunca se publica.
+- **Estética de tu local:** colores y tonos de la ficha. Es de solo lectura.
+- **Elige las mejores:** rejilla de referencias del catálogo. Hay que elegir exactamente una, del catálogo o subida.
+- **Botón «Siguiente: local».**
 
 ## Estados
 
-Por definir. Si la pantalla muestra datos, incluirá los cuatro estados obligatorios: cargando, vacío, error y con datos.
+Cargando, error, con datos y subiendo. Si no hay una referencia elegida, avisa con «Elige o sube una referencia». Una referencia subida solo se guarda si el usuario la sube.
 
 ## Navegación
 

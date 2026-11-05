@@ -1,6 +1,6 @@
 # 12. Campaña a medida
 
-Diseño de una campaña a medida. En el diseño, el título es «Diseña tu campaña».
+Diseño de una campaña a medida. Es P1: se construye si sobra tiempo y, si no, se oculta el acceso en la Home. En el diseño, el título es «Diseña tu campaña».
 
 ## Objetivo
 
@@ -10,18 +10,26 @@ Ayudar al usuario a diseñar una campaña según lo que quiera conseguir.
 
 - Flujo: [Flujo de navegación](../flujo-de-navegacion/README.md).
 - Figma: pestaña v3 · Cristal líquido. Ver [Diseño](../README.md).
+- Detalle: página «14 · S12 · Campaña a medida [P1]» de [`diagrama-pantallas-detalle.drawio`](../../arquitectura/diagramas/diagrama-pantallas-detalle.drawio).
+- Decisión D-18.
 
 ## Contenido
 
-Búsqueda de los objetivos del usuario (clientes, seguidores, publicitar anuncios, etc.) y de los métodos más óptimos para alcanzarlos. El diseño solo tiene la cabecera, con el botón atrás y el título.
+- **Cabecera:** botón atrás y el título «Diseña tu campaña».
+- **Objetivo:** obligatorio. Atraer clientes, Promocionar un producto, Fidelizar, Evento, Notoriedad o Participación.
+- **Producto o servicio:** obligatorio, de 3 a 80 caracteres.
+- **Mensaje:** opcional, hasta 200 caracteres.
+- **Fechas:** inicio y fin. El fin no puede ser anterior al inicio ni el inicio anterior a hoy.
+- **Formatos:** carrusel, historia o ambos.
+- **Botón «Crear plan».**
 
 ## Estados
 
-Por definir. Si la pantalla muestra datos, incluirá los cuatro estados obligatorios: cargando, vacío, error y con datos.
+Formulario, enviando, error y hecho. Al crear el plan, Society propone de 2 a 4 piezas con su idea, formato y fecha.
 
 ## Navegación
 
-Se llega desde «Campaña a tu medida» de [05. Home](05-home.md).
+Se llega desde «Campaña a tu medida» de [05. Home](05-home.md). Al crear el plan se pasa a [11. Campaña propuesta](11-campana-propuesta.md).
 
 ## Implementación
 

@@ -10,26 +10,29 @@ Que el usuario diga qué quiere publicar.
 
 - Flujo: [Flujo de navegación](../flujo-de-navegacion/README.md).
 - Figma: pestaña v3 · Cristal líquido. Ver [Diseño](../README.md).
+- Detalle: página «7 · S06 · Crear contenido · Idea» de [`diagrama-pantallas-detalle.drawio`](../../arquitectura/diagramas/diagrama-pantallas-detalle.drawio).
+- Decisiones D-16 y D-18.
 
 ## Contenido
 
 Es el primer paso de tres: Idea, Estética y Local.
 
 - **Cabecera:** botón atrás y el título «Crear contenido», con el selector de pasos.
-- **Tu idea:** campo de texto, por ejemplo «Pulpo a la brasa directo de Galicia…».
-- **Tipo de publicación:** Plato estrella, Novedad, Oferta y Evento.
-- **Fotos** de los platos.
-- **Botón «Siguiente: tus platos».**
+- **Formato:** Carrusel (de 3 a 5 imágenes 4:5) o Historia (de 1 a 3 pantallas 9:16).
+- **Tu idea:** campo de texto de 10 a 300 caracteres, con contador.
+- **Tipo de publicación:** Plato estrella, Novedad, Oferta o Evento.
+- **Condiciones:** precio, fechas y límites. Son obligatorias si el tipo es Oferta o Evento, con al menos un campo y 120 caracteres como máximo cada uno. La IA no puede inventar precios ni fechas: solo usa los que escribe el dueño.
+- **Botón «Siguiente: estética».**
 
-El selector de pasos de este diseño dice «Platos» en el paso 2, y el de [07. Elección de estilo](07-eleccion-de-estilo.md) dice «Estética». Por confirmar.
+Si se llega desde una campaña propuesta, la idea y el tipo vienen precargados.
 
 ## Estados
 
-Por definir. Si la pantalla muestra datos, incluirá los cuatro estados obligatorios: cargando, vacío, error y con datos.
+Borrador, con los errores por campo, y cargando la campaña cuando viene de [11. Campaña propuesta](11-campana-propuesta.md). El error típico es «Indica precio o fechas».
 
 ## Navegación
 
-Se llega desde el botón «+» de [05. Home](05-home.md). El siguiente paso es [07. Elección de estilo](07-eleccion-de-estilo.md). El orden sale del selector de pasos, porque Figma no dibuja esas flechas.
+Se llega desde el botón «+» de [05. Home](05-home.md) o desde 11. El siguiente paso es [07. Elección de estilo](07-eleccion-de-estilo.md). El borrador es el mismo hasta 08: no se guarda nada antes.
 
 ## Implementación
 
