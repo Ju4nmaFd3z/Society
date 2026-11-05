@@ -25,4 +25,4 @@ Se llega desde la barra inferior de [05. Home](05-home.md).
 
 ## Implementación
 
-- Android: pantalla de cartón piedra, ver [Society-Kotlin](https://github.com/Ju4nmaFd3z/Society-Kotlin/blob/main/docs/pantallas.md).
+- Android: fuera del MVP, sin pantalla ni ruta por ahora.

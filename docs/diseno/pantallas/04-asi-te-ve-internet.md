@@ -37,4 +37,4 @@ Se llega desde [03. Análisis](03-analisis.md), o desde [13. Perfil](13-perfil.m
 
 ## Implementación
 
-- Android: pantalla de cartón piedra, ver [Society-Kotlin](https://github.com/Ju4nmaFd3z/Society-Kotlin/blob/main/docs/pantallas.md).
+- Android: pantalla provisional en `feature/asiteveinternet`, con la ruta `AsiTeVeInternetRoute(restauranteId, modoEdicion)`. Muestra el título y los botones que llevan a la siguiente pantalla. Ver [Society-Kotlin](https://github.com/Ju4nmaFd3z/Society-Kotlin/blob/main/docs/pantallas.md).

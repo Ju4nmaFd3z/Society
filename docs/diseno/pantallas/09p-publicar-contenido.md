@@ -36,5 +36,5 @@ Se llega desde [09. Contenido creado](09-contenido-creado.md). Al publicar, la p
 
 ## Implementación
 
-- Android: pendiente. Issue SOCIETY-95.
+- Android: pantalla provisional en `feature/publicarcontenido`, con la ruta `PublicarContenidoRoute(piezaId)`. Muestra el título y los botones que llevan a la siguiente pantalla. La implementación real sigue pendiente, issue SOCIETY-95. Ver [Society-Kotlin](https://github.com/Ju4nmaFd3z/Society-Kotlin/blob/main/docs/pantallas.md).
 - Web: pendiente. Issue SOCIETY-97.

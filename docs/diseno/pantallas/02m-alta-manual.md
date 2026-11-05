@@ -35,5 +35,5 @@ Se llega desde «¿No aparece tu local? Añádelo a mano» de [02. Empezamos](02
 
 ## Implementación
 
-- Android: pendiente. Issue SOCIETY-62.
+- Android: pantalla provisional en `feature/altamanual`, con la ruta `AltaManualRoute`. Muestra el título y los botones que llevan a la siguiente pantalla. La implementación real sigue pendiente, issue SOCIETY-62. Ver [Society-Kotlin](https://github.com/Ju4nmaFd3z/Society-Kotlin/blob/main/docs/pantallas.md).
 - Web: pendiente. Ruta `/alta/manual`, issue SOCIETY-63.

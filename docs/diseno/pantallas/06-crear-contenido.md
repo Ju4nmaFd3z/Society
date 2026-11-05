@@ -36,4 +36,4 @@ Se llega desde el botón «+» de [05. Home](05-home.md) o desde 11. El siguient
 
 ## Implementación
 
-- Android: pantalla de cartón piedra, ver [Society-Kotlin](https://github.com/Ju4nmaFd3z/Society-Kotlin/blob/main/docs/pantallas.md).
+- Android: pantalla provisional en `feature/crearcontenidograph`, con la ruta `CrearContenidoRoute`. Muestra el título y los botones que llevan a la siguiente pantalla. Va dentro del grafo `CrearContenidoGraph(campanaId)`, que agrupa 06, 07 y 08 para que compartan el borrador. Ver [Society-Kotlin](https://github.com/Ju4nmaFd3z/Society-Kotlin/blob/main/docs/pantallas.md).

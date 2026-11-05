@@ -1,6 +1,6 @@
 # Estado del proyecto
 
-Última actualización: 4 de noviembre de 2026.
+Última actualización: 5 de noviembre de 2026.
 
 ## Hecho
 
@@ -13,9 +13,7 @@
 - Perfil de Instagram creado: [@society.app](https://www.instagram.com/society.app/).
 - Proyecto Android creado, con la estructura de carpetas y el esqueleto de la pantalla de búsqueda de locales, en [Society-Kotlin](https://github.com/Ju4nmaFd3z/Society-Kotlin).
 - Flujo de navegación y especificación de la pantalla [02. Empezamos](diseno/pantallas/02-empezamos.md).
-- Navegación montada en Society-Kotlin, con una ruta por pantalla del diseño (15 en total) y los enlaces del [flujo](diseno/flujo-de-navegacion/README.md). Salvo [02. Empezamos](diseno/pantallas/02-empezamos.md), todas las pantallas son de cartón piedra.
 - Notas de las 15 pantallas en [Pantallas](diseno/pantallas/README.md).
-- Parte visual de la pantalla [02. Empezamos](diseno/pantallas/02-empezamos.md) en Society-Kotlin, sin funcionalidad real todavía.
 - Proyecto de Supabase creado en Frankfurt, con todo el equipo invitado.
 - API Express con TypeScript desplegada en Vercel, organizada en rutas, controladores y servicios, con un formato de error común. Responde en [`/api/v1/salud`](https://society-api-xi.vercel.app/api/v1/salud) (hito H1). Código en [Society-TypeScript](https://github.com/Ju4nmaFd3z/Society-TypeScript/tree/main/api).
 - Prisma conectado a Supabase, con la primera migración (`perfil_usuario` y `restaurante`) y RLS en todas las tablas.
@@ -23,15 +21,16 @@
 - [Arquitectura técnica](arquitectura/tecnica/README.md) y [diagramas](arquitectura/diagramas/README.md) actualizados a la API Express con Prisma.
 - Panel web desplegado en [society-web-gamma.vercel.app](https://society-web-gamma.vercel.app), y API con sus variables de entorno cargadas en Vercel (hito H1).
 - Regla de una rama por issue de Jira en todos los repositorios. Ver la decisión [0006](decisiones/0006-una-rama-por-issue-de-jira.md).
-- Esqueleto de Android con una carpeta por pantalla y la navegación de las pantallas 02 y 03 en [Society-Kotlin](https://github.com/Ju4nmaFd3z/Society-Kotlin).
+- Navegación de todas las pantallas del MVP en [Society-Kotlin](https://github.com/Ju4nmaFd3z/Society-Kotlin), de 01 Bienvenida a 15 Calendario, según el [diagrama de flujo](arquitectura/diagramas/README.md). Cada pantalla tiene su carpeta en `feature/`, y su ruta en `navigation/Rutas.kt` con los datos que recibe. Salvo 02, las pantallas son provisionales: título y botones que llevan a la siguiente.
+- Pantalla [02. Empezamos](diseno/pantallas/02-empezamos.md) funcional en Android con datos de ejemplo: busca locales en `assets/locales.json`, muestra sus estados y lleva a 03. Análisis.
 
 ## En curso
 
 - Sprint 1 · Arranque (hitos H1 y H2), del 1 al 8 de noviembre. Quedan: Tailwind en el panel web, capa de red Android, contrato OpenAPI de `/auth` y `/restaurantes`, y prueba de Nano Banana Pro en Higgsfield.
 - Diseño de las pantallas de la app móvil. El contenido y los estados de todas están en [Diseño](diseno/README.md), según los diagramas oficiales. El diseño visual completo está en una copia de trabajo de Figma, y falta pasarlo al archivo oficial del equipo. Una propuesta de estética más legible espera decisión.
 - Documentación de producto. Ver [Producto](producto/README.md).
-- Funcionalidad de la pantalla 02. Empezamos: búsqueda de locales y lectura de los datos.
-- Definición del contenido y los estados de las pantallas de cartón piedra.
+- Pantalla 02. Empezamos: pasar la búsqueda a la API de Society.
+- Implementar las pantallas provisionales de Android y cambiar los IDs inventados de la navegación por los que devuelva la API.
 
 ## Pendiente
 
