@@ -1,6 +1,6 @@
 # Estado del proyecto
 
-Última actualización: 2 de noviembre de 2026.
+Última actualización: 4 de noviembre de 2026.
 
 ## Hecho
 
@@ -21,11 +21,14 @@
 - Prisma conectado a Supabase, con la primera migración (`perfil_usuario` y `restaurante`) y RLS en todas las tablas.
 - Proyecto Angular creado en Society-TypeScript (`web/`) y primera versión del contrato OpenAPI, con las rutas de Places.
 - [Arquitectura técnica](arquitectura/tecnica/README.md) y [diagramas](arquitectura/diagramas/README.md) actualizados a la API Express con Prisma.
+- Panel web desplegado en [society-web-gamma.vercel.app](https://society-web-gamma.vercel.app), y API con sus variables de entorno cargadas en Vercel (hito H1).
+- Regla de una rama por issue de Jira en todos los repositorios. Ver la decisión [0006](decisiones/0006-una-rama-por-issue-de-jira.md).
+- Esqueleto de Android con una carpeta por pantalla y la navegación de las pantallas 02 y 03 en [Society-Kotlin](https://github.com/Ju4nmaFd3z/Society-Kotlin).
 
 ## En curso
 
-- Sprint 1 · Arranque (hitos H1 y H2), del 1 al 8 de noviembre. Quedan: despliegue del panel web con Tailwind, capa de red Android, contrato OpenAPI de `/auth` y `/restaurantes`, y prueba de Nano Banana Pro en Higgsfield.
-- Diseño de las pantallas de la app móvil en Figma: diseñadas de la 01 a la 07; las 08 a 15 tienen solo la cabecera. Ver [Diseño](diseno/README.md).
+- Sprint 1 · Arranque (hitos H1 y H2), del 1 al 8 de noviembre. Quedan: Tailwind en el panel web, capa de red Android, contrato OpenAPI de `/auth` y `/restaurantes`, y prueba de Nano Banana Pro en Higgsfield.
+- Diseño de las pantallas de la app móvil. El contenido y los estados de todas están en [Diseño](diseno/README.md), según los diagramas oficiales. El diseño visual completo está en una copia de trabajo de Figma, y falta pasarlo al archivo oficial del equipo. Una propuesta de estética más legible espera decisión.
 - Documentación de producto. Ver [Producto](producto/README.md).
 - Funcionalidad de la pantalla 02. Empezamos: búsqueda de locales y lectura de los datos.
 - Definición del contenido y los estados de las pantallas de cartón piedra.
