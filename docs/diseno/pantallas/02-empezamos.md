@@ -1,6 +1,6 @@
 # 02. Empezamos
 
-Pantalla «Busca tu local». Permite encontrar el local del usuario en Google Maps y seleccionarlo para proceder con el análisis.
+Pantalla «Busca tu local». Permite encontrar el local del usuario en Google Maps y confirmarlo para empezar el análisis.
 
 ## Objetivo
 
@@ -10,38 +10,42 @@ Que el usuario encuentre su local, o el que quiera gestionar.
 
 - Flujo: [Flujo de navegación](../flujo-de-navegacion/README.md).
 - Figma: pestaña v3 · Cristal líquido. Ver [Diseño](../README.md).
+- Detalle: página «2 · S02 · Busca tu local» de [`diagrama-pantallas-detalle.drawio`](../../arquitectura/diagramas/diagrama-pantallas-detalle.drawio).
+- Decisión D-05: la clave de Google solo vive en el servidor.
 
 ## Contenido
 
 Disposición: la cabecera con el botón atrás y el título «Busca tu local», el buscador y, debajo, los resultados.
 
-- **Buscador:** campo de texto donde se escribe el nombre del local o la zona.
+- **Buscador:** campo de texto donde se escribe el nombre del local y la zona, de 3 a 100 caracteres. Con menos de 3, el botón de buscar está desactivado.
 - **Resumen de resultados:** por ejemplo, «2 resultados en Google Maps».
-- **Lista de locales:** se carga de forma perezosa (lazy) a medida que el usuario hace scroll.
+- **Lista de locales:** 20 resultados por página y 60 como máximo. Se carga a medida que el usuario hace scroll.
 - **Tarjeta de local:** una por cada resultado, con:
-    - Primeras imágenes del local.
+    - Foto del local.
     - Nombre.
     - Calle y zona.
-    - Media de reseñas.
-    - Número de reseñas.
-- **Botón «Es mi local»:** confirma el local elegido. En Android, de momento, es el botón «Analizar» de la tarjeta.
-- **Enlace «¿No aparece tu local? Añádelo a mano»:** destino por definir.
+    - Estrellas y número de reseñas.
+    - Autor de la foto y el texto «Google Maps», que exigen las políticas de Places.
+- **Botón «Es mi local»:** abre el modal «¿Es tu local?», con la casilla obligatoria «Soy propietario o gestor». En Android, de momento, es el botón «Analizar» de la tarjeta.
+- **Enlace «¿No aparece tu local? Añádelo a mano»:** lleva a [02M. Alta manual](02m-alta-manual.md).
 
-Pendiente de confirmar: la especificación anterior incluía un buscador de página web, que el diseño actual no muestra.
+El buscador de página web de la especificación anterior se descarta: la web se pide en 02M y se edita en [04. Así te ve Internet](04-asi-te-ve-internet.md).
 
 ## Estados
 
 Además de los cuatro estados obligatorios (cargando, vacío, error y con datos), la pantalla tiene un estado inicial, anterior a la primera búsqueda.
 
-1. **Inicial:** aún no se ha buscado. Mensaje «No se han buscado locales todavía».
+1. **Inicial:** aún no se ha buscado.
 2. **Cargando:** indicador de carga mientras llegan los resultados.
-3. **Vacío:** la búsqueda no ha devuelto locales. Mensaje «No se han encontrado locales».
-4. **Error:** aviso de fallo de red, con opción de reintentar. Mensaje «Error de red. Revisa tu conexión e inténtalo de nuevo.» y botón «Reintentar».
-5. **Con datos:** búsqueda realizada, con los locales y la carga de más páginas al llegar al final de la lista.
+3. **Vacío:** «No encontramos tu local», con la salida «Añádelo a mano».
+4. **Error:** «Revisa tu conexión» y el botón «Reintentar».
+5. **Con datos:** locales y carga de más páginas al llegar al final de la lista.
+
+Después de confirmar hay dos estados más: confirmando y guardando. Errores posibles: local ya dado de alta con otra cuenta (409), falta de conexión y proveedor no disponible. Los textos de Android todavía son provisionales. Ver [Modales y estados](modales-y-estados.md).
 
 ## Navegación
 
-Se llega desde [01. Inicio](01-inicio.md). Al pulsar «Es mi local» se pasa a [03. Análisis](03-analisis.md).
+Se llega desde [01A. Acceso](01a-acceso.md) o al abrir la app sin local dado de alta. Al confirmar el local se pasa a [03. Análisis](03-analisis.md). «Añádelo a mano» lleva a 02M.
 
 ## Implementación
 

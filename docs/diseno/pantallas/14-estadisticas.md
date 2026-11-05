@@ -1,6 +1,6 @@
 # 14. Estadísticas
 
-Estadísticas de Instagram.
+Estadísticas de Instagram. Es P2: queda fuera del MVP.
 
 ## Objetivo
 
@@ -13,7 +13,7 @@ Mostrar cómo funciona la cuenta del local.
 
 ## Contenido
 
-Estadísticas de Instagram sobre publicaciones, seguidores, campañas, likes, comentarios, retención de audiencia, visitas del perfil, etc. El diseño solo tiene la cabecera, con el botón atrás y el título.
+Estadísticas de Instagram sobre publicaciones, seguidores, likes, comentarios, retención de audiencia, visitas del perfil y campañas, con su fuente. En el MVP, las estadísticas de la barra inferior de [05. Home](05-home.md) aparecen como «Próximamente», con el acceso desactivado.
 
 ## Estados
 

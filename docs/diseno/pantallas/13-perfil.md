@@ -1,27 +1,35 @@
 # 13. Perfil
 
-Perfil del usuario.
+Perfil del usuario y conexión con Instagram.
 
 ## Objetivo
 
-Reunir los permisos de la aplicación y el acceso a los términos y las políticas.
+Reunir los datos de la cuenta, la conexión con Instagram y los accesos legales.
 
 ## Diseño
 
 - Flujo: [Flujo de navegación](../flujo-de-navegacion/README.md).
 - Figma: pestaña v3 · Cristal líquido. Ver [Diseño](../README.md).
+- Detalle: página «13 · S13 · Perfil e Instagram» de [`diagrama-pantallas-detalle.drawio`](../../arquitectura/diagramas/diagrama-pantallas-detalle.drawio).
+- Decisiones D-09, D-30 y D-31.
 
 ## Contenido
 
-Perfil, donde se encuentran todos los permisos de la aplicación y las rutas hacia los términos y las políticas. El diseño solo tiene la cabecera, con el botón atrás y el título.
+- **Cabecera:** botón atrás y el título «Perfil».
+- **Cuenta:** nombre del local y correo.
+- **Datos del local:** abre [04. Así te ve Internet](04-asi-te-ve-internet.md) en modo edición.
+- **Instagram:** usuario, tipo de cuenta, estado de la conexión y cuándo caduca. Con los botones «Conectar» o «Desconectar». La cuenta debe ser profesional.
+- **Legal:** términos y condiciones, y política de privacidad.
+- **Botón «Cerrar sesión».**
+- **Enlace «Eliminar cuenta».** Es P1.
 
 ## Estados
 
-Por definir. Si la pantalla muestra datos, incluirá los cuatro estados obligatorios: cargando, vacío, error y con datos.
+Cargando, con datos, conectando Instagram, error y cerrando sesión. La conexión con Instagram puede estar conectada, caducada o revocada.
 
 ## Navegación
 
-Se llega desde la barra inferior de [05. Home](05-home.md).
+Se llega desde la barra inferior de [05. Home](05-home.md). «Conectar» sale a Instagram y vuelve a esta pantalla. «Cerrar sesión» abre un modal de confirmación y vuelve a [01. Inicio](01-inicio.md). Ver [Modales y estados](modales-y-estados.md).
 
 ## Implementación
 

@@ -1,6 +1,6 @@
 # 10. Notificaciones
 
-Panel de notificaciones.
+Panel de notificaciones. Es P2: queda fuera del MVP.
 
 ## Objetivo
 
@@ -13,7 +13,7 @@ Reunir las propuestas y las analíticas semanales.
 
 ## Contenido
 
-Panel de notificaciones con propuestas y analíticas semanales. El diseño solo tiene la cabecera, con el botón atrás y el título.
+Panel con las propuestas nuevas, los contenidos publicados y el resumen semanal de Instagram. En el MVP, la campana de [05. Home](05-home.md) aparece como «Próximamente», con el acceso desactivado.
 
 ## Estados
 

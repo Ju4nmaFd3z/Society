@@ -10,25 +10,27 @@ Estudiar lo que internet sabe del local seleccionado en [02. Empezamos](02-empez
 
 - Flujo: [Flujo de navegación](../flujo-de-navegacion/README.md).
 - Figma: pestaña v3 · Cristal líquido. Ver [Diseño](../README.md).
+- Detalle: página «4 · S03 · Estudiando tu local» de [`diagrama-pantallas-detalle.drawio`](../../arquitectura/diagramas/diagrama-pantallas-detalle.drawio).
 
 ## Contenido
 
-Es el paso 3 de 6 del proceso. Los datos del diseño son de ejemplo.
+Los datos del diseño son de ejemplo.
 
-- **Cabecera:** botón atrás, «Paso 3 de 6» y el título «Estudiando tu local».
-- **Texto:** «Buscamos lo que internet sabe de Torre de Vega. Tarda unos minutos.»
-- **Progreso:** porcentaje y tiempo restante, por ejemplo «46 %» y «Quedan unos 4 minutos».
-- **Fuentes:** Google Maps, Instagram, Tu web, TikTok y Colores y letras, cada una con su estado: hecho, ahora o pendiente.
-- **Botón «Avisarme cuando termine».**
-- **Aviso:** «Puedes cerrar la app. Seguimos trabajando.»
+- **Cabecera:** botón atrás y el título «Estudiando tu local».
+- **Texto:** «Buscamos lo que internet sabe de [nombre del local]. Tarda unos minutos.»
+- **Progreso:** barra con «3 de 5», que es el número de pasos terminados entre cinco, y el tiempo restante, por ejemplo «Quedan unos 2 min». Con tiempo cero, «Casi listo…».
+- **Cinco pasos:** Google Maps, Tu web, Instagram, Colores y letras, y Ficha con IA. Cada uno muestra su estado (pendiente, en curso, hecho, omitido o error) y un detalle, por ejemplo «695 reseñas leídas». Instagram es P1 y se omite si no está conectado.
+- **Aviso «No salgas de la aplicación».** Es la decisión D-19: no hay botón «Avisarme cuando termine».
 
 ## Estados
 
-Por definir. Muestra el progreso del análisis y el estado de cada fuente. Si la pantalla muestra datos, incluirá los cuatro estados obligatorios: cargando, vacío, error y con datos.
+Cargando, en curso, terminado (completo o parcial), error con opción de reintentar y cancelado.
+
+La pantalla consulta el estado cada 3 segundos. Si falla un paso que no es crítico, el análisis sigue y termina como parcial.
 
 ## Navegación
 
-Se llega desde [02. Empezamos](02-empezamos.md). El botón «Avisarme cuando termine» lleva a [04. Así te ve Internet](04-asi-te-ve-internet.md).
+Se llega desde [02. Empezamos](02-empezamos.md), [02M. Alta manual](02m-alta-manual.md) o al abrir la app con un análisis en curso. Al terminar pasa a [04. Así te ve Internet](04-asi-te-ve-internet.md), con un aviso de «Faltan datos» si fue parcial. «Atrás» abre el modal «¿Cancelar el análisis?» y, al confirmar, vuelve a 02. Ver [Modales y estados](modales-y-estados.md).
 
 ## Implementación
 

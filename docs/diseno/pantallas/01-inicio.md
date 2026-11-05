@@ -24,7 +24,7 @@ No muestra datos, así que no tiene estados de carga, vacío ni error.
 
 ## Navegación
 
-Es la pantalla con la que se abre la app. El botón «Descubre cómo funciona» lleva a [02. Empezamos](02-empezamos.md).
+Es la pantalla con la que se abre la app sin sesión. El botón «Descubre cómo funciona» lleva a [01A. Acceso](01a-acceso.md). Con una sesión válida, la app salta directamente a 02, 03, 04 o 05, según el estado del alta del local.
 
 ## Implementación
 
