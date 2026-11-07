@@ -1,6 +1,6 @@
 # Estado del proyecto
 
-Última actualización: 6 de noviembre de 2026.
+Última actualización: 7 de noviembre de 2026.
 
 ## Hecho
 
@@ -24,7 +24,7 @@
 - Panel web desplegado en [society-web-gamma.vercel.app](https://society-web-gamma.vercel.app), y API con sus variables de entorno cargadas en Vercel (hito H1).
 - Regla de una rama por issue de Jira en todos los repositorios. Ver la decisión [0006](decisiones/0006-una-rama-por-issue-de-jira.md).
 - Esqueleto de Android con una carpeta por pantalla y la navegación de las pantallas 02 y 03 en [Society-Kotlin](https://github.com/Ju4nmaFd3z/Society-Kotlin).
-- Diseño visual de la app terminado en el [archivo de Figma definitivo](diseno/README.md), con su [sistema de diseño](diseno/sistema-de-diseno.md). El contenido y los estados de todas las pantallas están en [Pantallas](diseno/pantallas/README.md).
+- Diseño visual de la app terminado en el [archivo de Figma definitivo](diseno/README.md), con su [sistema de diseño](diseno/sistema-de-diseno.md) y la decisión [0007](decisiones/0007-diseno-definitivo.md). El contenido y los estados de todas las pantallas están en [Pantallas](diseno/pantallas/README.md).
 - Prueba de Nano Banana Pro en la API de Higgsfield.
 
 ## En curso
