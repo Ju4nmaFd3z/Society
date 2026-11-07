@@ -49,4 +49,4 @@ Se llega desde [01A. Acceso](01a-acceso.md) o al abrir la app sin local dado de 
 
 ## Implementación
 
-- Android: [Society-Kotlin](https://github.com/Ju4nmaFd3z/Society-Kotlin/blob/main/docs/pantallas.md). La carpeta del código se llama `feature/inicio`, por historia, y está pendiente de renombrar.
+- Android: [Society-Kotlin](https://github.com/Ju4nmaFd3z/Society-Kotlin/blob/main/docs/pantallas.md). El código está en la carpeta `feature/empezamos`.
