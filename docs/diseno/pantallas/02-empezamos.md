@@ -49,4 +49,4 @@ Se llega desde [01A. Acceso](01a-acceso.md) o al abrir la app sin local dado de 
 
 ## Implementación
 
-- Android: en `feature/empezamos`, con la ruta `EmpezamosRoute`. Funcional con datos de ejemplo: busca en `assets/locales.json`, muestra sus estados y lleva a 03 y a 02M. Ver [Society-Kotlin](https://github.com/Ju4nmaFd3z/Society-Kotlin/blob/main/docs/pantallas.md).
+- Android: [Society-Kotlin](https://github.com/Ju4nmaFd3z/Society-Kotlin/blob/main/docs/pantallas.md). El código está en la carpeta `feature/empezamos`.
