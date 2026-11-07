@@ -20,3 +20,4 @@ Si una decisión se sustituye por otra, no se borra: se cambia su estado y se en
 | [0004](0004-jira-y-notion.md) | Jira y Notion como herramientas del equipo | Aceptada |
 | [0005](0005-estetica-de-cristal.md) | Estética de cristal en la identidad visual | Aceptada |
 | [0006](0006-una-rama-por-issue-de-jira.md) | Una rama por issue de Jira | Aceptada |
+| [0007](0007-diseno-definitivo.md) | Diseño definitivo: cristal sobre grafiti con texto legible | Aceptada |
