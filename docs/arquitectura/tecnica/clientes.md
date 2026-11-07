@@ -37,24 +37,19 @@ com.alanturing.society
     ├── empezamos/           S02
     ├── altamanual/          S02M
     ├── analisis/            S03
-    ├── asiteveinternet/     S04
+    ├── ficha/               S04
     ├── home/                S05
-    ├── crearcontenidograph/ S06 · S07 · S08 (grafo anidado con un ViewModel compartido)
-    ├── contenidocreado/     S09
-    ├── publicarcontenido/   S09P
-    ├── campanapropuesta/    S11
-    ├── campanamedida/       S12 [P1]
+    ├── crearcontenido/      S06 · S07 · S08 (grafo anidado con un ViewModel compartido)
+    ├── contenido/           S09 · S09P
+    ├── campanas/            S11 · S12 [P1]
     ├── perfil/              S13
     └── calendario/          S15 [P1]
 ```
-
-Cada ruta lleva los datos que recibe su pantalla, según el diagrama de flujo: `AnalisisRoute(analisisId)`, `AsiTeVeInternetRoute(restauranteId, modoEdicion)`, `CrearContenidoGraph(campanaId)` (opcional, solo desde S11), `ContenidoCreadoRoute(piezaId)`, `PublicarContenidoRoute(piezaId)` y `CampanaPropuestaRoute(oportunidadId)`. El resto no recibe datos.
 
 Dentro de cada `feature/<pantalla>/`:
 
 | Carpeta | Qué va |
 |---|---|
-| `XxxNavigation.kt` | `navigateToXxx()` para llegar a la pantalla y `xxxDestination()` con lo que se muestra; los botones son callbacks y el destino lo decide `SocietyNavHost` |
 | `ui/` | `XxxScreen` (Compose), `XxxViewModel` con `StateFlow<XxxUiState>` y `ui/component/` para piezas propias de esa pantalla |
 | `data/` | `XxxRemoteDataSource` y `XxxRepository` + `Impl`; los DTO de Gson en `data/dto/` con su `toModel()` |
 | `model/` | Clases que usa la interfaz (nunca los DTO) |
