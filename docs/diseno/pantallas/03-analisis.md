@@ -9,7 +9,7 @@ Estudiar lo que internet sabe del local seleccionado en [02. Empezamos](02-empez
 ## Diseño
 
 - Flujo: [Flujo de navegación](../flujo-de-navegacion/README.md).
-- Figma: pestaña v3 · Cristal líquido. Ver [Diseño](../README.md).
+- Figma: archivo definitivo, página «1 · Presentación». Ver [Diseño](../README.md).
 - Detalle: página «4 · S03 · Estudiando tu local» de [`diagrama-pantallas-detalle.drawio`](../../arquitectura/diagramas/diagrama-pantallas-detalle.drawio).
 
 ## Contenido
@@ -34,4 +34,4 @@ Se llega desde [02. Empezamos](02-empezamos.md), [02M. Alta manual](02m-alta-man
 
 ## Implementación
 
-- Android: pantalla provisional en `feature/analisis`, con la ruta `AnalisisRoute(analisisId)`. Muestra el título y los botones que llevan a la siguiente pantalla. Ver [Society-Kotlin](https://github.com/Ju4nmaFd3z/Society-Kotlin/blob/main/docs/pantallas.md).
+- Android: pantalla de cartón piedra que recibe el ID del local. Ver [Society-Kotlin](https://github.com/Ju4nmaFd3z/Society-Kotlin/blob/main/docs/pantallas.md).

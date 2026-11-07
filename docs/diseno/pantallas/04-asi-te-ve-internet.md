@@ -9,7 +9,7 @@ Que el usuario revise y corrija lo que el análisis ha encontrado de su local.
 ## Diseño
 
 - Flujo: [Flujo de navegación](../flujo-de-navegacion/README.md).
-- Figma: pestaña v3 · Cristal líquido. Ver [Diseño](../README.md).
+- Figma: archivo definitivo, página «1 · Presentación». Ver [Diseño](../README.md).
 - Detalle: página «5 · S04 · Así te ve internet» de [`diagrama-pantallas-detalle.drawio`](../../arquitectura/diagramas/diagrama-pantallas-detalle.drawio).
 
 ## Contenido
@@ -37,4 +37,4 @@ Se llega desde [03. Análisis](03-analisis.md), o desde [13. Perfil](13-perfil.m
 
 ## Implementación
 
-- Android: pantalla provisional en `feature/asiteveinternet`, con la ruta `AsiTeVeInternetRoute(restauranteId, modoEdicion)`. Muestra el título y los botones que llevan a la siguiente pantalla. Ver [Society-Kotlin](https://github.com/Ju4nmaFd3z/Society-Kotlin/blob/main/docs/pantallas.md).
+- Android: pantalla de cartón piedra, ver [Society-Kotlin](https://github.com/Ju4nmaFd3z/Society-Kotlin/blob/main/docs/pantallas.md).

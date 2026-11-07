@@ -9,7 +9,7 @@ Ver cuándo sale cada pieza, prevista o ya publicada.
 ## Diseño
 
 - Flujo: [Flujo de navegación](../flujo-de-navegacion/README.md).
-- Figma: pestaña v3 · Cristal líquido. Ver [Diseño](../README.md).
+- Figma: archivo definitivo, página «1 · Presentación». Ver [Diseño](../README.md).
 - Detalle: página «15 · S15 · Calendario [P1]» de [`diagrama-pantallas-detalle.drawio`](../../arquitectura/diagramas/diagrama-pantallas-detalle.drawio).
 
 ## Contenido
@@ -31,4 +31,4 @@ Se llega desde la barra inferior de [05. Home](05-home.md). Al tocar una pieza s
 
 ## Implementación
 
-- Android: pantalla provisional en `feature/calendario`, con la ruta `CalendarioRoute`. Muestra el título y los botones que llevan a la siguiente pantalla. Ver [Society-Kotlin](https://github.com/Ju4nmaFd3z/Society-Kotlin/blob/main/docs/pantallas.md).
+- Android: pantalla de cartón piedra, ver [Society-Kotlin](https://github.com/Ju4nmaFd3z/Society-Kotlin/blob/main/docs/pantallas.md).

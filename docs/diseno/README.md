@@ -6,10 +6,14 @@ Flujo de navegación, pantallas y criterios de diseño de Society.
 
 - [Flujo de navegación](flujo-de-navegacion/README.md): reglas del diagrama de navegación de la app.
 - [Pantallas](pantallas/README.md): una nota por pantalla, con su objetivo, contenido y estados.
+- [Sistema de diseño](sistema-de-diseno.md): colores, tipografía, cristal, etiquetas e iconos. Es la guía de estilos de la app y del panel web.
 
 ## Archivo de diseño
 
-Las pantallas de la app móvil se diseñan en Figma, en el archivo [Society · Rediseño papel y cristal](https://www.figma.com/design/xigLfMNI2Zs3ugOiadJJ9O). La versión de trabajo es la pestaña **v3 · Cristal líquido**. Es el archivo oficial del proyecto para todo el equipo.
+Las pantallas de la app móvil se diseñan en Figma, en el archivo [Society · Final Version](https://www.figma.com/design/G4bwEgiP3eRRlNoHK4ftVA/Society--Final-Version-?node-id=2027-1844). Es el archivo oficial y definitivo del proyecto para todo el equipo. Tiene dos páginas:
+
+- **1 · Presentación:** portada, mapa general de navegación y las pantallas, agrupadas en cinco galerías.
+- **2 · Sistema de diseño:** colores, tipografía, cristal, etiquetas, iconos y componentes.
 
 ## Qué manda en caso de duda
 

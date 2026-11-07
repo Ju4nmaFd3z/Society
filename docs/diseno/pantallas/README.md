@@ -2,7 +2,7 @@
 
 Una nota por pantalla, con su objetivo, contenido y estados. La implementación en cada tecnología se documenta en su repositorio.
 
-La numeración y los nombres son los del diseño en Figma, pestaña v3 · Cristal líquido, y los de los [diagramas oficiales](../../arquitectura/diagramas/README.md). El contenido y los estados de cada nota siguen el detalle de esos diagramas.
+La numeración y los nombres son los del diseño definitivo en Figma y los de los [diagramas oficiales](../../arquitectura/diagramas/README.md). El contenido y los estados de cada nota siguen el detalle de esos diagramas.
 
 ## Contenido
 

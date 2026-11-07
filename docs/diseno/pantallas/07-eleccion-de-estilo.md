@@ -9,7 +9,7 @@ Que el usuario elija la estética que quiere para su contenido.
 ## Diseño
 
 - Flujo: [Flujo de navegación](../flujo-de-navegacion/README.md).
-- Figma: pestaña v3 · Cristal líquido. Ver [Diseño](../README.md).
+- Figma: archivo definitivo, página «1 · Presentación». Ver [Diseño](../README.md).
 - Detalle: página «8 · S07 · Crear contenido · Estética» de [`diagrama-pantallas-detalle.drawio`](../../arquitectura/diagramas/diagrama-pantallas-detalle.drawio).
 
 ## Contenido
@@ -30,4 +30,4 @@ Se llega desde [06. Crear contenido](06-crear-contenido.md). El siguiente paso e
 
 ## Implementación
 
-- Android: pantalla provisional en `feature/crearcontenidograph`, con la ruta `EleccionEstiloRoute`. Muestra el título y los botones que llevan a la siguiente pantalla. Va dentro del grafo `CrearContenidoGraph`. Ver [Society-Kotlin](https://github.com/Ju4nmaFd3z/Society-Kotlin/blob/main/docs/pantallas.md).
+- Android: pantalla de cartón piedra, ver [Society-Kotlin](https://github.com/Ju4nmaFd3z/Society-Kotlin/blob/main/docs/pantallas.md).

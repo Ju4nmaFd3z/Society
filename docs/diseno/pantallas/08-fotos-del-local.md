@@ -9,7 +9,7 @@ Que el usuario suba fotos reales de su local o elija las ya subidas anteriorment
 ## Diseño
 
 - Flujo: [Flujo de navegación](../flujo-de-navegacion/README.md).
-- Figma: pestaña v3 · Cristal líquido. Ver [Diseño](../README.md).
+- Figma: archivo definitivo, página «1 · Presentación». Ver [Diseño](../README.md).
 - Detalle: página «9 · S08 · Crear contenido · Fotos» de [`diagrama-pantallas-detalle.drawio`](../../arquitectura/diagramas/diagrama-pantallas-detalle.drawio).
 - Decisión D-32.
 
@@ -33,4 +33,4 @@ Se llega desde [07. Elección de estilo](07-eleccion-de-estilo.md). Al generar, 
 
 ## Implementación
 
-- Android: pantalla provisional en `feature/crearcontenidograph`, con la ruta `FotosLocalRoute`. Muestra el título y los botones que llevan a la siguiente pantalla. Va dentro del grafo `CrearContenidoGraph`. Ver [Society-Kotlin](https://github.com/Ju4nmaFd3z/Society-Kotlin/blob/main/docs/pantallas.md).
+- Android: pantalla de cartón piedra, ver [Society-Kotlin](https://github.com/Ju4nmaFd3z/Society-Kotlin/blob/main/docs/pantallas.md).

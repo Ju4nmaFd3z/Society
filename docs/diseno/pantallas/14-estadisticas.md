@@ -9,7 +9,7 @@ Mostrar cómo funciona la cuenta del local.
 ## Diseño
 
 - Flujo: [Flujo de navegación](../flujo-de-navegacion/README.md).
-- Figma: pestaña v3 · Cristal líquido. Ver [Diseño](../README.md).
+- Figma: archivo definitivo, página «1 · Presentación». Ver [Diseño](../README.md).
 
 ## Contenido
 
@@ -25,4 +25,4 @@ Se llega desde la barra inferior de [05. Home](05-home.md).
 
 ## Implementación
 
-- Android: fuera del MVP, sin pantalla ni ruta por ahora.
+- Android: pantalla de cartón piedra, ver [Society-Kotlin](https://github.com/Ju4nmaFd3z/Society-Kotlin/blob/main/docs/pantallas.md).
