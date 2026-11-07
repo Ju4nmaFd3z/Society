@@ -33,5 +33,5 @@ Se llega desde [01. Inicio](01-inicio.md) o cuando caduca la sesión. Al termina
 
 ## Implementación
 
-- Android: pendiente. Issue SOCIETY-52.
+- Android: pantalla provisional en `feature/acceso`, con la ruta `AccesoRoute`. Muestra el título y los botones que llevan a la siguiente pantalla. La implementación real sigue pendiente, issue SOCIETY-52. Ver [Society-Kotlin](https://github.com/Ju4nmaFd3z/Society-Kotlin/blob/main/docs/pantallas.md).
 - Web: pendiente. Ruta `/acceso`, issue SOCIETY-55.

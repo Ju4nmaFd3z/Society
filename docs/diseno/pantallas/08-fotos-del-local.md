@@ -33,4 +33,4 @@ Se llega desde [07. Elección de estilo](07-eleccion-de-estilo.md). Al generar, 
 
 ## Implementación
 
-- Android: pantalla de cartón piedra, ver [Society-Kotlin](https://github.com/Ju4nmaFd3z/Society-Kotlin/blob/main/docs/pantallas.md).
+- Android: pantalla provisional en `feature/crearcontenidograph`, con la ruta `FotosLocalRoute`. Muestra el título y los botones que llevan a la siguiente pantalla. Va dentro del grafo `CrearContenidoGraph`. Ver [Society-Kotlin](https://github.com/Ju4nmaFd3z/Society-Kotlin/blob/main/docs/pantallas.md).

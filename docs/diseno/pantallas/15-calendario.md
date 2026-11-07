@@ -31,4 +31,4 @@ Se llega desde la barra inferior de [05. Home](05-home.md). Al tocar una pieza s
 
 ## Implementación
 
-- Android: pantalla de cartón piedra, ver [Society-Kotlin](https://github.com/Ju4nmaFd3z/Society-Kotlin/blob/main/docs/pantallas.md).
+- Android: pantalla provisional en `feature/calendario`, con la ruta `CalendarioRoute`. Muestra el título y los botones que llevan a la siguiente pantalla. Ver [Society-Kotlin](https://github.com/Ju4nmaFd3z/Society-Kotlin/blob/main/docs/pantallas.md).

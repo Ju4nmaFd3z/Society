@@ -30,4 +30,4 @@ Se llega desde [06. Crear contenido](06-crear-contenido.md). El siguiente paso e
 
 ## Implementación
 
-- Android: pantalla de cartón piedra, ver [Society-Kotlin](https://github.com/Ju4nmaFd3z/Society-Kotlin/blob/main/docs/pantallas.md).
+- Android: pantalla provisional en `feature/crearcontenidograph`, con la ruta `EleccionEstiloRoute`. Muestra el título y los botones que llevan a la siguiente pantalla. Va dentro del grafo `CrearContenidoGraph`. Ver [Society-Kotlin](https://github.com/Ju4nmaFd3z/Society-Kotlin/blob/main/docs/pantallas.md).

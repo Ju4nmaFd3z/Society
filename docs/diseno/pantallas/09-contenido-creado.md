@@ -33,4 +33,4 @@ Se llega desde [08. Fotos del local](08-fotos-del-local.md), desde [05. Home](05
 
 ## Implementación
 
-- Android: pantalla de cartón piedra, ver [Society-Kotlin](https://github.com/Ju4nmaFd3z/Society-Kotlin/blob/main/docs/pantallas.md).
+- Android: pantalla provisional en `feature/contenidocreado`, con la ruta `ContenidoCreadoRoute(piezaId)`. Muestra el título y los botones que llevan a la siguiente pantalla. Ver [Society-Kotlin](https://github.com/Ju4nmaFd3z/Society-Kotlin/blob/main/docs/pantallas.md).
