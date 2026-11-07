@@ -9,7 +9,7 @@ Mostrar el contenido creado mientras se genera, recoger los cambios que quiera e
 ## Diseño
 
 - Flujo: [Flujo de navegación](../flujo-de-navegacion/README.md).
-- Figma: pestaña v3 · Cristal líquido. Ver [Diseño](../README.md).
+- Figma: archivo definitivo, página «1 · Presentación». Ver [Diseño](../README.md).
 - Detalle: página «10 · S09 · Contenido creado» de [`diagrama-pantallas-detalle.drawio`](../../arquitectura/diagramas/diagrama-pantallas-detalle.drawio).
 - Decisiones D-17 y D-19.
 
@@ -33,4 +33,4 @@ Se llega desde [08. Fotos del local](08-fotos-del-local.md), desde [05. Home](05
 
 ## Implementación
 
-- Android: pantalla provisional en `feature/contenidocreado`, con la ruta `ContenidoCreadoRoute(piezaId)`. Muestra el título y los botones que llevan a la siguiente pantalla. Ver [Society-Kotlin](https://github.com/Ju4nmaFd3z/Society-Kotlin/blob/main/docs/pantallas.md).
+- Android: pantalla de cartón piedra, ver [Society-Kotlin](https://github.com/Ju4nmaFd3z/Society-Kotlin/blob/main/docs/pantallas.md).

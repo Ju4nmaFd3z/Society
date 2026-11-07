@@ -9,7 +9,7 @@ Ayudar al usuario a diseñar una campaña según lo que quiera conseguir.
 ## Diseño
 
 - Flujo: [Flujo de navegación](../flujo-de-navegacion/README.md).
-- Figma: pestaña v3 · Cristal líquido. Ver [Diseño](../README.md).
+- Figma: archivo definitivo, página «1 · Presentación». Ver [Diseño](../README.md).
 - Detalle: página «14 · S12 · Campaña a medida [P1]» de [`diagrama-pantallas-detalle.drawio`](../../arquitectura/diagramas/diagrama-pantallas-detalle.drawio).
 - Decisión D-18.
 
@@ -33,4 +33,4 @@ Se llega desde «Campaña a tu medida» de [05. Home](05-home.md). Al crear el p
 
 ## Implementación
 
-- Android: pantalla provisional en `feature/campanamedida`, con la ruta `CampanaMedidaRoute`. Muestra el título y los botones que llevan a la siguiente pantalla. Ver [Society-Kotlin](https://github.com/Ju4nmaFd3z/Society-Kotlin/blob/main/docs/pantallas.md).
+- Android: pantalla de cartón piedra, ver [Society-Kotlin](https://github.com/Ju4nmaFd3z/Society-Kotlin/blob/main/docs/pantallas.md).

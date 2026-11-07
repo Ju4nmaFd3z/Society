@@ -9,7 +9,7 @@ Reunir los datos de la cuenta, la conexión con Instagram y los accesos legales.
 ## Diseño
 
 - Flujo: [Flujo de navegación](../flujo-de-navegacion/README.md).
-- Figma: pestaña v3 · Cristal líquido. Ver [Diseño](../README.md).
+- Figma: archivo definitivo, página «1 · Presentación». Ver [Diseño](../README.md).
 - Detalle: página «13 · S13 · Perfil e Instagram» de [`diagrama-pantallas-detalle.drawio`](../../arquitectura/diagramas/diagrama-pantallas-detalle.drawio).
 - Decisiones D-09, D-30 y D-31.
 
@@ -33,4 +33,4 @@ Se llega desde la barra inferior de [05. Home](05-home.md). «Conectar» sale a 
 
 ## Implementación
 
-- Android: pantalla provisional en `feature/perfil`, con la ruta `PerfilRoute`. Muestra el título y los botones que llevan a la siguiente pantalla. Ver [Society-Kotlin](https://github.com/Ju4nmaFd3z/Society-Kotlin/blob/main/docs/pantallas.md).
+- Android: pantalla de cartón piedra, ver [Society-Kotlin](https://github.com/Ju4nmaFd3z/Society-Kotlin/blob/main/docs/pantallas.md).

@@ -9,7 +9,7 @@ Que el usuario entienda por qué se le propone una campaña y pueda crear conten
 ## Diseño
 
 - Flujo: [Flujo de navegación](../flujo-de-navegacion/README.md).
-- Figma: pestaña v3 · Cristal líquido. Ver [Diseño](../README.md).
+- Figma: archivo definitivo, página «1 · Presentación». Ver [Diseño](../README.md).
 - Detalle: página «12 · S11 · Campaña propuesta» de [`diagrama-pantallas-detalle.drawio`](../../arquitectura/diagramas/diagrama-pantallas-detalle.drawio).
 - Decisiones D-11 y D-18.
 
@@ -36,4 +36,4 @@ Se llega desde una oportunidad de [05. Home](05-home.md) o al crear una campaña
 
 ## Implementación
 
-- Android: pantalla provisional en `feature/campanapropuesta`, con la ruta `CampanaPropuestaRoute(oportunidadId)`. Muestra el título y los botones que llevan a la siguiente pantalla. Ver [Society-Kotlin](https://github.com/Ju4nmaFd3z/Society-Kotlin/blob/main/docs/pantallas.md).
+- Android: pantalla de cartón piedra, ver [Society-Kotlin](https://github.com/Ju4nmaFd3z/Society-Kotlin/blob/main/docs/pantallas.md).
