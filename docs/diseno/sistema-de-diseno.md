@@ -95,7 +95,7 @@ Ninguna sombra tiene borde duro: todas se difuminan por completo. En el código,
 
 - **Texto sobre cristal:** va en tinta o en los textos secundario y terciario de la tabla anterior. Son más oscuros que los de la versión anterior (el terciario era `#5C5966`), porque sobre una mancha azul de grafiti translúcida el gris claro apenas se leía.
 - **Texto directamente sobre el fondo:** si mide menos de 20 px, lleva un halo del color Papel de marca (`#F2F1EC`), de 3,2 px y por fuera de la letra.
-- **Velo superior:** degradado del Papel de marca, de 200 px de alto, del 90 % arriba al 0 % abajo. Garantiza que el título se lea sobre la pared.
+- **Velo de la pared:** tiene dos partes, en el papel claro `#FBF8F2`. Arriba, un degradado de 380 px de alto, del 90 % al 42 %, garantiza que el título se lea sobre la pared. En el resto de la pantalla hay un velo uniforme del 42 %, que suaviza el grafiti sin taparlo.
 
 ## Radios
 
@@ -153,7 +153,7 @@ Para quien implemente el tema (SOCIETY-33 en la web y SOCIETY-129 en Android).
 | Elemento | Antes (versión 3) | Ahora |
 | --- | --- | --- |
 | Texto secundario | `#5C5966` | `#2E2C36` y, para etiquetas y notas, `#46434F` |
-| Papel claro | `#FBF8F2` | No es un color del sistema de diseño |
+| Papel claro | `#FBF8F2` | Solo se usa en el velo de la pared. No se usa en ningún otro sitio |
 | Colores | Papel, tinta, azul y amarillo | Además, la paleta completa de marca, el blanco, el positivo, la alerta y la tinta violeta |
 | Cristal | Dos niveles: hoja (70 % a 62 %) y tarjeta (de gris al 35 % a blanco al 51 %) | Tres niveles de blanco: claro, estándar y denso |
 | Filo del cristal | Brillo interior fijo | Trazo de 1,25 px con degradado vertical |
