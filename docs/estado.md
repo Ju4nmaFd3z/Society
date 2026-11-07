@@ -25,6 +25,7 @@
 - Regla de una rama por issue de Jira en todos los repositorios. Ver la decisión [0006](decisiones/0006-una-rama-por-issue-de-jira.md).
 - Esqueleto de Android con una carpeta por pantalla y la navegación de las pantallas 02 y 03 en [Society-Kotlin](https://github.com/Ju4nmaFd3z/Society-Kotlin).
 - Diseño visual de la app terminado en el [archivo de Figma definitivo](diseno/README.md), con su [sistema de diseño](diseno/sistema-de-diseno.md) y la decisión [0007](decisiones/0007-diseno-definitivo.md). El contenido y los estados de todas las pantallas están en [Pantallas](diseno/pantallas/README.md).
+- [Prototipo](diseno/prototipo.md) navegable en Figma, con todas las pantallas, los modales y los estados conectados. Revisión final del archivo de diseño: sin restos del diseño anterior y con los datos de ejemplo coherentes en todo el recorrido.
 - Prueba de Nano Banana Pro en la API de Higgsfield.
 
 ## En curso

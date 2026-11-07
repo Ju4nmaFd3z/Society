@@ -7,6 +7,7 @@ Flujo de navegación, pantallas y criterios de diseño de Society.
 - [Flujo de navegación](flujo-de-navegacion/README.md): reglas del diagrama de navegación de la app.
 - [Pantallas](pantallas/README.md): una nota por pantalla, con su objetivo, contenido y estados.
 - [Sistema de diseño](sistema-de-diseno.md): colores, tipografía, cristal, etiquetas e iconos. Es la guía de estilos de la app y del panel web.
+- [Prototipo](prototipo.md): el recorrido navegable de la app en Figma, con sus puntos de inicio y sus conexiones.
 
 ## Archivo de diseño
 
