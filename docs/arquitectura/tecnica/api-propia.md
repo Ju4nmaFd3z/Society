@@ -1,13 +1,13 @@
 # API propia
 
-**Base:** `https://society-api-xi.vercel.app/api/v1` · JSON en camelCase · fechas ISO 8601 en UTC. El código está en [`Society-TypeScript/api`](https://github.com/Ju4nmaFd3z/Society-TypeScript/tree/main/api).
+**Base:** `https://society-api-xi.vercel.app/api/v1` · JSON en camelCase · fechas ISO 8601 en UTC. El código está en [`Society-TypeScript/api`](https://github.com/Ju4nmaFd3z/Society-TypeScript/tree/main/api) y el contrato en [`Society-TypeScript/contrato/openapi.yaml`](https://github.com/Ju4nmaFd3z/Society-TypeScript/blob/main/contrato/openapi.yaml).
 
 | Método y ruta | Pantallas | Devuelve |
 |---|---|---|
 | `GET /salud` | — | `{ok: true}`. Comprueba que la API está en marcha. **Hecha** |
 | `POST /auth/registro` · `POST /auth/acceso` · `POST /auth/refresco` · `POST /auth/salir` · `POST /auth/recuperar` [P1] | S01A, S13 | `{accessToken, refreshToken, expiraEn}` · 401 · 409 (email ya registrado) · 429 |
 | `GET /perfil` | S13 | email y términos aceptados |
-| `GET /restaurantes/mio` | Arranque, S01A | `{restaurante \| null, altaEstado, analisisEnCursoId?}` |
+| `GET /restaurantes/mio` | Arranque, S01A | `{restaurante \| null, altaEstado, analisisEnCursoId?}`. `altaEstado`: `SIN_LOCAL` (aún no tiene local) o el `alta_estado` del local: `CREADO` · `ANALIZANDO` · `PENDIENTE_CONFIRMAR` · `COMPLETADA` |
 | `GET /places/search?q=&pageToken=` | S02 | `{resultados[], nextPageToken?}` (no se guarda) |
 | `GET /places/photo?name=&maxWidthPx=` | S02 | `{photoUri, atribuciones[]}` |
 | `POST /restaurantes` | S02, S02M | 201 · 409 `DUPLICADO` |
@@ -40,6 +40,7 @@ Todas las respuestas de error tienen el formato `{"error": {"code", "message", "
 |---|---|---|
 | `VALIDACION` | 400 | Datos de entrada no válidos o JSON mal formado |
 | `SESION_CADUCADA` | 401 | JWT ausente, caducado o no válido |
+| `CREDENCIALES_INCORRECTAS` | 401 | Email o contraseña incorrectos en `/auth/acceso`. A diferencia de `SESION_CADUCADA`, el cliente no intenta renovar la sesión |
 | `NO_ENCONTRADO` | 404 | No existe el recurso o la ruta |
 | `DUPLICADO` | 409 | El recurso ya existe (por ejemplo, el local ya está dado de alta) |
 | `LIMITE_ALCANZADO` | 429 | Demasiadas peticiones o límite de cambios o imágenes |
