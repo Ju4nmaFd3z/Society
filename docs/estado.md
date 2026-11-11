@@ -1,6 +1,6 @@
 # Estado del proyecto
 
-Última actualización: 7 de noviembre de 2026.
+Última actualización: 11 de noviembre de 2026.
 
 ## Hecho
 
@@ -26,11 +26,18 @@
 - Esqueleto de Android con una carpeta por pantalla y la navegación de las pantallas 02 y 03 en [Society-Kotlin](https://github.com/Ju4nmaFd3z/Society-Kotlin).
 - Diseño visual de la app terminado en el [archivo de Figma definitivo](diseno/README.md), con su [sistema de diseño](diseno/sistema-de-diseno.md) y la decisión [0007](decisiones/0007-diseno-definitivo.md). El contenido y los estados de todas las pantallas están en [Pantallas](diseno/pantallas/README.md).
 - [Prototipo](diseno/prototipo.md) navegable en Figma para iPhone 16 Pro, con scroll real, modales como pantallas, secuencias animadas (análisis, generación y publicación) y todas las pantallas y estados conectados. Revisión final del archivo de diseño: sin restos del diseño anterior y con los datos de ejemplo coherentes en todo el recorrido.
+- Panel web con Tailwind CSS: el tema de cristal del diseño definitivo, los colores y las fuentes de la marca, y el layout del panel con barra lateral, cabecera y páginas vacías. Código en [Society-TypeScript](https://github.com/Ju4nmaFd3z/Society-TypeScript/tree/main/web).
+- Contrato OpenAPI v0.2.0 con `/salud`, `/auth`, `/restaurantes`, `/analisis` y las rutas de Places, incluido el error de credenciales incorrectas. Código en [Society-TypeScript](https://github.com/Ju4nmaFd3z/Society-TypeScript/tree/main/contrato).
+- Registro de cuentas en la API: `POST /api/v1/auth/registro`, con Supabase Auth. Código en [Society-TypeScript](https://github.com/Ju4nmaFd3z/Society-TypeScript/tree/main/api).
+- Capa de red de Android con Retrofit, Gson y Hilt en [Society-Kotlin](https://github.com/Ju4nmaFd3z/Society-Kotlin): una `SocietyApi`, un DataSource y un repositorio, con la URL de la API en `API_BASE`. Al arrancar, la app llama a `/salud` y escribe el resultado en el log.
+- Fuentes de la marca en Android: DynaPuff y Nunito, aplicadas en `Type.kt`.
 - Prueba de Nano Banana Pro en la API de Higgsfield.
 
 ## En curso
 
-- Sprint 1 · Arranque (hitos H1 y H2), del 1 al 8 de noviembre. Quedan: Tailwind en el panel web, capa de red Android y contrato OpenAPI de `/auth` y `/restaurantes`.
+- Sprint 2 · Acceso (hito H3), del 9 al 15 de noviembre: acceso y sesión en la app y en la web, router y componentes de Angular, autenticación en la API y búsqueda con Places. Carriles: Víctor en Android, Pablo en el backend y Juanma en la web.
+- Sprint 1 · Arranque (hitos H1 y H2), del 1 al 8 de noviembre. Queda preparar la primera rotación de carriles.
+- Tema de cristal de Android: los colores, el esquema de Material, la tarjeta y el botón de cristal están hechos en la rama `SOCIETY-129` de Society-Kotlin, pendiente de fusionar en `main`.
 - Documentación de producto. Ver [Producto](producto/README.md).
 
 ## Pendiente
