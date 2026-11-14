@@ -1,6 +1,6 @@
 # Estado del proyecto
 
-Última actualización: 13 de noviembre de 2026.
+Última actualización: 14 de noviembre de 2026.
 
 ## Hecho
 
@@ -33,11 +33,11 @@
 - Fuentes de la marca en Android: DynaPuff y Nunito, aplicadas en `Type.kt`.
 - Tema de cristal de Android: los colores de la interfaz, el esquema de Material, `TarjetaCristal` y `BotonCristal`, en [Society-Kotlin](https://github.com/Ju4nmaFd3z/Society-Kotlin). Todavía no los usa ninguna pantalla.
 - Prueba de Nano Banana Pro en la API de Higgsfield.
+- Sprint 1 · Arranque (hitos H1 y H2), cerrado el 12 de noviembre, con la primera rotación de carriles preparada.
 
 ## En curso
 
-- Sprint 2 · Acceso (hito H3), del 9 al 15 de noviembre: acceso y sesión en la app y en la web, router y componentes de Angular, autenticación en la API y búsqueda con Places. Carriles: Víctor en Android, Pablo en el backend y Juanma en la web.
-- Sprint 1 · Arranque (hitos H1 y H2), del 1 al 8 de noviembre. Queda preparar la primera rotación de carriles.
+- Sprint 2 · Acceso (hito H3), del 12 al 15 de noviembre: acceso y sesión en la app y en la web, router y componentes de Angular, autenticación en la API y búsqueda con Places. Carriles: Víctor en Android, Pablo en el backend y Juanma en la web.
 - Documentación de producto. Ver [Producto](producto/README.md).
 
 ## Pendiente
