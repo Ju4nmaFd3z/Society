@@ -37,7 +37,7 @@
 
 ## En curso
 
-- Sprint 2 · Acceso (hito H3), del 12 al 15 de noviembre: acceso y sesión en la app y en la web, router y componentes de Angular, autenticación en la API y búsqueda con Places. Carriles: Víctor en Android, Pablo en el backend y Juanma en la web.
+- Sprint 2 · Acceso (hito H3), del 12 al 15 de noviembre: acceso y sesión en la app y en la web, router y componentes de Angular, autenticación en la API y búsqueda con Places. Carriles: Víctor en el backend, Pablo en Android y Juanma en la web.
 - Documentación de producto. Ver [Producto](producto/README.md).
 
 ## Pendiente
