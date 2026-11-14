@@ -1,6 +1,6 @@
 # Estado del proyecto
 
-Última actualización: 11 de noviembre de 2026.
+Última actualización: 13 de noviembre de 2026.
 
 ## Hecho
 
@@ -31,13 +31,13 @@
 - Registro de cuentas en la API: `POST /api/v1/auth/registro`, con Supabase Auth. Código en [Society-TypeScript](https://github.com/Ju4nmaFd3z/Society-TypeScript/tree/main/api).
 - Capa de red de Android con Retrofit, Gson y Hilt en [Society-Kotlin](https://github.com/Ju4nmaFd3z/Society-Kotlin): una `SocietyApi`, un DataSource y un repositorio, con la URL de la API en `API_BASE`. Al arrancar, la app llama a `/salud` y escribe el resultado en el log.
 - Fuentes de la marca en Android: DynaPuff y Nunito, aplicadas en `Type.kt`.
+- Tema de cristal de Android: los colores de la interfaz, el esquema de Material, `TarjetaCristal` y `BotonCristal`, en [Society-Kotlin](https://github.com/Ju4nmaFd3z/Society-Kotlin). Todavía no los usa ninguna pantalla.
 - Prueba de Nano Banana Pro en la API de Higgsfield.
 
 ## En curso
 
 - Sprint 2 · Acceso (hito H3), del 9 al 15 de noviembre: acceso y sesión en la app y en la web, router y componentes de Angular, autenticación en la API y búsqueda con Places. Carriles: Víctor en Android, Pablo en el backend y Juanma en la web.
 - Sprint 1 · Arranque (hitos H1 y H2), del 1 al 8 de noviembre. Queda preparar la primera rotación de carriles.
-- Tema de cristal de Android: los colores, el esquema de Material, la tarjeta y el botón de cristal están hechos en la rama `SOCIETY-129` de Society-Kotlin, pendiente de fusionar en `main`.
 - Documentación de producto. Ver [Producto](producto/README.md).
 
 ## Pendiente
