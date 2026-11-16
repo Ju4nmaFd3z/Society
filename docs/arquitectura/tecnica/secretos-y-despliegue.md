@@ -37,11 +37,15 @@ Configuración del proyecto (Authentication → Sign In / Providers), comprobada
 |---|---|---|
 | Email y contraseña | Activado | Único método de acceso del MVP |
 | Confirmar email | Desactivado | D-04: la cuenta queda lista al registrarse |
-| Permitir registros nuevos (*Allow new users to sign up*) | **Activado** | Pendiente de desactivar mientras el registro esté cerrado |
+| Permitir registros nuevos (*Allow new users to sign up*) | **Desactivado** desde el 16 de noviembre de 2026 (temporal) | Registro cerrado mientras solo prueba el equipo |
 
-Para cerrar el registro hacen falta dos cambios, porque hay dos puertas:
+### Registro cerrado temporalmente
 
-1. **Supabase:** desactivar *Allow new users to sign up*. Impide registrarse llamando a Supabase Auth directamente, sin pasar por la API.
-2. **API:** `POST /auth/registro` crea los usuarios con la API de administrador (`auth.admin.createUser`), que **ignora** ese ajuste. Para cerrarlo hace falta un cambio en la API.
+Para que nadie ajeno al equipo cree una cuenta y use la búsqueda de Google a través de la API. Hay dos puertas:
 
-Los usuarios que ya existen siguen pudiendo entrar y renovar la sesión en los dos casos.
+1. **Supabase Auth directo:** ✅ cerrada. *Allow new users to sign up* está desactivado, así que no se puede crear una cuenta llamando a Supabase Auth sin pasar por la API.
+2. **`POST /auth/registro` de la API:** ⚠️ **sigue abierta**. Crea los usuarios con la API de administrador (`auth.admin.createUser`), que ignora ese ajuste. Cerrarla necesita un cambio en la API.
+
+Los usuarios que ya existen siguen pudiendo entrar y renovar la sesión. Si el equipo necesita una cuenta nueva mientras tanto, se crea desde el panel (Authentication → Users → *Add user*, marcando *Auto Confirm User*). Esa cuenta no tendrá fila en `perfil_usuario`, porque solo la crea `/auth/registro`.
+
+**Para reabrir el registro:** volver a activar *Allow new users to sign up* y deshacer el cierre de la API.

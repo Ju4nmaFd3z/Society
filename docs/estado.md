@@ -45,5 +45,5 @@
 
 - Completar el modelo de datos con Prisma (el resto de tablas) y el seed con el local ficticio de la demo.
 - Confirmar en equipo dos decisiones de datos: un restaurante por usuario (D-13) y que `perfil_usuario` lo cree la API al registrarse (el registro ya lo hace así).
-- Cerrar temporalmente el registro de cuentas nuevas, para que nadie ajeno al equipo use la búsqueda de Google a través de la API.
+- Cerrar en la API (`POST /auth/registro`) el registro de cuentas nuevas. En Supabase ya está cerrado desde el 16 de noviembre. Ver [Supabase Auth](arquitectura/tecnica/secretos-y-despliegue.md#supabase-auth).
 - Elegir la licencia de los repositorios.
