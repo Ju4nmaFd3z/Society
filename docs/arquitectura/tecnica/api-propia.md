@@ -5,10 +5,11 @@
 | Método y ruta | Pantallas | Devuelve |
 |---|---|---|
 | `GET /salud` | — | `{ok: true}`. Comprueba que la API está en marcha. **Hecha** |
-| `POST /auth/registro` · `POST /auth/acceso` · `POST /auth/refresco` · `POST /auth/salir` · `POST /auth/recuperar` [P1] | S01A, S13 | `{accessToken, refreshToken, expiraEn}` · 401 · 409 (email ya registrado) · 429 |
+| `POST /auth/registro` · `POST /auth/acceso` · `POST /auth/refresco` | S01A | `{accessToken, refreshToken, expiraEn}` · 401 · 409 (email ya registrado) · 429. **Hechas** |
+| `POST /auth/salir` · `POST /auth/recuperar` [P1] | S13 | — |
 | `GET /perfil` | S13 | email y términos aceptados |
 | `GET /restaurantes/mio` | Arranque, S01A | `{restaurante \| null, altaEstado, analisisEnCursoId?}`. `altaEstado`: `SIN_LOCAL` (aún no tiene local) o el `alta_estado` del local: `CREADO` · `ANALIZANDO` · `PENDIENTE_CONFIRMAR` · `COMPLETADA` |
-| `GET /places/search?q=&pageToken=` | S02 | `{resultados[], nextPageToken?}` (no se guarda) |
+| `GET /places/search?q=&pageToken=` | S02 | `{resultados[], nextPageToken?}` (no se guarda). Cada resultado trae hasta 5 `fotoNames` para el carrusel de la tarjeta. **Hecha** sin `pageToken` |
 | `GET /places/photo?name=&maxWidthPx=` | S02 | `{photoUri, atribuciones[]}` |
 | `POST /restaurantes` | S02, S02M | 201 · 409 `DUPLICADO` |
 | `POST /restaurantes/{id}/analisis` | S02, S02M, S03 | 202 `{analisisId}` |
@@ -25,6 +26,10 @@
 | `POST /piezas/{id}/diapositivas/{n}/regenerar` | S09 | 202 · 429 (3 cambios por diapositiva o 40 imágenes al día) |
 | `POST /piezas/{id}/publicar-instagram` · `POST /piezas/{id}/marcar-publicada` | S09P | 202 · 409 si Instagram no está conectado |
 | `POST /instagram/conexiones` · `GET /instagram/callback` · `GET /instagram/cuenta` · `DELETE /instagram/cuenta` | S04, S09P, S13 | URL de autorización · redirección · estado de la cuenta |
+
+**Rutas privadas:** todas menos `/salud` y `/auth/*` llevan el *middleware* `requiereAuth`. Exige `Authorization: Bearer <accessToken>`, valida el token con Supabase Auth y deja el id del usuario en `req.userId`, que se usa para filtrar cada consulta (`owner_id = userId`). Sin token o con uno no válido responde 401 `SESION_CADUCADA`; si Supabase no responde, 503 `PROVEEDOR_NO_DISPONIBLE`.
+
+**Sesión:** el `accessToken` dura 1 h. Cuando caduca, el cliente llama a `/auth/refresco` con el `refreshToken` y recibe dos tokens nuevos; el usado deja de valer. Si el refresco da 401, el cliente vuelve a S01A.
 
 **Listados** (`GET /piezas`, `GET /recursos`, `GET /campanas`): búsqueda, filtros, orden y paginación en el backend con Prisma. Ejemplo: `GET /piezas?q=&estado=&formato=&campanaId=&orden=creada_desc&pagina=1&tamano=20` → `{datos[], total, pagina, tamano}`.
 
