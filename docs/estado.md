@@ -1,6 +1,6 @@
 # Estado del proyecto
 
-Última actualización: 14 de noviembre de 2026.
+Última actualización: 16 de noviembre de 2026.
 
 ## Hecho
 
@@ -28,7 +28,8 @@
 - [Prototipo](diseno/prototipo.md) navegable en Figma para iPhone 16 Pro, con scroll real, modales como pantallas, secuencias animadas (análisis, generación y publicación) y todas las pantallas y estados conectados. Revisión final del archivo de diseño: sin restos del diseño anterior y con los datos de ejemplo coherentes en todo el recorrido.
 - Panel web con Tailwind CSS: el tema de cristal del diseño definitivo, los colores y las fuentes de la marca, y el layout del panel con barra lateral, cabecera y páginas vacías. Código en [Society-TypeScript](https://github.com/Ju4nmaFd3z/Society-TypeScript/tree/main/web).
 - Contrato OpenAPI v0.2.0 con `/salud`, `/auth`, `/restaurantes`, `/analisis` y las rutas de Places, incluido el error de credenciales incorrectas. Código en [Society-TypeScript](https://github.com/Ju4nmaFd3z/Society-TypeScript/tree/main/contrato).
-- Registro de cuentas en la API: `POST /api/v1/auth/registro`, con Supabase Auth. Código en [Society-TypeScript](https://github.com/Ju4nmaFd3z/Society-TypeScript/tree/main/api).
+- Autenticación en la API con Supabase Auth: registro, acceso y renovación de la sesión (`/auth/registro`, `/auth/acceso` y `/auth/refresco`), y el *middleware* `requiereAuth` que protege las rutas privadas. Ver [API propia](arquitectura/tecnica/api-propia.md). Código en [Society-TypeScript](https://github.com/Ju4nmaFd3z/Society-TypeScript/tree/main/api).
+- Búsqueda de locales en la API, `GET /places/search`, protegida por token: llama a Google Places y devuelve los campos de la tarjeta, con hasta 5 fotos por local. Todavía sin paginación ni `/places/photo`.
 - Capa de red de Android con Retrofit, Gson y Hilt en [Society-Kotlin](https://github.com/Ju4nmaFd3z/Society-Kotlin): una `SocietyApi`, un DataSource y un repositorio, con la URL de la API en `API_BASE`. Al arrancar, la app llama a `/salud` y escribe el resultado en el log.
 - Fuentes de la marca en Android: DynaPuff y Nunito, aplicadas en `Type.kt`.
 - Tema de cristal de Android: los colores de la interfaz, el esquema de Material, `TarjetaCristal` y `BotonCristal`, en [Society-Kotlin](https://github.com/Ju4nmaFd3z/Society-Kotlin). Todavía no los usa ninguna pantalla.
@@ -37,11 +38,12 @@
 
 ## En curso
 
-- Sprint 2 · Acceso (hito H3), del 12 al 15 de noviembre: acceso y sesión en la app y en la web, router y componentes de Angular, autenticación en la API y búsqueda con Places. Carriles: Víctor en el backend, Pablo en Android y Juanma en la web.
+- Sprint 2 · Acceso (hito H3), del 12 al 15 de noviembre: acceso y sesión en la app y en la web, router y componentes de Angular, autenticación en la API y búsqueda con Places. Carriles: Víctor en el backend, Pablo en Android y Juanma en la web. En el backend quedan la paginación de la búsqueda, `/places/photo` y `GET /restaurantes/mio`.
 - Documentación de producto. Ver [Producto](producto/README.md).
 
 ## Pendiente
 
 - Completar el modelo de datos con Prisma (el resto de tablas) y el seed con el local ficticio de la demo.
-- Confirmar en equipo dos decisiones de datos: un restaurante por usuario (D-13) y que `perfil_usuario` lo cree la API al registrarse.
+- Confirmar en equipo dos decisiones de datos: un restaurante por usuario (D-13) y que `perfil_usuario` lo cree la API al registrarse (el registro ya lo hace así).
+- Cerrar en la API (`POST /auth/registro`) el registro de cuentas nuevas. En Supabase ya está cerrado desde el 16 de noviembre. Ver [Supabase Auth](arquitectura/tecnica/secretos-y-despliegue.md#supabase-auth).
 - Elegir la licencia de los repositorios.

@@ -6,7 +6,7 @@
 |---|---|
 | `DATABASE_URL` y `DIRECT_URL` (ver [Datos](datos.md#dos-conexiones-a-la-base-de-datos)) | Variables de Vercel de la API y `.env` local |
 | `SUPABASE_URL` (solo `https://<proyecto>.supabase.co`) y `SUPABASE_SECRET_KEY` | API |
-| `GOOGLE_MAPS_API_KEY` (restringida a Places y con cuota diaria) | API |
+| `GOOGLE_PLACES_API_KEY` (restringida a Places API (New) y con cuota diaria) | API |
 | `GEMINI_API_KEY` | API (worker) |
 | `HF_API_KEY_ID`, `HF_API_KEY_SECRET` y secreto del *webhook* de Higgsfield | API (worker) |
 | `IG_APP_SECRET` e `IG_TOKEN_KEY` (cifrado AES-256-GCM de los tokens) | API |
@@ -26,3 +26,26 @@ Ningún secreto se sube a los repositorios: cada parte tiene su `.env.example` c
 | Desarrollo | `npm run dev` en `api/` contra el proyecto de Supabase · `npm run db:migrar` para aplicar migraciones · `ng serve` en `web/` |
 
 Vercel detecta Express sin configuración: despliega `api/src/app.ts`, que exporta la app. Cada fusión en `main` despliega de nuevo.
+
+Vercel solo compila los archivos que se importan, directa o indirectamente, desde `app.ts`. Por eso los tipos que amplían Express (`src/types/express.ts`) se importan en `app.ts`: si no, la build de Vercel falla aunque `npm run typecheck` pase en local.
+
+## Supabase Auth
+
+Configuración del proyecto (Authentication → Sign In / Providers), comprobada el 16 de noviembre de 2026:
+
+| Ajuste | Valor | Por qué |
+|---|---|---|
+| Email y contraseña | Activado | Único método de acceso del MVP |
+| Confirmar email | Desactivado | D-04: la cuenta queda lista al registrarse |
+| Permitir registros nuevos (*Allow new users to sign up*) | **Desactivado** desde el 16 de noviembre de 2026 (temporal) | Registro cerrado mientras solo prueba el equipo |
+
+### Registro cerrado temporalmente
+
+Para que nadie ajeno al equipo cree una cuenta y use la búsqueda de Google a través de la API. Hay dos puertas:
+
+1. **Supabase Auth directo:** ✅ cerrada. *Allow new users to sign up* está desactivado, así que no se puede crear una cuenta llamando a Supabase Auth sin pasar por la API.
+2. **`POST /auth/registro` de la API:** ⚠️ **sigue abierta**. Crea los usuarios con la API de administrador (`auth.admin.createUser`), que ignora ese ajuste. Cerrarla necesita un cambio en la API.
+
+Los usuarios que ya existen siguen pudiendo entrar y renovar la sesión. Si el equipo necesita una cuenta nueva mientras tanto, se crea desde el panel (Authentication → Users → *Add user*, marcando *Auto Confirm User*). Esa cuenta no tendrá fila en `perfil_usuario`, porque solo la crea `/auth/registro`.
+
+**Para reabrir el registro:** volver a activar *Allow new users to sign up* y deshacer el cierre de la API.
