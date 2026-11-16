@@ -6,7 +6,7 @@
 |---|---|
 | `DATABASE_URL` y `DIRECT_URL` (ver [Datos](datos.md#dos-conexiones-a-la-base-de-datos)) | Variables de Vercel de la API y `.env` local |
 | `SUPABASE_URL` (solo `https://<proyecto>.supabase.co`) y `SUPABASE_SECRET_KEY` | API |
-| `GOOGLE_MAPS_API_KEY` (restringida a Places y con cuota diaria) | API |
+| `GOOGLE_PLACES_API_KEY` (restringida a Places API (New) y con cuota diaria) | API |
 | `GEMINI_API_KEY` | API (worker) |
 | `HF_API_KEY_ID`, `HF_API_KEY_SECRET` y secreto del *webhook* de Higgsfield | API (worker) |
 | `IG_APP_SECRET` e `IG_TOKEN_KEY` (cifrado AES-256-GCM de los tokens) | API |
@@ -26,3 +26,22 @@ Ningún secreto se sube a los repositorios: cada parte tiene su `.env.example` c
 | Desarrollo | `npm run dev` en `api/` contra el proyecto de Supabase · `npm run db:migrar` para aplicar migraciones · `ng serve` en `web/` |
 
 Vercel detecta Express sin configuración: despliega `api/src/app.ts`, que exporta la app. Cada fusión en `main` despliega de nuevo.
+
+Vercel solo compila los archivos que se importan, directa o indirectamente, desde `app.ts`. Por eso los tipos que amplían Express (`src/types/express.ts`) se importan en `app.ts`: si no, la build de Vercel falla aunque `npm run typecheck` pase en local.
+
+## Supabase Auth
+
+Configuración del proyecto (Authentication → Sign In / Providers), comprobada el 16 de noviembre de 2026:
+
+| Ajuste | Valor | Por qué |
+|---|---|---|
+| Email y contraseña | Activado | Único método de acceso del MVP |
+| Confirmar email | Desactivado | D-04: la cuenta queda lista al registrarse |
+| Permitir registros nuevos (*Allow new users to sign up*) | **Activado** | Pendiente de desactivar mientras el registro esté cerrado |
+
+Para cerrar el registro hacen falta dos cambios, porque hay dos puertas:
+
+1. **Supabase:** desactivar *Allow new users to sign up*. Impide registrarse llamando a Supabase Auth directamente, sin pasar por la API.
+2. **API:** `POST /auth/registro` crea los usuarios con la API de administrador (`auth.admin.createUser`), que **ignora** ese ajuste. Para cerrarlo hace falta un cambio en la API.
+
+Los usuarios que ya existen siguen pudiendo entrar y renovar la sesión en los dos casos.
