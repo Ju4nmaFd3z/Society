@@ -1,6 +1,6 @@
 # Estado del proyecto
 
-Última actualización: 17 de noviembre de 2026.
+Última actualización: 18 de noviembre de 2026.
 
 ## Hecho
 
@@ -27,6 +27,8 @@
 - Diseño visual de la app terminado en el [archivo de Figma definitivo](diseno/README.md), con su [sistema de diseño](diseno/sistema-de-diseno.md) y la decisión [0007](decisiones/0007-diseno-definitivo.md). El contenido y los estados de todas las pantallas están en [Pantallas](diseno/pantallas/README.md).
 - [Prototipo](diseno/prototipo.md) navegable en Figma para iPhone 16 Pro, con scroll real, modales como pantallas, secuencias animadas (análisis, generación y publicación) y todas las pantallas y estados conectados. Revisión final del archivo de diseño: sin restos del diseño anterior y con los datos de ejemplo coherentes en todo el recorrido.
 - Panel web con Tailwind CSS: el tema de cristal del diseño definitivo, los colores y las fuentes de la marca, y el layout del panel con barra lateral, cabecera y páginas vacías. Código en [Society-TypeScript](https://github.com/Ju4nmaFd3z/Society-TypeScript/tree/main/web).
+- Componentes reutilizables del panel web (botones, campos, casilla, chips, etiquetas, tarjetas de cristal y estados cargando, vacío y error), con una página de [catálogo](https://society-web-gamma.vercel.app/catalogo) (hito H3).
+- Router del panel web con todas las rutas, los guards de sesión y de alta, y la pantalla [01A. Acceso](diseno/pantallas/01a-acceso.md) con validaciones (hito H3). De momento la sesión es simulada y, salvo el acceso, las vistas son páginas vacías.
 - Contrato OpenAPI v0.2.0 con `/salud`, `/auth`, `/restaurantes`, `/analisis` y las rutas de Places, incluido el error de credenciales incorrectas. Código en [Society-TypeScript](https://github.com/Ju4nmaFd3z/Society-TypeScript/tree/main/contrato).
 - Autenticación en la API con Supabase Auth: registro, acceso y renovación de la sesión (`/auth/registro`, `/auth/acceso` y `/auth/refresco`), y el *middleware* `requiereAuth` que protege las rutas privadas. Ver [API propia](arquitectura/tecnica/api-propia.md). Código en [Society-TypeScript](https://github.com/Ju4nmaFd3z/Society-TypeScript/tree/main/api).
 - Búsqueda de locales en la API, `GET /places/search`, protegida por token: llama a Google Places y devuelve los campos de la tarjeta, con hasta 5 fotos por local. Todavía sin paginación ni `/places/photo`.
@@ -39,7 +41,7 @@
 
 ## En curso
 
-- Sprint 2 · Acceso (hito H3), del 12 al 15 de noviembre: acceso y sesión en la app y en la web, router y componentes de Angular, autenticación en la API y búsqueda con Places. Carriles: Víctor en el backend, Pablo en Android y Juanma en la web. En el backend quedan la paginación de la búsqueda, `/places/photo` y `GET /restaurantes/mio`.
+- Sprint 2 · Acceso (hito H3), del 12 al 15 de noviembre: acceso y sesión en la app y en la web, router y componentes de Angular, autenticación en la API y búsqueda con Places. Carriles: Víctor en el backend, Pablo en Android y Juanma en la web. El carril web está terminado. En el backend quedan la paginación de la búsqueda, `/places/photo` y `GET /restaurantes/mio`, y en Android, S01 y S01A con la API y el arranque con `AuthInterceptor`.
 - Documentación de producto. Ver [Producto](producto/README.md).
 
 ## Pendiente
