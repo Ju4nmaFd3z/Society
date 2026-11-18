@@ -1,6 +1,6 @@
 # Estado del proyecto
 
-Última actualización: 16 de noviembre de 2026.
+Última actualización: 17 de noviembre de 2026.
 
 ## Hecho
 
@@ -33,6 +33,7 @@
 - Capa de red de Android con Retrofit, Gson y Hilt en [Society-Kotlin](https://github.com/Ju4nmaFd3z/Society-Kotlin): una `SocietyApi`, un DataSource y un repositorio, con la URL de la API en `API_BASE`. Al arrancar, la app llama a `/salud` y escribe el resultado en el log.
 - Fuentes de la marca en Android: DynaPuff y Nunito, aplicadas en `Type.kt`.
 - Tema de cristal de Android: los colores de la interfaz, el esquema de Material, `TarjetaCristal` y `BotonCristal`, en [Society-Kotlin](https://github.com/Ju4nmaFd3z/Society-Kotlin). Todavía no los usa ninguna pantalla.
+- ERP Odoo del Proyecto Intermodular con los datos ficticios de Society y los cuatro bloques del curso cubiertos: operaciones (inventario, compras, contabilidad, empleados y proyectos), ventas (CRM, ventas, facturación, TPV, firma electrónica y alquiler), productividad (conversaciones, marketing social y por correo, partes de horas, documentos, planificación, ausencias y reclutamiento) y sitios web (sitio web, comercio electrónico, chat en vivo, blog, foro, eventos, eLearning y encuestas). Ver [Odoo](odoo.md).
 - Prueba de Nano Banana Pro en la API de Higgsfield.
 - Sprint 1 · Arranque (hitos H1 y H2), cerrado el 12 de noviembre, con la primera rotación de carriles preparada.
 

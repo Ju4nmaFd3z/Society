@@ -14,6 +14,7 @@ Punto de entrada a la documentación general del proyecto.
 ## Otros documentos
 
 - [Estado del proyecto](estado.md): qué hay hecho, qué está en curso y qué falta.
+- [Odoo](odoo.md): el ERP de Society del Proyecto Intermodular y los datos que contiene.
 - [Guía de estilo](guia-de-estilo.md): cómo se escribe y se organiza la documentación, y cómo se trabaja en los repositorios.
 
 ## Organización y documentación del equipo
