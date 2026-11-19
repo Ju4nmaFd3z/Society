@@ -21,3 +21,4 @@ Si una decisión se sustituye por otra, no se borra: se cambia su estado y se en
 | [0005](0005-estetica-de-cristal.md) | Estética de cristal en la identidad visual | Aceptada |
 | [0006](0006-una-rama-por-issue-de-jira.md) | Una rama por issue de Jira | Aceptada |
 | [0007](0007-diseno-definitivo.md) | Diseño definitivo: cristal sobre grafiti con texto legible | Aceptada |
+| [0008](0008-atribuciones-de-fotos-en-la-busqueda.md) | Las atribuciones de las fotos viajan en la búsqueda | Aceptada |

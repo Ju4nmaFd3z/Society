@@ -9,8 +9,8 @@
 | `POST /auth/salir` · `POST /auth/recuperar` [P1] | S13 | — |
 | `GET /perfil` | S13 | email y términos aceptados |
 | `GET /restaurantes/mio` | Arranque, S01A | `{restaurante \| null, altaEstado, analisisEnCursoId?}`. `altaEstado`: `SIN_LOCAL` (aún no tiene local) o el `alta_estado` del local: `CREADO` · `ANALIZANDO` · `PENDIENTE_CONFIRMAR` · `COMPLETADA` |
-| `GET /places/search?q=&pageToken=` | S02 | `{resultados[], nextPageToken?}` (no se guarda). Cada resultado trae hasta 5 `fotoNames` para el carrusel de la tarjeta. **Hecha** sin `pageToken` |
-| `GET /places/photo?name=&maxWidthPx=` | S02 | `{photoUri, atribuciones[]}` |
+| `GET /places/search?q=&pageToken=` | S02 | `{resultados[], nextPageToken?}` (no se guarda). Cada resultado trae hasta 5 `fotos` `{name, atribuciones[]}` para el carrusel de la tarjeta. **Hecha** sin `pageToken` |
+| `GET /places/photo?name=&maxWidthPx=` | S02 | `{photoUri}`. Los autores vienen en `fotos[].atribuciones` de la búsqueda |
 | `POST /restaurantes` | S02, S02M | 201 · 409 `DUPLICADO` |
 | `POST /restaurantes/{id}/analisis` | S02, S02M, S03 | 202 `{analisisId}` |
 | `GET /analisis/{id}` · `POST /analisis/{id}/cancelar` | S03 | estado, pasos y `tiempoRestanteSeg` |

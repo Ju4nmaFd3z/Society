@@ -1,6 +1,6 @@
 # Estado del proyecto
 
-Última actualización: 18 de noviembre de 2026.
+Última actualización: 19 de noviembre de 2026.
 
 ## Hecho
 
@@ -31,7 +31,7 @@
 - Router del panel web con todas las rutas, los guards de sesión y de alta, y la pantalla [01A. Acceso](diseno/pantallas/01a-acceso.md) con validaciones (hito H3). De momento la sesión es simulada y, salvo el acceso, las vistas son páginas vacías.
 - Contrato OpenAPI v0.2.0 con `/salud`, `/auth`, `/restaurantes`, `/analisis` y las rutas de Places, incluido el error de credenciales incorrectas. Código en [Society-TypeScript](https://github.com/Ju4nmaFd3z/Society-TypeScript/tree/main/contrato).
 - Autenticación en la API con Supabase Auth: registro, acceso y renovación de la sesión (`/auth/registro`, `/auth/acceso` y `/auth/refresco`), y el *middleware* `requiereAuth` que protege las rutas privadas. Ver [API propia](arquitectura/tecnica/api-propia.md). Código en [Society-TypeScript](https://github.com/Ju4nmaFd3z/Society-TypeScript/tree/main/api).
-- Búsqueda de locales en la API, `GET /places/search`, protegida por token: llama a Google Places y devuelve los campos de la tarjeta, con hasta 5 fotos por local. Todavía sin paginación ni `/places/photo`.
+- Búsqueda de locales en la API, `GET /places/search`, protegida por token: llama a Google Places y devuelve los campos de la tarjeta, paginados con `pageToken` y con hasta 5 fotos por local, cada una con sus autores. `GET /places/photo` devuelve la URL de una foto. Ver la decisión [0008](decisiones/0008-atribuciones-de-fotos-en-la-busqueda.md).
 - Capa de red de Android con Retrofit, Gson y Hilt en [Society-Kotlin](https://github.com/Ju4nmaFd3z/Society-Kotlin): una `SocietyApi`, un DataSource y un repositorio, con la URL de la API en `API_BASE`. Al arrancar, la app llama a `/salud` y escribe el resultado en el log.
 - Fuentes de la marca en Android: DynaPuff y Nunito, aplicadas en `Type.kt`.
 - Tema de cristal de Android: los colores de la interfaz, el esquema de Material, `TarjetaCristal` y `BotonCristal`, en [Society-Kotlin](https://github.com/Ju4nmaFd3z/Society-Kotlin). Todavía no los usa ninguna pantalla.
@@ -41,7 +41,7 @@
 
 ## En curso
 
-- Sprint 2 · Acceso (hito H3), del 12 al 15 de noviembre: acceso y sesión en la app y en la web, router y componentes de Angular, autenticación en la API y búsqueda con Places. Carriles: Víctor en el backend, Pablo en Android y Juanma en la web. El carril web está terminado. En el backend quedan la paginación de la búsqueda, `/places/photo` y `GET /restaurantes/mio`, y en Android, S01 y S01A con la API y el arranque con `AuthInterceptor`.
+- Sprint 2 · Acceso (hito H3), del 12 al 15 de noviembre: acceso y sesión en la app y en la web, router y componentes de Angular, autenticación en la API y búsqueda con Places. Carriles: Víctor en el backend, Pablo en Android y Juanma en la web. El carril web está terminado. En el backend queda `GET /restaurantes/mio`, y en Android, S01 y S01A con la API y el arranque con `AuthInterceptor`.
 - Documentación de producto. Ver [Producto](producto/README.md).
 
 ## Pendiente
