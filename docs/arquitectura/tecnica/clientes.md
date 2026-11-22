@@ -8,12 +8,13 @@ Sigue el patrón del proyecto de clase PokeDex2627, sin librerías añadidas:
 
 | Pieza | Qué es |
 |---|---|
-| `NetworkModule` | Módulo de Hilt (`@InstallIn(SingletonComponent::class)`) que crea Retrofit con `GsonConverterFactory` y la URL de la API de `BuildConfig` |
+| `NetworkModule` | Módulo de Hilt (`@InstallIn(SingletonComponent::class)`) que crea el cliente OkHttp, con el `AuthInterceptor`, y Retrofit con `GsonConverterFactory` y la URL fija de `API_BASE` |
 | `SocietyApi` | Interfaz de Retrofit con funciones `suspend` que devuelven `Response<T>` |
 | `*ApiModels.kt` | DTO (`data class`) escritos a mano a partir de `openapi.yaml`, con `toModel()` |
 | `XxxRemoteDataSource` | Llama a `SocietyApi` y convierte la respuesta |
 | `XxxRepository` + `XxxRepositoryImpl` | Lo que usan los ViewModel; se enlaza con `@Binds` en `AppModule` |
-| OkHttp | Interceptor que añade `Authorization: Bearer` y `Authenticator` que renueva el token con `/auth/refresco` |
+| `DataStoreModule` | Módulo de Hilt que crea el DataStore donde se guarda la sesión |
+| OkHttp | `AuthInterceptor`, que añade `Authorization: Bearer` y, ante un 401, renueva una vez con `/auth/refresco` y repite la llamada |
 
 ## Estructura de la app Android: una carpeta por pantalla
 
@@ -23,17 +24,17 @@ El código se organiza **por pantalla (feature)**, no por tipo de archivo. Cada 
 com.alanturing.society
 ├── MainActivity.kt          (intent-filter society://instagram)
 ├── core/
-│   ├── network/             SocietyApi · NetworkModule · AuthInterceptor · AuthAuthenticator · ErrorMapper
-│   ├── auth/                SesionRepository · TokenStore (DataStore)
-│   ├── di/                  AppModule (@Binds de los repositorios)
+│   ├── network/             SocietyApi · AuthInterceptor · ErrorMapper
+│   ├── di/                  AppModule (@Binds de los repositorios) · NetworkModule · DataStoreModule
 │   └── model/               ErrorSociety
-├── navigation/              Rutas.kt · SocietyNavHost.kt · ArranqueViewModel.kt
+├── navigation/              Rutas.kt · SocietyNavHost.kt
 ├── ui/
 │   ├── theme/               Color · Theme · Type
 │   └── component/           EstadoCargando · EstadoError · EstadoVacio · BotonPrincipal · TarjetaCristal
 └── feature/
+    ├── arranque/            ArranqueViewModel · Destino (no es pantalla)
     ├── bienvenida/          S01
-    ├── acceso/              S01A
+    ├── acceso/              S01A · sesión en data/local (DataStore)
     ├── empezamos/           S02
     ├── altamanual/          S02M
     ├── analisis/            S03

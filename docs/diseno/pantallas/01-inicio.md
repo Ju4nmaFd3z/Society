@@ -28,4 +28,4 @@ Es la pantalla con la que se abre la app sin sesión. El botón «Descubre cómo
 
 ## Implementación
 
-- Android: pantalla de cartón piedra, ver [Society-Kotlin](https://github.com/Ju4nmaFd3z/Society-Kotlin/blob/main/docs/pantallas.md).
+- Android: pantalla terminada en `feature/bienvenida`, según el diseño definitivo, issue SOCIETY-52. Ver [Society-Kotlin](https://github.com/Ju4nmaFd3z/Society-Kotlin/blob/main/docs/pantallas.md).
