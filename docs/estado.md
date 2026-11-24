@@ -1,6 +1,6 @@
 # Estado del proyecto
 
-Última actualización: 19 de noviembre de 2026.
+Última actualización: 22 de noviembre de 2026.
 
 ## Hecho
 
@@ -35,14 +35,16 @@
 - `GET /restaurantes/mio` en la API, protegida por token: dice si el usuario tiene local y en qué punto del alta está, para que la app elija la primera pantalla. Todavía sin `analisisEnCursoId`, que llega con el análisis. Con ella llega la tabla `canal` (web, Instagram y teléfono del local), preparada para el alta.
 - Capa de red de Android con Retrofit, Gson y Hilt en [Society-Kotlin](https://github.com/Ju4nmaFd3z/Society-Kotlin): una `SocietyApi`, un DataSource y un repositorio, con la URL de la API en `API_BASE`. Al arrancar, la app llama a `/salud` y escribe el resultado en el log.
 - Fuentes de la marca en Android: DynaPuff y Nunito, aplicadas en `Type.kt`.
+- Acceso en Android: las pantallas 01 Bienvenida y 01A Acceso con la API de Society (crear cuenta e iniciar sesión), la sesión guardada en el móvil y el arranque, que con `GET /restaurantes/mio` lleva a cada usuario a la pantalla de su punto del alta. `AuthInterceptor` añade el token a cada petición y, si caduca, lo renueva una vez. Código en [Society-Kotlin](https://github.com/Ju4nmaFd3z/Society-Kotlin).
 - Tema de cristal de Android: los colores de la interfaz, el esquema de Material, `TarjetaCristal` y `BotonCristal`, en [Society-Kotlin](https://github.com/Ju4nmaFd3z/Society-Kotlin). Todavía no los usa ninguna pantalla.
 - ERP Odoo del Proyecto Intermodular con los datos ficticios de Society y los cuatro bloques del curso cubiertos: operaciones (inventario, compras, contabilidad, empleados y proyectos), ventas (CRM, ventas, facturación, TPV, firma electrónica y alquiler), productividad (conversaciones, marketing social y por correo, partes de horas, documentos, planificación, ausencias y reclutamiento) y sitios web (sitio web, comercio electrónico, chat en vivo, blog, foro, eventos, eLearning y encuestas). Ver [Odoo](odoo.md).
 - Prueba de Nano Banana Pro en la API de Higgsfield.
 - Sprint 1 · Arranque (hitos H1 y H2), cerrado el 12 de noviembre, con la primera rotación de carriles preparada.
+- Sprint 2 · Acceso (hito H3), cerrado el 20 de noviembre con todas sus tareas hechas: acceso y sesión en la app y en la web, router y componentes de Angular, autenticación en la API y búsqueda con Places.
 
 ## En curso
 
-- Sprint 2 · Acceso (hito H3), del 12 al 15 de noviembre: acceso y sesión en la app y en la web, router y componentes de Angular, autenticación en la API y búsqueda con Places. Carriles: Víctor en el backend, Pablo en Android y Juanma en la web. El carril web y el del backend están terminados. En Android quedan S01 y S01A con la API y el arranque con `AuthInterceptor`.
+- Sprint 3 · Alta del local (hito H4), del 20 al 27 de noviembre: el alta del local de principio a fin en Android, las vistas web del alta con datos simulados, y la cola de trabajos y el *worker* en la API. Carriles: Víctor en Android, Pablo en la web y Juanma en el backend.
 - Documentación de producto. Ver [Producto](producto/README.md).
 
 ## Pendiente
