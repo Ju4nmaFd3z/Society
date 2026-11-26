@@ -14,7 +14,7 @@
 | `trabajo` · `trabajo_generacion` | Cola de trabajos (tipo, estado, fase, intentos) y registro de cada llamada a la IA |
 
 - Nombres en castellano y `snake_case`. Relaciones, `@unique`, índices y enumeraciones en [`schema.prisma`](https://github.com/Ju4nmaFd3z/Society-TypeScript/blob/main/api/prisma/schema.prisma).
-- **Ya creadas en Supabase** con la primera migración: `perfil_usuario` y `restaurante`. El resto se añade con nuevas migraciones a medida que se programa cada parte.
+- **Ya creadas en Supabase:** `perfil_usuario` y `restaurante` (primera migración), `canal` y `trabajo`. El resto se añade con nuevas migraciones a medida que se programa cada parte.
 - El `seed` creará el local ficticio de la demo (usuario, restaurante, ficha, análisis, oportunidades) y el catálogo de referencias del equipo. De momento está vacío.
 - `perfil_usuario` lo crea la API en `/auth/registro`, con el mismo `id` que el usuario de Supabase Auth. Pendiente de confirmar en equipo: sustituye al *trigger* que se planteó cuando la API era una Edge Function.
 - Valoración, reseñas y fotos de Google **nunca se guardan**: se piden en vivo.
