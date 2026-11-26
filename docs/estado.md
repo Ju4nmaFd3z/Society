@@ -1,6 +1,6 @@
 # Estado del proyecto
 
-Última actualización: 25 de noviembre de 2026.
+Última actualización: 26 de noviembre de 2026.
 
 ## Hecho
 
@@ -16,6 +16,7 @@
 - Navegación montada en Society-Kotlin, con una ruta por pantalla del diseño (15 en total) y los enlaces del [flujo](diseno/flujo-de-navegacion/README.md). Salvo [02. Empezamos](diseno/pantallas/02-empezamos.md), todas las pantallas son de cartón piedra.
 - Notas de las 15 pantallas en [Pantallas](diseno/pantallas/README.md).
 - Pantalla [02. Empezamos](diseno/pantallas/02-empezamos.md) en Society-Kotlin con la API de Society: busca con `/places/search`, carga más páginas, muestra la foto de cada local con su autor y, con el modal M02, da de alta el local y pasa a 03. El alta está simulada en la app hasta que la API tenga `POST /restaurantes` y el lanzamiento del análisis.
+- Pantalla [02M. Alta manual](diseno/pantallas/02m-alta-manual.md) en Society-Kotlin: formulario con las validaciones del contrato y sus errores por campo, que da de alta el local a mano y pasa a 03. Usa la misma alta simulada que 02.
 - Proyecto de Supabase creado en Frankfurt, con todo el equipo invitado.
 - API Express con TypeScript desplegada en Vercel, organizada en rutas, controladores y servicios, con un formato de error común. Responde en [`/api/v1/salud`](https://society-api-xi.vercel.app/api/v1/salud) (hito H1). Código en [Society-TypeScript](https://github.com/Ju4nmaFd3z/Society-TypeScript/tree/main/api).
 - Prisma conectado a Supabase, con la primera migración (`perfil_usuario` y `restaurante`) y RLS en todas las tablas.
