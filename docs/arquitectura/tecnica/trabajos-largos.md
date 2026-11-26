@@ -9,7 +9,7 @@ Vercel (plan Hobby) no mantiene procesos encendidos: cada función dura **como m
 | `pg_cron` | Una vez al día | Encola la renovación de tokens de Instagram |
 | *Webhook* de Higgsfield | Cuando termina una imagen | `POST /api/v1/webhooks/higgsfield` (firma HMAC) |
 
-Ninguna función espera dentro de su ejecución: los trabajos largos se dividen en **fases**, cada una se guarda en la tabla `trabajo` y se retoma en la siguiente llamada. La función SQL que reclama el siguiente trabajo (con `FOR UPDATE SKIP LOCKED`) y la programación de `pg_cron` van en una migración de Prisma escrita a mano.
+Ninguna función espera dentro de su ejecución: los trabajos largos se dividen en **fases**, cada una se guarda en la tabla `trabajo` y se retoma en la siguiente llamada. La función SQL que reclama el siguiente trabajo (`reclamar_trabajo()`, con `FOR UPDATE SKIP LOCKED`) va en la migración de Prisma `trabajo`, escrita a mano. El aviso al insertar y el barrido de `pg_cron` van en `api/prisma/sql/activar-trabajos.sql`, que se ejecuta una vez en Supabase: `pg_net`, `pg_cron` y Vault solo existen allí, no en la base temporal de `prisma migrate dev`. La URL de la API y `TRABAJOS_SECRETO` se leen de Vault. Si una fase falla, se reintenta a los 10 s, 30 s y 90 s; un trabajo `EN_CURSO` más de 10 minutos se da por colgado y vuelve a la cola.
 
 | Trabajo | Qué hace | Fases |
 |---|---|---|
