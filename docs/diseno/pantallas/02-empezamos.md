@@ -26,7 +26,7 @@ Disposición: la cabecera con el botón atrás y el título «Busca tu local», 
     - Calle y zona.
     - Estrellas y número de reseñas.
     - Autor de la foto y el texto «Google Maps», que exigen las políticas de Places.
-- **Botón «Es mi local»:** abre el modal «¿Es tu local?», con la casilla obligatoria «Soy propietario o gestor». En Android, de momento, es el botón «Analizar» de la tarjeta.
+- **Botón «Es mi local»:** abre el modal «¿Es tu local?», con la casilla obligatoria «Soy propietario o gestor».
 - **Enlace «¿No aparece tu local? Añádelo a mano»:** lleva a [02M. Alta manual](02m-alta-manual.md).
 
 El buscador de página web de la especificación anterior se descarta: la web se pide en 02M y se edita en [04. Así te ve Internet](04-asi-te-ve-internet.md).
@@ -41,7 +41,7 @@ Además de los cuatro estados obligatorios (cargando, vacío, error y con datos)
 4. **Error:** «Revisa tu conexión» y el botón «Reintentar».
 5. **Con datos:** locales y carga de más páginas al llegar al final de la lista.
 
-Después de confirmar hay dos estados más: confirmando y guardando. Errores posibles: local ya dado de alta con otra cuenta (409), falta de conexión y proveedor no disponible. Los textos de Android todavía son provisionales. Ver [Modales y estados](modales-y-estados.md).
+Después de confirmar hay dos estados más: confirmando y guardando. Errores posibles: local ya dado de alta con otra cuenta (409), falta de conexión y proveedor no disponible. Ver [Modales y estados](modales-y-estados.md).
 
 ## Navegación
 
@@ -49,4 +49,4 @@ Se llega desde [01A. Acceso](01a-acceso.md) o al abrir la app sin local dado de 
 
 ## Implementación
 
-- Android: [Society-Kotlin](https://github.com/Ju4nmaFd3z/Society-Kotlin/blob/main/docs/pantallas.md). El código está en la carpeta `feature/empezamos`.
+- Android: hecha en `feature/empezamos`, con la ruta `EmpezamosRoute`, issue SOCIETY-61. Busca con `GET /places/search`, carga más páginas con el botón «Ver más resultados» (60 resultados como máximo) y pinta una foto por tarjeta con `GET /places/photo`, con su autor y «Google Maps». «Es mi local» abre el modal M02, que da de alta el local, lanza el análisis y pasa a 03 con su `analisisId`, y muestra los errores de local ya dado de alta (409) y sin conexión. Si la sesión caduca, vuelve a 01A. El alta está simulada en la app hasta que la API tenga `POST /restaurantes` y `POST /restaurantes/{id}/analisis` (SOCIETY-58 y SOCIETY-60). Todavía sin el estilo de cristal del diseño. Ver [Society-Kotlin](https://github.com/Ju4nmaFd3z/Society-Kotlin/blob/main/docs/pantallas.md).

@@ -35,5 +35,5 @@ Se llega desde «¿No aparece tu local? Añádelo a mano» de [02. Empezamos](02
 
 ## Implementación
 
-- Android: pantalla provisional en `feature/altamanual`, con la ruta `AltaManualRoute`. Muestra el título y los botones que llevan a la siguiente pantalla. La implementación real sigue pendiente, issue SOCIETY-62. Ver [Society-Kotlin](https://github.com/Ju4nmaFd3z/Society-Kotlin/blob/main/docs/pantallas.md).
+- Android: hecha en `feature/altamanual`, con la ruta `AltaManualRoute`, issue SOCIETY-62. Valida en el móvil las mismas reglas que la API y muestra el error debajo de cada campo desde el primer «Guardar y analizar». Quita la @ de Instagram y lo pasa a minúsculas. Al guardar da de alta el local con `POST /restaurantes` (`origen: MANUAL`), lanza el análisis y pasa a 03, y muestra los errores de local ya dado de alta (409), dato rechazado y fallo del servidor, con el mismo botón para reintentar. El alta está simulada en la app hasta que la API tenga `POST /restaurantes` y `POST /restaurantes/{id}/analisis` (SOCIETY-58 y SOCIETY-60). Todavía sin el estilo de cristal del diseño. Ver [Society-Kotlin](https://github.com/Ju4nmaFd3z/Society-Kotlin/blob/main/docs/pantallas.md).
 - Web: pendiente. Ruta `/alta/manual`, issue SOCIETY-63.

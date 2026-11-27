@@ -29,4 +29,4 @@ Que cada pantalla tenga resuelto qué ve el usuario cuando algo sale distinto de
 
 ## Implementación
 
-- Android: pendiente. Cada modal se implementa con su pantalla.
+- Android: M02 hecho en `feature/empezamos` (`ConfirmPlaceDialog`), issue SOCIETY-61. El resto, pendiente: cada modal se implementa con su pantalla.
