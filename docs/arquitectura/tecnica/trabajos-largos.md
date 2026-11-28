@@ -4,7 +4,7 @@ Vercel (plan Hobby) no mantiene procesos encendidos: cada función dura **como m
 
 | Disparador | Cuándo | Llama a |
 |---|---|---|
-| *Database Webhook* de Supabase | Cada vez que se inserta un trabajo | `POST /api/v1/trabajos/ejecutar` |
+| *Trigger* `al_insertar_trabajo` + `pg_net` | Cada vez que se inserta un trabajo | `POST /api/v1/trabajos/ejecutar` |
 | `pg_cron` + `pg_net` | Cada minuto | `POST /api/v1/trabajos/barrido`: reintentos, esperas vencidas y trabajos colgados |
 | `pg_cron` | Una vez al día | Encola la renovación de tokens de Instagram |
 | *Webhook* de Higgsfield | Cuando termina una imagen | `POST /api/v1/webhooks/higgsfield` (firma HMAC) |
@@ -13,7 +13,7 @@ Ninguna función espera dentro de su ejecución: los trabajos largos se dividen 
 
 | Trabajo | Qué hace | Fases |
 |---|---|---|
-| `ANALISIS` | Google Places · web del local · Instagram (P1) · colores y letras · ficha y oportunidades con Gemini | Una por paso (5) |
+| `ANALISIS` | Google Places · web del local · Instagram (P1) · colores y letras · ficha y oportunidades con Gemini. Lo encola `POST /restaurantes/{id}/analisis`; al terminar, el análisis queda `COMPLETADO` o `PARCIAL` y el alta en `PENDIENTE_CONFIRMAR`. Hoy los pasos se omiten: llegan con SOCIETY-68 y 69 | Una por paso (5) |
 | `PLAN_PIEZA` | Gemini crea el plan: diapositivas, textos, prompt por imagen, pie, hashtags, texto alternativo | 1 |
 | `IMAGEN_DIAPOSITIVA` | Imagen de cada diapositiva con Higgsfield a partir de la foto real; JPEG 1080×1350 (carrusel) o 1080×1920 (historia) | Enviar → esperar el *webhook* → guardar |
 | `PUBLICAR_INSTAGRAM` | Carrusel o historia en la cuenta conectada | Crear contenedores → esperar procesado → publicar |

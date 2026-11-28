@@ -8,11 +8,11 @@
 | `POST /auth/registro` · `POST /auth/acceso` · `POST /auth/refresco` | S01A | `{accessToken, refreshToken, expiraEn}` · 401 · 409 (email ya registrado) · 429. **Hechas** |
 | `POST /auth/salir` · `POST /auth/recuperar` [P1] | S13 | — |
 | `GET /perfil` | S13 | email y términos aceptados |
-| `GET /restaurantes/mio` | Arranque, S01A | `{restaurante \| null, altaEstado, analisisEnCursoId?}`. `altaEstado`: `SIN_LOCAL` (aún no tiene local) o el `alta_estado` del local: `CREADO` · `ANALIZANDO` · `PENDIENTE_CONFIRMAR` · `COMPLETADA`. **Hecha** sin `analisisEnCursoId`, que llega con el análisis |
+| `GET /restaurantes/mio` | Arranque, S01A | `{restaurante \| null, altaEstado, analisisEnCursoId?}`. `altaEstado`: `SIN_LOCAL` (aún no tiene local) o el `alta_estado` del local: `CREADO` · `ANALIZANDO` · `PENDIENTE_CONFIRMAR` · `COMPLETADA`. `analisisEnCursoId` solo aparece si hay un análisis `EN_COLA` o `EN_CURSO`. **Hecha** |
 | `GET /places/search?q=&pageToken=` | S02 | `{resultados[], nextPageToken?}` (no se guarda). Cada resultado trae hasta 5 `fotos` `{name, atribuciones[]}` para el carrusel de la tarjeta. **Hecha** |
 | `GET /places/photo?name=&maxWidthPx=` | S02 | `{photoUri}`. Los autores vienen en `fotos[].atribuciones` de la búsqueda |
-| `POST /restaurantes` | S02, S02M | 201 · 409 `DUPLICADO` |
-| `POST /restaurantes/{id}/analisis` | S02, S02M, S03 | 202 `{analisisId}` |
+| `POST /restaurantes` | S02, S02M | 201 · 409 `DUPLICADO`. Desde Google lee los datos con Place Details; a mano, guarda los del formulario. **Hecha** |
+| `POST /restaurantes/{id}/analisis` | S02, S02M, S03 | 202 `{analisisId}`. Crea el análisis con sus 5 pasos, lo encola como trabajo `ANALISIS` y pone el alta en `ANALIZANDO`; si ya hay uno sin terminar, devuelve ese. 404 si el local no es del usuario. **Hecha**; los pasos se programan en SOCIETY-68 y 69 |
 | `GET /analisis/{id}` · `POST /analisis/{id}/cancelar` | S03 | estado, pasos y `tiempoRestanteSeg` |
 | `GET /restaurantes/{id}/ficha` · `PATCH /restaurantes/{id}/ficha` | S04, S07 | ficha con origen por campo y `version` |
 | `GET /restaurantes/{id}/resumen-google` | S04, S05 | valoración y reseñas en vivo |
