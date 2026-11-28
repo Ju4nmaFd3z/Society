@@ -1,6 +1,6 @@
 # Estado del proyecto
 
-Última actualización: 22 de noviembre de 2026.
+Última actualización: 27 de noviembre de 2026.
 
 ## Hecho
 
@@ -32,15 +32,19 @@
 - Contrato OpenAPI v0.3.0 con `/salud`, `/auth`, `/restaurantes`, `/analisis` y las rutas de Places, incluido el error de credenciales incorrectas. Código en [Society-TypeScript](https://github.com/Ju4nmaFd3z/Society-TypeScript/tree/main/contrato).
 - Autenticación en la API con Supabase Auth: registro, acceso y renovación de la sesión (`/auth/registro`, `/auth/acceso` y `/auth/refresco`), y el *middleware* `requiereAuth` que protege las rutas privadas. Ver [API propia](arquitectura/tecnica/api-propia.md). Código en [Society-TypeScript](https://github.com/Ju4nmaFd3z/Society-TypeScript/tree/main/api).
 - Búsqueda de locales en la API, `GET /places/search`, protegida por token: llama a Google Places y devuelve los campos de la tarjeta, paginados con `pageToken` y con hasta 5 fotos por local, cada una con sus autores. `GET /places/photo` devuelve la URL de una foto. Ver la decisión [0008](decisiones/0008-atribuciones-de-fotos-en-la-busqueda.md).
-- `GET /restaurantes/mio` en la API, protegida por token: dice si el usuario tiene local y en qué punto del alta está, para que la app elija la primera pantalla. Todavía sin `analisisEnCursoId`, que llega con el análisis. Con ella llega la tabla `canal` (web, Instagram y teléfono del local), preparada para el alta.
+- `GET /restaurantes/mio` en la API, protegida por token: dice si el usuario tiene local y en qué punto del alta está, para que la app elija la primera pantalla. Con ella llega la tabla `canal` (web, Instagram y teléfono del local), preparada para el alta.
 - Capa de red de Android con Retrofit, Gson y Hilt en [Society-Kotlin](https://github.com/Ju4nmaFd3z/Society-Kotlin): una `SocietyApi`, un DataSource y un repositorio, con la URL de la API en `API_BASE`. Al arrancar, la app llama a `/salud` y escribe el resultado en el log.
 - Fuentes de la marca en Android: DynaPuff y Nunito, aplicadas en `Type.kt`.
 - Acceso en Android: las pantallas 01 Bienvenida y 01A Acceso con la API de Society (crear cuenta e iniciar sesión), la sesión guardada en el móvil y el arranque, que con `GET /restaurantes/mio` lleva a cada usuario a la pantalla de su punto del alta. `AuthInterceptor` añade el token a cada petición y, si caduca, lo renueva una vez. Código en [Society-Kotlin](https://github.com/Ju4nmaFd3z/Society-Kotlin).
-- Tema de cristal de Android: los colores de la interfaz, el esquema de Material, `TarjetaCristal` y `BotonCristal`, en [Society-Kotlin](https://github.com/Ju4nmaFd3z/Society-Kotlin). Todavía no los usa ninguna pantalla.
+- Tema de cristal de Android: los colores de la interfaz, el esquema de Material y los componentes `TarjetaCristal`, `BotonCristal` y `BotonVolver`, en [Society-Kotlin](https://github.com/Ju4nmaFd3z/Society-Kotlin). `TarjetaCristal` se usa en 01 Bienvenida y `BotonVolver` en 01A Acceso.
 - ERP Odoo del Proyecto Intermodular con los datos ficticios de Society y los cuatro bloques del curso cubiertos: operaciones (inventario, compras, contabilidad, empleados y proyectos), ventas (CRM, ventas, facturación, TPV, firma electrónica y alquiler), productividad (conversaciones, marketing social y por correo, partes de horas, documentos, planificación, ausencias y reclutamiento) y sitios web (sitio web, comercio electrónico, chat en vivo, blog, foro, eventos, eLearning y encuestas). Ver [Odoo](odoo.md).
 - Prueba de Nano Banana Pro en la API de Higgsfield.
 - Sprint 1 · Arranque (hitos H1 y H2), cerrado el 12 de noviembre, con la primera rotación de carriles preparada.
 - Sprint 2 · Acceso (hito H3), cerrado el 20 de noviembre con todas sus tareas hechas: acceso y sesión en la app y en la web, router y componentes de Angular, autenticación en la API y búsqueda con Places.
+- Vistas web del alta, [02. Empezamos](diseno/pantallas/02-empezamos.md) y [02M. Alta manual](diseno/pantallas/02m-alta-manual.md), con datos simulados. Código en [Society-TypeScript](https://github.com/Ju4nmaFd3z/Society-TypeScript/tree/main/web).
+- `POST /restaurantes` en la API: da de alta el local en `CREADO`, desde Google (lee los datos con Place Details y guarda la web y el teléfono como canales) o a mano. Valida el cuerpo con zod y responde 409 `DUPLICADO` si el usuario ya tiene local o el local de Google es de otra cuenta. Ver [API propia](arquitectura/tecnica/api-propia.md).
+- Cola de trabajos y *worker* en la API: la tabla `trabajo`, las rutas internas `/trabajos/ejecutar` y `/trabajos/barrido`, y el aviso desde Supabase al insertar un trabajo y cada minuto. En producción desde el 27 de noviembre. Ver [Trabajos largos](arquitectura/tecnica/trabajos-largos.md).
+- `POST /restaurantes/{id}/analisis` en la API: crea el análisis con sus 5 pasos, lo encola para el *worker* y pone el alta en `ANALIZANDO`. `GET /restaurantes/mio` devuelve ya `analisisEnCursoId`. Los pasos del análisis se programan en el sprint 4.
 
 ## En curso
 
